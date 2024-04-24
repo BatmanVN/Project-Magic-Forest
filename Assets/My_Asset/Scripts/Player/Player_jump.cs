@@ -19,41 +19,36 @@ public class Player_jump : MonoBehaviour
     {
         jumpLeft = maxJump;
     }
-    //public void CheckUp()
-    //{
-    //    isGrounded = Physics2D.OverlapCircle(canJump.position,0.1f,ground);
-    //    var jumpRection = jumpDirection;
-    //    if(isGrounded)
-    //    {
-    //        player2D.velocity = jumpRection;
-    //        jumpLeft--;
-    //        if(jumpLeft > 0)
-    //        {
-    //            player2D.velocity = jumpRection;
-    //            jumpLeft--;
-    //            if (isGrounded)
-    //            {
-    //                jumpLeft = maxJump;
-    //            }
-    //        }
-    //    }
-    //}
     public void CheckUp()
     {
-        isGrounded = Physics2D.OverlapCircle(canJump.position,0.1f,ground);
+        isGrounded = Physics2D.OverlapCircle(canJump.position, 0.1f, ground);
         var jumpRection = jumpDirection;
-        if(isGrounded || jumpLeft>0)
+        if(jumpLeft == 0)
         {
-            player2D.velocity = jumpRection;
+            return;
+        }
+        player2D.velocity = jumpRection;
+        animator.SetTrigger("isJump");
+        jumpLeft--;
+        if(!isGrounded && jumpLeft > 0)
+        {
+            player2D.velocity = jumpDirection;
             jumpLeft--;
-            if(isGrounded)
+        }
+    }
+    private void RestJump()
+    {
+        if (isGrounded && jumpLeft == 0)
+        {
+            jumpLeft++;
+            if(jumpLeft == maxJump)
             {
-                jumpLeft = maxJump;
+                return;
             }
         }
-        if(jumpLeft == 1)
-        {
-            animator.SetTrigger("isJump");
-        }
+    }
+    private void Update()
+    {
+        RestJump();
     }
 }
