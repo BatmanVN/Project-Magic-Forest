@@ -1,8 +1,10 @@
 fileFormatVersion: 2
 guid: 3004324eb7f49fe4dba66af3c554abf0
+timeCreated: 1713554189
+licenseType: Free
 TrueTypeFontImporter:
-  externalObjects: {}
   serializedVersion: 4
+  externalObjects: {}
   fontSize: 16
   forceTextureCase: -2
   characterSpacing: 0
@@ -11,11 +13,13 @@ TrueTypeFontImporter:
   fontNames:
   - Hardpixel
   fallbackFontReferences: []
-  customCharacters: 
+  customCharacters:
   fontRenderingMode: 0
+  output:
+    hasEmptyFontData: 0
   ascentCalculationMode: 1
   useLegacyBoundsCalculation: 0
   shouldRoundAdvanceValue: 1
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+  userData:
+  assetBundleName:
+  assetBundleVariant:
