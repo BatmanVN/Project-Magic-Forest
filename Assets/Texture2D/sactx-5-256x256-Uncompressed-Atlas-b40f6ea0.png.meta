@@ -1,11 +1,9 @@
 fileFormatVersion: 2
 guid: 3da2146511589764aa10f1dd8f0d47eb
-timeCreated: 1713554189
-licenseType: Free
 TextureImporter:
-  serializedVersion: 12
   internalIDToNameTable: []
   externalObjects: {}
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -79,47 +77,117 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: sactx-5-256x256-Uncompressed-Atlas-b40f6ea0_0
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 198
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a530caa869fe914e83586aa69e21dec
+      internalID: -45601920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-5-256x256-Uncompressed-Atlas-b40f6ea0_1
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 118
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63fc4b3b442d8cc4e884a0489da3612b
+      internalID: -811046187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-5-256x256-Uncompressed-Atlas-b40f6ea0_2
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 128
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9622a3da8a0ec314099f8515bcb5a99b
+      internalID: 1269616382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID:
+    spriteID: cdb8752f3fe08d244b52493b0a5b8740
     internalID: 0
     vertices: []
-    indices: []
+    indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
-  mipmapLimitGroupName:
-  output:
-    textureImportInstructions:
-      compressedFormat: 0
-      uncompressedFormat: 0
-      desiredFormat: 0
-      usageMode: 0
-      colorSpace: 0
-      androidETC2FallbackFormat: 0
-      width: 0
-      height: 0
-      depth: 0
-      cubeIntermediateSize: 0
-      cubeMode: 0
-      cubeLayout: 0
-      compressionQuality: 0
-      androidETC2FallbackDownscale: 0
-      vtOnly: 0
-    sourceTextureInformation:
-      width: 0
-      height: 0
-      doesTextureContainAlpha: 0
-      sourceWasHDR: 0
-    importInspectorWarnings:
+    nameFileIdTable:
+      sactx-5-256x256-Uncompressed-Atlas-b40f6ea0_0: -45601920
+      sactx-5-256x256-Uncompressed-Atlas-b40f6ea0_1: -811046187
+      sactx-5-256x256-Uncompressed-Atlas-b40f6ea0_2: 1269616382
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  userData:
-  assetBundleName:
-  assetBundleVariant:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
