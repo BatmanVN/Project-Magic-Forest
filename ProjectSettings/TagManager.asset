@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Instructs
   - Ground
+  - Canjump
+  - Coin
+  - StopGround
+  - StopGroundRight
   layers:
   - Default
   - TransparentFX
@@ -15,8 +19,8 @@ TagManager:
   - UI
   - Ground
   - BackGround
-  - 
-  - 
+  - UICanvas
+  - GroundDouble
   - 
   - 
   - 
@@ -42,4 +46,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BackGround
+    uniqueID: 3902868049
     locked: 0

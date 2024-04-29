@@ -10,16 +10,20 @@ public class Player_Move : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private Vector2 moveDirection;
 
-    private bool isLeft;
-    private bool isRight;
-    public void MoveLeft()
-    {
-        isLeft = true;
-    }
-    public void MoveRight()
-    {
-        isRight = true;
-    }
+    public bool isLeft;
+    public bool isRight;
+    public bool isStop;
+    public bool stopGroundLeft;
+    public bool stopGroundRight;
+
+    //public void MoveLeft()
+    //{
+    //    isLeft = true;
+    //}
+    //public void MoveRight()
+    //{
+    //    isRight = true;
+    //}
     private void PlayerMove()
     {
         var direction = moveDirection;
@@ -43,26 +47,61 @@ public class Player_Move : MonoBehaviour
     }
     public void Stopmove()
     {
-        isLeft = false;
-        isRight = false;
         player2D.velocity = new Vector2(player2D.velocity.x * 0, player2D.velocity.y);
-        animator.SetBool(isWalkingParaname,false);
+        animator.SetBool(isWalkingParaname, false);
+        isStop = true;
+    }
+    private void OnTriggerEnter2D(Collider2D Player)
+    {
+        if(Player.CompareTag("StopGround"))
+        {
+            isLeft = false;
+            stopGroundLeft = true;
+        }
+        if (Player.CompareTag("StopGroundRight"))
+        {
+            isRight = false;
+            stopGroundRight = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D Player)
+    {
+        if (Player.CompareTag("StopGround"))
+        {
+            stopGroundLeft = false;
+        }
+        if (Player.CompareTag("StopGroundRight"))
+        {
+            stopGroundRight = false;
+        }
     }
     public void DownLeft()
     {
-        isLeft = true;
+        if (stopGroundLeft == false)
+            isLeft = true;
     }
     public void DownRight()
     {
-        isRight = true;
+        if(stopGroundRight == false)
+            isRight = true;
+    }
+    public void UpLeft()
+    {
+        isLeft = false;
+        Stopmove();
+    }
+    public void UpRight()
+    {
+        isRight = false;
+        Stopmove();
     }
     private void Update()
     {
         PlayerMove();
     }
-    private void Start()
-    {
-        isLeft = false;
-        isRight = false;
-    }
+    //private void Start()
+    //{
+    //    isLeft = false;
+    //    isRight = false;
+    //}
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Player_jump : MonoBehaviour
 {
+    [SerializeField] private Player_Move moveComponent;
     [SerializeField] private Rigidbody2D player2D;
     [SerializeField] private SpriteRenderer playerSprite;
     [SerializeField] private Animator animator;
@@ -12,9 +13,28 @@ public class Player_jump : MonoBehaviour
     [SerializeField] private Transform canJump;
     [SerializeField] private LayerMask ground;
     [SerializeField] private float maxJump;
+    [SerializeField] private float maxJumpDouble;
     [SerializeField] private float jumpLeft;
+    bool isGroundDouble;
     bool isGrounded;
+    bool isJumping;
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Canjump"))
+        {
+            isGroundDouble = true;
+            moveComponent.isRight = false;
+            moveComponent.isLeft = false;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Canjump"))
+        {
+            isGroundDouble = false;
+        }
+    }
     private void Start()
     {
         jumpLeft = maxJump;
@@ -32,9 +52,15 @@ public class Player_jump : MonoBehaviour
         jumpLeft--;
         if(!isGrounded && jumpLeft > 0)
         {
-            player2D.velocity = jumpDirection;
+            if(isGroundDouble == false)
+            {
+                jumpLeft = maxJump;
+                maxJumpDouble = 0;
+            }
+            player2D.velocity = jumpRection;
             jumpLeft--;
         }
+        isJumping = true;
     }
     private void RestJump()
     {
@@ -45,6 +71,10 @@ public class Player_jump : MonoBehaviour
             {
                 return;
             }
+        }
+        if (isGroundDouble == true && isJumping == true)
+        {
+            jumpLeft = maxJumpDouble + 1;
         }
     }
     private void Update()

@@ -31,6 +31,7 @@ public class AutoMove : MonoBehaviour
             currentPoint = pointA.transform;
             spriteRenderer.flipX = true;
         }
+       //monsterAnim.
     }
     private void StartMove()
     {
