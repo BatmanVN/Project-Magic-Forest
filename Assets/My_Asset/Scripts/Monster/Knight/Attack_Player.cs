@@ -12,44 +12,61 @@ public class Attack_Player : MonoBehaviour
     [SerializeField] private LayerMask player;
     [SerializeField] public float dame;
     [SerializeField] private HealthCharacter character;
+    [SerializeField] private Transform enemyTransform;
+    [SerializeField] private Player_Move playerFlip;
+    public float delay;
     public bool isAttk;
-    public bool attacking = false;
-    private bool hit;
+    //public bool attacking = false;
     private void Dame()
     {
-        hit = Physics2D.OverlapCircle(swordPoint.position, rangeAttk, player);
-        if (attacking == false)
-        {
-            if (hit)
-            {
-                animator.SetTrigger(isAttackParaname);
-                isAttk = true;
-            }
-            if (isAttk == true)
-            {
-                character.TakeDame(dame);
-                isAttk = false;
-                attacking = true;
-            }
-        }
-        //if (isAttk == true)
+        var hit = Physics2D.OverlapCircle(swordPoint.position, rangeAttk, player);
+        var scale = enemyTransform.localScale;
+        //if (attacking == false)
         //{
-        //    character.TakeDame(dame);
-        //    attacking = true;
-        //    isAttk = false;
+        //    if (hit)
+        //    {
+        //        animator.SetTrigger(isAttackParaname);
+        //        isAttk = true;
+        //    }
+        //    if (isAttk == true)
+        //    {
+        //        character.TakeDame(dame);
+        //        isAttk = false;
+        //        attacking = true;
+        //    }
         //}
-        if (!hit)
+        //if (!hit)
+        //{
+        //    attacking = false;
+        //}
+        if (hit)
         {
-            attacking = false;
+            if(playerFlip.isFlip == true)
+            {
+                scale.x = (float)1.4;
+            }
+            if(playerFlip.isFlip == false)
+            {
+                scale.x = (float)-1.4;
+            }
+            enemyTransform.localScale = scale;
+            animator.SetTrigger(isAttackParaname);
+            character.TakeDame(dame);
+            isAttk = true;
         }
+    }
+    private void DelayDame()
+    {
+        InvokeRepeating(nameof(Dame),delay,delay);
     }
     public void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(swordPoint.position,rangeAttk);
     }
-    private void Update()
+    private void Start()
     {
         Dame();
+        DelayDame();
     }
 }

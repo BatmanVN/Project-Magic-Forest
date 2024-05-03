@@ -9,7 +9,7 @@ public class Player_Move : MonoBehaviour
     [SerializeField] private SpriteRenderer playerSprite;
     [SerializeField] private Animator animator;
     [SerializeField] private Vector2 moveDirection;
-
+    public bool isFlipKey;
     public bool isLeft;
     public bool isRight;
     public bool isStop;
@@ -36,6 +36,32 @@ public class Player_Move : MonoBehaviour
             }
             transform.localScale = scale;
             player2D.velocity = direction;
+        }
+    }
+    private void KeyMove()
+    {
+        var keyWalking = Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D);
+        var direction = moveDirection;
+        direction.y = player2D.velocity.y;
+        if (keyWalking )
+        {
+            isFlip = Input.GetKey(KeyCode.A) || isLeft == true;
+            var scale = transform.localScale;
+            if(isFlip)
+            {
+                direction.x *= -1;
+                scale.x = -2;
+            }    
+            else
+            {
+                scale.x = 2;
+            }
+            transform.localScale = scale;
+            player2D.velocity = direction;
+        }
+        if(!keyWalking)
+        {
+            player2D.velocity = new Vector2(direction.x*0,direction.y);
         }
     }
     public void Stopmove()
@@ -90,6 +116,7 @@ public class Player_Move : MonoBehaviour
     }
     private void Update()
     {
+        KeyMove();
         PlayerMove();
     }
 }

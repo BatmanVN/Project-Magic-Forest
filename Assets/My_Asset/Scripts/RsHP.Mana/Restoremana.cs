@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class Restoremana : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Mana mana;
+    [SerializeField] private float delay;
+    [SerializeField] private float manaAmount;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        DelayRestore();
+    }
+    private void DelayRestore()
+    {
+        InvokeRepeating(nameof(RestoreMana), delay,delay);
+    }
+    private void RestoreMana()
+    {
+        mana.RestoreMaNa(manaAmount);
     }
 }

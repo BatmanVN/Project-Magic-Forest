@@ -350,9 +350,10 @@ MonoBehaviour:
     m_Bits: 8
   dame: 3
   character: {fileID: 3409384953111840695, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+  enemyTransform: {fileID: 8839208799024725494}
+  playerFlip: {fileID: 0}
+  delay: 0
   isAttk: 0
-  hasAttk: 0
-  attacking: 0
 --- !u!1 &5282484827160549392
 GameObject:
   m_ObjectHideFlags: 0

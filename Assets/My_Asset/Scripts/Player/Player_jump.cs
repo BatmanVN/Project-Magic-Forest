@@ -64,6 +64,35 @@ public class Player_jump : MonoBehaviour
         }
         isJumping = true;
     }
+    private void KeyJump()
+    {
+        var keyUp = Input.GetKeyDown(KeyCode.Space);
+        isGrounded = Physics2D.OverlapCircle(canJump.position, 0.1f, ground);
+        var jumpRection = jumpDirection;
+        if(keyUp)
+        {
+            if (jumpLeft == 0)
+            {
+                return;
+            }
+            //player2D.AddForce(jumpRection);
+            player2D.velocity = jumpRection;
+            animator.SetTrigger("isJump");
+            jumpLeft--;
+            if (!isGrounded && jumpLeft > 0)
+            {
+                if (isGroundDouble == false)
+                {
+                    jumpLeft = maxJump;
+                    maxJumpDouble = 0;
+                }
+                //player2D.AddForce(jumpRection);
+                player2D.velocity = jumpRection;
+                jumpLeft--;
+            }
+            isJumping = true;
+        }
+    }
     private void RestJump()
     {
         if (isGrounded && jumpLeft == 0)
@@ -81,6 +110,7 @@ public class Player_jump : MonoBehaviour
     }
     private void Update()
     {
+        KeyJump();
         RestJump();
     }
 }

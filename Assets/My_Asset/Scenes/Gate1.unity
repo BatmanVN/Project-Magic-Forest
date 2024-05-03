@@ -2112,9 +2112,17 @@ PrefabInstance:
       value: Knight_Enemy (1)
       objectReference: {fileID: 0}
     - target: {fileID: 6409066554987826123, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
+      propertyPath: delay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6409066554987826123, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
       propertyPath: character
       value: 
       objectReference: {fileID: 929075734}
+    - target: {fileID: 6409066554987826123, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
+      propertyPath: playerFlip
+      value: 
+      objectReference: {fileID: 929075730}
     - target: {fileID: 7877777033360554206, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.01
@@ -10813,9 +10821,17 @@ PrefabInstance:
       value: Knight_Enemy (3)
       objectReference: {fileID: 0}
     - target: {fileID: 6409066554987826123, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
+      propertyPath: delay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6409066554987826123, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
       propertyPath: character
       value: 
       objectReference: {fileID: 929075734}
+    - target: {fileID: 6409066554987826123, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
+      propertyPath: playerFlip
+      value: 
+      objectReference: {fileID: 929075730}
     - target: {fileID: 7877777033360554206, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.04
@@ -14016,9 +14032,17 @@ PrefabInstance:
       value: Knight_Enemy (2)
       objectReference: {fileID: 0}
     - target: {fileID: 6409066554987826123, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
+      propertyPath: delay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6409066554987826123, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
       propertyPath: character
       value: 
       objectReference: {fileID: 929075734}
+    - target: {fileID: 6409066554987826123, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
+      propertyPath: playerFlip
+      value: 
+      objectReference: {fileID: 929075730}
     - target: {fileID: 7877777033360554206, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -19315,6 +19339,14 @@ PrefabInstance:
       propertyPath: playerAnim
       value: 
       objectReference: {fileID: 1600842409}
+    - target: {fileID: -1926848928194310396, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+      propertyPath: maxMana
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -1926848928194310396, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+      propertyPath: powerBar
+      value: 
+      objectReference: {fileID: 303464142}
     - target: {fileID: 1208243408123778392, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -19391,6 +19423,18 @@ PrefabInstance:
       propertyPath: character
       value: 
       objectReference: {fileID: 929075734}
+    - target: {fileID: 2964668129651964004, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+      propertyPath: mana
+      value: 
+      objectReference: {fileID: 1600842416}
+    - target: {fileID: 2964668129651964004, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+      propertyPath: delay
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964668129651964004, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+      propertyPath: manaAmount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3409384953111840695, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
       propertyPath: attk
       value: 
@@ -19436,6 +19480,10 @@ PrefabInstance:
       value: -520.99
       objectReference: {fileID: 0}
     - target: {fileID: 8300130075343802544, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+      propertyPath: mana
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8300130075343802544, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
       propertyPath: move
       value: 
       objectReference: {fileID: 929075730}
@@ -19443,6 +19491,10 @@ PrefabInstance:
       propertyPath: enable
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8300130075343802544, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+      propertyPath: useMana
+      value: 
+      objectReference: {fileID: 1600842416}
     - target: {fileID: 8300130075343802544, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
       propertyPath: fireBall
       value: 
@@ -26694,6 +26746,17 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 5396419360059184052, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
   m_PrefabInstance: {fileID: 1104657082}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1600842416 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -1926848928194310396, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+  m_PrefabInstance: {fileID: 1104657082}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec2dba8a0ccfb6546aa53b2adcdcec62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1615689908
 GameObject:
   m_ObjectHideFlags: 0
@@ -26927,7 +26990,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -3.9355054, y: 1.0775173}
+  m_Offset: {x: -3.9355054, y: 0.9111051}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -26938,7 +27001,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.100730896, y: 2.0215278}
+  m_Size: {x: 0.100730896, y: 1.6887037}
   m_EdgeRadius: 0
 --- !u!212 &1636106476
 SpriteRenderer:
@@ -28699,6 +28762,14 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6409066554987826123, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
+      propertyPath: delay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6409066554987826123, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
+      propertyPath: delay2
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6409066554987826123, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
       propertyPath: character
       value: 
       objectReference: {fileID: 929075734}
@@ -28706,6 +28777,10 @@ PrefabInstance:
       propertyPath: rangeAttk
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6409066554987826123, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
+      propertyPath: playerFlip
+      value: 
+      objectReference: {fileID: 929075730}
     - target: {fileID: 7381432069853411867, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
       propertyPath: m_FillAmount
       value: 1

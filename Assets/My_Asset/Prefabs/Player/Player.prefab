@@ -50,6 +50,8 @@ GameObject:
   - component: {fileID: 3409384953111840695}
   - component: {fileID: -4396169491694653612}
   - component: {fileID: 2796690226886084481}
+  - component: {fileID: -1926848928194310396}
+  - component: {fileID: 2964668129651964004}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -272,7 +274,9 @@ MonoBehaviour:
   fireBallRight: {fileID: 7401987750966301171}
   move: {fileID: 0}
   fireRender: {fileID: 0}
+  useMana: {fileID: 0}
   dame: 3
+  mana: 0
 --- !u!114 &3409384953111840695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,6 +323,36 @@ MonoBehaviour:
   character: {fileID: 0}
   animator: {fileID: 0}
   isDieAnim: 0
+--- !u!114 &-1926848928194310396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2363234522061934474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec2dba8a0ccfb6546aa53b2adcdcec62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerBar: {fileID: 0}
+  mana: 0
+  maxMana: 0
+--- !u!114 &2964668129651964004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2363234522061934474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4766bb73d0f8c0d4e9449f8ea12f2c75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mana: {fileID: 0}
+  delay: 0
+  manaAmount: 0
 --- !u!1 &5612474334171528951
 GameObject:
   m_ObjectHideFlags: 0

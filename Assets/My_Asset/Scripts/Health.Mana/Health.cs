@@ -42,6 +42,6 @@ public class HealthCharacter : MonoBehaviour
             return;
         }
         Health += healAmount;
+        healthBar.fillAmount = Health / MaxHealth;
     }
-
 }
