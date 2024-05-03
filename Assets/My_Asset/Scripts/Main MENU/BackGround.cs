@@ -11,6 +11,7 @@ public class BackGround : MonoBehaviour
     [SerializeField] private Player_Move moveComponent;
     private void Background()
     {
+        var scale = transform.localScale;
         if (moveComponent.isRight == true)
         {
             backGround.uvRect = new Rect(backGround.uvRect.position + new Vector2(_x, _y) * Time.deltaTime, backGround.uvRect.size);

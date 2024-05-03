@@ -472,7 +472,7 @@ TextureImporter:
         serializedVersion: 2
         x: 27
         y: 21
-        width: 18
+        width: 15
         height: 28
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -492,9 +492,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 45
-        y: 19
+        y: 21
         width: 18
-        height: 30
+        height: 28
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -516,8 +516,8 @@ TextureImporter:
         y: 37
         width: 15
         height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -537,8 +537,8 @@ TextureImporter:
         y: 37
         width: 13
         height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -682,7 +682,7 @@ TextureImporter:
         serializedVersion: 2
         x: 132
         y: 0
-        width: 17
+        width: 14
         height: 25
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -745,7 +745,7 @@ TextureImporter:
         serializedVersion: 2
         x: 192
         y: 0
-        width: 17
+        width: 14
         height: 28
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -827,10 +827,10 @@ TextureImporter:
       name: sactx-3-256x256-Uncompressed-Atlas-b40f6ea0_38
       rect:
         serializedVersion: 2
-        x: 65
+        x: 67
         y: 226
-        width: 24
-        height: 29
+        width: 16
+        height: 21
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -871,7 +871,7 @@ TextureImporter:
         serializedVersion: 2
         x: 189
         y: 201
-        width: 18
+        width: 19
         height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -892,7 +892,7 @@ TextureImporter:
         serializedVersion: 2
         x: 153
         y: 201
-        width: 30
+        width: 25
         height: 13
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1081,7 +1081,7 @@ TextureImporter:
         serializedVersion: 2
         x: 59
         y: 133
-        width: 18
+        width: 16
         height: 24
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -1102,7 +1102,7 @@ TextureImporter:
         serializedVersion: 2
         x: 79
         y: 133
-        width: 18
+        width: 16
         height: 26
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -1144,7 +1144,7 @@ TextureImporter:
         serializedVersion: 2
         x: 148
         y: 109
-        width: 18
+        width: 15
         height: 24
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -1165,8 +1165,8 @@ TextureImporter:
         serializedVersion: 2
         x: 167
         y: 104
-        width: 19
-        height: 10
+        width: 18
+        height: 13
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1352,10 +1352,10 @@ TextureImporter:
       name: sactx-3-256x256-Uncompressed-Atlas-b40f6ea0_20
       rect:
         serializedVersion: 2
-        x: 64
-        y: 34
-        width: 23
-        height: 32
+        x: 69
+        y: 37
+        width: 15
+        height: 29
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

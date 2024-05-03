@@ -13,6 +13,7 @@ public class AutoMove : MonoBehaviour
     private Transform currentPoint;    
     private void AutoMoveMonster()
     {
+        var scale = transform.localScale;
        if(currentPoint == pointA.transform)
         {
             monster2D.velocity = new Vector2(-speed,0);
@@ -24,14 +25,14 @@ public class AutoMove : MonoBehaviour
        if(Vector2.Distance(transform.position,currentPoint.position) < 1f && currentPoint == pointA.transform)
         {
             currentPoint = pointB.transform;
-            spriteRenderer.flipX = false;
+            scale.x = (float)1.4;
         }
        if(Vector2.Distance(transform.position,currentPoint.position)< 1f && currentPoint == pointB.transform)
         {
             currentPoint = pointA.transform;
-            spriteRenderer.flipX = true;
+            scale.x = (float)-1.4;
         }
-       //monsterAnim.
+       transform.localScale = scale;
     }
     private void StartMove()
     {

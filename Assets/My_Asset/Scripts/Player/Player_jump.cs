@@ -47,6 +47,7 @@ public class Player_jump : MonoBehaviour
         {
             return;
         }
+        //player2D.AddForce(jumpRection);
         player2D.velocity = jumpRection;
         animator.SetTrigger("isJump");
         jumpLeft--;
@@ -57,6 +58,7 @@ public class Player_jump : MonoBehaviour
                 jumpLeft = maxJump;
                 maxJumpDouble = 0;
             }
+            //player2D.AddForce(jumpRection);
             player2D.velocity = jumpRection;
             jumpLeft--;
         }
@@ -75,7 +77,7 @@ public class Player_jump : MonoBehaviour
         if (isGroundDouble == true && isJumping == true)
         {
             jumpLeft = maxJumpDouble + 1;
-        }
+        } 
     }
     private void Update()
     {
