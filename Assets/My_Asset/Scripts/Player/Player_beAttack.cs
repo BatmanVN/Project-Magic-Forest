@@ -11,7 +11,7 @@ public class Player_beAttack : MonoBehaviour
     //private float takeDame;
     private void BeAttack()
     {
-        if(attacker.isAttk == true)
+        if(attacker.attacking == true)
         {
             playerAnim.SetTrigger(beAttackParaname);
         }

@@ -31,22 +31,6 @@ public class HealthCharacter : MonoBehaviour
         Health -= dame;
         healthBar.fillAmount = Health / MaxHealth;
     }
-    public void PlayerbeAttk(float dame)
-    {
-            if (isDead)
-            {
-                return;
-            }
-            if(attk.hasAttk == true) 
-            {
-                return;
-            }
-            if(attk.isAttk == true)
-            {
-                Health -= dame;
-            }
-            healthBar.fillAmount = Health / MaxHealth;
-    }
     public void Heal(float healAmount)
     {
         if(isDead)

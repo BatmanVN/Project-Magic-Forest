@@ -13,22 +13,40 @@ public class Attack_Player : MonoBehaviour
     [SerializeField] public float dame;
     [SerializeField] private HealthCharacter character;
     public bool isAttk;
-    public bool hasAttk;
+    public bool attacking = false;
+    private bool hit;
     private void Dame()
     {
-        var hit = Physics2D.OverlapCircle(swordPoint.position,rangeAttk,player);
-        if (hit)
+        hit = Physics2D.OverlapCircle(swordPoint.position, rangeAttk, player);
+        if (attacking == false)
         {
-            animator.SetBool(isAttackParaname,true);
-            character.PlayerbeAttk(dame);
-            isAttk = true;
-            hasAttk = true;
+            if (hit)
+            {
+                animator.SetTrigger(isAttackParaname);
+                isAttk = true;
+            }
+            if (isAttk == true)
+            {
+                character.TakeDame(dame);
+                isAttk = false;
+                attacking = true;
+            }
         }
-        else
+        //if (isAttk == true)
+        //{
+        //    character.TakeDame(dame);
+        //    attacking = true;
+        //    isAttk = false;
+        //}
+        if (!hit)
         {
-            animator.SetBool(isAttackParaname, false);
-            isAttk = false;
+            attacking = false;
         }
+    }
+    public void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(swordPoint.position,rangeAttk);
     }
     private void Update()
     {
