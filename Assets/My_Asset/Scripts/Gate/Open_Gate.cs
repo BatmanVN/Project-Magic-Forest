@@ -31,17 +31,17 @@ public class Open_Gate : MonoBehaviour
             }
         }
     }
-    private void ChangeScene()
-    {
-        if(objDisable == true)
-        {
-            SceneManager.LoadScene(sceneName);
-        }
-    }
-    private void Start()
-    {
-        InvokeRepeating(nameof(ChangeScene),delay,0);
-    }
+    //private void ChangeScene()
+    //{
+    //    if(objDisable == true)
+    //    {
+    //        SceneManager.LoadScene(sceneName);
+    //    }
+    //}
+    //private void Start()
+    //{
+    //    InvokeRepeating(nameof(ChangeScene),delay,0);
+    //}
     private void Update()
     {
         OpenGate();

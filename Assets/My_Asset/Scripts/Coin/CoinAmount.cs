@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class CoinAmount : MonoBehaviour
 {
     [SerializeField] private Text coinText;
+    [SerializeField] private Text coinTextBar;
     [SerializeField] private int countCoin;
     [SerializeField] private float delay;
     public bool getCoin;

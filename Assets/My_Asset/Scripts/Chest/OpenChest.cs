@@ -13,6 +13,7 @@ public class OpenChest : MonoBehaviour
     [SerializeField] private float checkChest;
     public bool hasRewardChest;
     public bool isRewardChest;
+    public float NumberChest { get => numberChest; set => numberChest = value; }
     private void OnTriggerEnter2D(Collider2D Chest)
     {
         if (Chest.CompareTag("Player"))
