@@ -52,6 +52,7 @@ GameObject:
   - component: {fileID: 2796690226886084481}
   - component: {fileID: -1926848928194310396}
   - component: {fileID: 2964668129651964004}
+  - component: {fileID: 5035777607508588473}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -228,6 +229,7 @@ MonoBehaviour:
   playerSprite: {fileID: 1797759950627781869}
   animator: {fileID: 5396419360059184052}
   moveDirection: {x: 5, y: 0}
+  isFlipKey: 0
   isLeft: 0
   isRight: 0
   isStop: 0
@@ -292,7 +294,6 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   health: 0
   maxHealth: 10
-  attk: {fileID: 0}
 --- !u!114 &-4396169491694653612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -353,6 +354,21 @@ MonoBehaviour:
   mana: {fileID: 0}
   delay: 0
   manaAmount: 0
+--- !u!114 &5035777607508588473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2363234522061934474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da326f294feed534a9db2a345db511b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coin: {fileID: 0}
+  coinText: {fileID: 0}
+  countCoin: 0
 --- !u!1 &5612474334171528951
 GameObject:
   m_ObjectHideFlags: 0

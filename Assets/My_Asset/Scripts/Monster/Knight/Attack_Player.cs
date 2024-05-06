@@ -41,15 +41,6 @@ public class Attack_Player : MonoBehaviour
         //}
         if (hit)
         {
-            if(playerFlip.isFlip == true)
-            {
-                scale.x = (float)1.4;
-            }
-            if(playerFlip.isFlip == false)
-            {
-                scale.x = (float)-1.4;
-            }
-            enemyTransform.localScale = scale;
             animator.SetTrigger(isAttackParaname);
             character.TakeDame(dame);
             isAttk = true;

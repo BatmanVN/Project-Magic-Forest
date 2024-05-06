@@ -32,7 +32,7 @@ public class BackGround : MonoBehaviour
 
     private void Update()
     {
-            //returnBackground();
+            
             Background();
     }
 }

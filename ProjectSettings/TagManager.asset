@@ -12,6 +12,7 @@ TagManager:
   - StopGroundRight
   - FireBall
   - KinghtMonster
+  - Chest
   layers:
   - Default
   - TransparentFX

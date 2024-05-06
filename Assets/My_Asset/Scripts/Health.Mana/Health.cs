@@ -8,7 +8,6 @@ public class HealthCharacter : MonoBehaviour
     [SerializeField] private Image healthBar;
     [SerializeField] private float health;
     [SerializeField] private float maxHealth;
-    [SerializeField] private Attack_Player attk;
     public float Health { get => health ; private set => health = value; }
     public float MaxHealth { get => maxHealth ; private set => maxHealth = value; }
     public bool isAlive => Health > 0;

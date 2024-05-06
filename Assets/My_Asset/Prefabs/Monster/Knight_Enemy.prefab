@@ -312,7 +312,6 @@ MonoBehaviour:
   healthBar: {fileID: 7381432069853411867}
   health: 0
   maxHealth: 9
-  attk: {fileID: 0}
 --- !u!114 &6001511636293249311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -344,7 +343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   swordPoint: {fileID: 7877777033360554206}
   animator: {fileID: 3092956610261973948}
-  rangeAttk: 1.5
+  rangeAttk: 1.2
   player:
     serializedVersion: 2
     m_Bits: 8
@@ -365,7 +364,7 @@ GameObject:
   - component: {fileID: 7877777033360554206}
   - component: {fileID: 1878728770488521283}
   m_Layer: 0
-  m_Name: AttkPoint
+  m_Name: AttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -380,7 +379,7 @@ Transform:
   m_GameObject: {fileID: 5282484827160549392}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9, y: -2.4, z: 0}
+  m_LocalPosition: {x: -0.14, y: 0.732, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
