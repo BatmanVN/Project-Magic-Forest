@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class EndGateBar : MonoBehaviour
 {
-    [SerializeField] private OpenChest hasChest;
+    [SerializeField] private OpenChest[] hasChest;
     [SerializeField] private GameObject[] Chest;
     //[SerializeField] private GameObject goldChest1;
     //[SerializeField] private GameObject goldChest2;
-    private void RewardChest()
+    
+
+    public void RewardChest()
     {
-        if(hasChest.NumberChest == 1)
+        for (int i = 0; i < hasChest.Length; i++)
         {
-            
+            if (hasChest[i].hasRewardChest)
+            {
+                Chest[i].SetActive(true);
+            }
         }
     }
-    
 }

@@ -5,9 +5,11 @@ using UnityEngine.UI;
 
 public class Coin : MonoBehaviour
 {
+    private CoinAmount amount;
     [SerializeField] private GameObject coinEnable;
     [SerializeField] private Animator coinAnim;
     [SerializeField] private float timeDelay;
+    [SerializeField] private int countCoin;
     public bool isAnimator;
     private void OnTriggerEnter2D(Collider2D coin)
     {
@@ -15,6 +17,7 @@ public class Coin : MonoBehaviour
         {
             coinAnim.SetTrigger("isCollect");
             isAnimator = true;
+            amount?.CountCoin();
         }
     }
     private void OnTriggerExit2D(Collider2D coin)
@@ -35,6 +38,10 @@ public class Coin : MonoBehaviour
             yield return new WaitForSeconds(timeDelay);
             WhenCollect();
         }
+    }
+    private void Start()
+    {
+        amount = FindAnyObjectByType<CoinAmount>();
     }
     private void Update()
     {
