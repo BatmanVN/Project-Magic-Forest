@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.U2D.IK;
 
 public class BonusPoint : MonoBehaviour
 {
@@ -16,13 +15,6 @@ public class BonusPoint : MonoBehaviour
             jumpEnabled = true;
         }
     }
-    private void OnTriggerExit2D(Collider2D bonusPoint)
-    {
-        if (bonusPoint.CompareTag("Player"))
-        {
-            jumpEnabled = false;
-        }
-    }
     private void DisAbleBonusPoint()
     {
         if(jumpBonus.isJumpBonus == true)   
@@ -30,8 +22,8 @@ public class BonusPoint : MonoBehaviour
             Destroy(PointBonus);
         }
     }
-    private void Start()
+    private void Update()
     {
-        InvokeRepeating(nameof(DisAbleBonusPoint), delay, delay);
+        DisAbleBonusPoint();
     }
 }

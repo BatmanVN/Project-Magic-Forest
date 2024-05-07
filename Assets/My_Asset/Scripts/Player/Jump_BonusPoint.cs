@@ -20,6 +20,7 @@ public class Jump_BonusPoint : MonoBehaviour
             bonus *= 2;
             player2D.velocity = bonus;
             playerAnim.SetTrigger(jumpbonusParaname);
+            bonusPoint.jumpEnabled = false;
         }
         if (bonusPoint.jumpEnabled == false)
         {
