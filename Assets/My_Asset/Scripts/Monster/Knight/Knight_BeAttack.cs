@@ -8,6 +8,7 @@ public class Knight_BeAttack : MonoBehaviour
     [SerializeField] private Animator monsterAnim;
     [SerializeField] private HealthCharacter monsterCharacter;
     [SerializeField] private Player_attack takeDame;
+    [SerializeField] private Player_skillFire skillDame;
     private Player_skillFire starFire;
     public bool beAttack;
     private void OnTriggerEnter2D(Collider2D Monster)
@@ -19,9 +20,18 @@ public class Knight_BeAttack : MonoBehaviour
             beAttack = true;
             starFire?.SkillAmount();
         }
+        if(Monster.CompareTag("StarSkill"))
+        {
+            monsterCharacter.TakeDame(skillDame.dameSkill);
+            monsterAnim.SetTrigger(isAttackParaname);
+        }
     }
+
+
     private void Start()
     {
         starFire = FindAnyObjectByType<Player_skillFire>();
     }
+
+
 }

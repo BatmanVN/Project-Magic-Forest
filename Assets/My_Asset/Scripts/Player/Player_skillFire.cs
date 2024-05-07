@@ -10,6 +10,7 @@ public class Player_skillFire : MonoBehaviour
     [SerializeField] private SpriteRenderer fireRender;
     [SerializeField] private Player_Move move;
     [SerializeField] private Transform fireBall;
+    public float dameSkill;
     public bool starEnable;
     public void SkillAmount()
     {
@@ -37,7 +38,11 @@ public class Player_skillFire : MonoBehaviour
         if (starEnable == true)
         {
             Instantiate(starPower,fireBall.position,Quaternion.identity);
-            excatlySkill = 0;
+            excatlySkill -= 5;
         }
+    }
+    private void Update()
+    {
+        
     }
 }

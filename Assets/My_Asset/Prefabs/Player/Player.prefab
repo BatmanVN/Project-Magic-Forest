@@ -44,15 +44,16 @@ GameObject:
   - component: {fileID: 4913562842587177108}
   - component: {fileID: 5396419360059184052}
   - component: {fileID: 4644119976011682073}
-  - component: {fileID: 7870081722653476929}
-  - component: {fileID: 4751454707115782111}
-  - component: {fileID: 8300130075343802544}
+  - component: {fileID: 5049461055006322131}
   - component: {fileID: 3409384953111840695}
+  - component: {fileID: 8300130075343802544}
   - component: {fileID: -4396169491694653612}
   - component: {fileID: 2796690226886084481}
+  - component: {fileID: 4751454707115782111}
+  - component: {fileID: 7870081722653476929}
+  - component: {fileID: 1658767248055020102}
   - component: {fileID: -1926848928194310396}
   - component: {fileID: 2964668129651964004}
-  - component: {fileID: 1658767248055020102}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -213,7 +214,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0.03456645, y: 0.75538546}
   m_Size: {x: 0.7028905, y: 1.5357125}
   m_Direction: 0
---- !u!114 &7870081722653476929
+--- !u!114 &5049461055006322131
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -222,21 +223,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 2363234522061934474}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff51bffb6b8882e44bb5d566bc6fc771, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ed30217aeb275345ac7dc72b72c2c76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player2D: {fileID: 4913562842587177108}
-  playerSprite: {fileID: 1797759950627781869}
-  animator: {fileID: 5396419360059184052}
-  moveDirection: {x: 5, y: 0}
-  isFlipKey: 0
-  isLeft: 0
-  isRight: 0
-  isStop: 0
-  stopGroundLeft: 0
-  stopGroundRight: 0
-  isFlip: 0
---- !u!114 &4751454707115782111
+  components: []
+  healthComponent: {fileID: 0}
+  attackComponent: {fileID: 0}
+  beAttackComponent: {fileID: 0}
+  dieComponent: {fileID: 0}
+  jumpComponent: {fileID: 0}
+  moveComponent: {fileID: 0}
+  skillFireComponent: {fileID: 0}
+  manaComponent: {fileID: 0}
+  restoremanaComponent: {fileID: 0}
+--- !u!114 &3409384953111840695
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -245,21 +245,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2363234522061934474}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c3acf74715013a40ac68d86a8331cc8, type: 3}
+  m_Script: {fileID: 11500000, guid: 29eae78d2e6827a439d9a2bb6b1458d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveComponent: {fileID: 7870081722653476929}
-  player2D: {fileID: 4913562842587177108}
-  playerSprite: {fileID: 1797759950627781869}
-  animator: {fileID: 5396419360059184052}
-  jumpDirection: {x: 0, y: 8}
-  canJump: {fileID: 4512888913407053842}
-  ground:
-    serializedVersion: 2
-    m_Bits: 64
-  maxJump: 2
-  maxJumpDouble: 1
-  jumpLeft: 0
+  healthBar: {fileID: 0}
+  health: 0
+  maxHealth: 10
 --- !u!114 &8300130075343802544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,21 +270,6 @@ MonoBehaviour:
   useMana: {fileID: 0}
   dame: 3
   mana: 0
---- !u!114 &3409384953111840695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2363234522061934474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29eae78d2e6827a439d9a2bb6b1458d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBar: {fileID: 0}
-  health: 0
-  maxHealth: 10
 --- !u!114 &-4396169491694653612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,6 +300,73 @@ MonoBehaviour:
   character: {fileID: 0}
   animator: {fileID: 0}
   isDieAnim: 0
+--- !u!114 &4751454707115782111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2363234522061934474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c3acf74715013a40ac68d86a8331cc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveComponent: {fileID: 7870081722653476929}
+  player2D: {fileID: 4913562842587177108}
+  playerSprite: {fileID: 1797759950627781869}
+  animator: {fileID: 5396419360059184052}
+  jumpDirection: {x: 0, y: 8}
+  canJump: {fileID: 4512888913407053842}
+  ground:
+    serializedVersion: 2
+    m_Bits: 64
+  maxJump: 2
+  maxJumpDouble: 1
+  jumpLeft: 0
+--- !u!114 &7870081722653476929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2363234522061934474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff51bffb6b8882e44bb5d566bc6fc771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player2D: {fileID: 4913562842587177108}
+  playerSprite: {fileID: 1797759950627781869}
+  animator: {fileID: 5396419360059184052}
+  moveDirection: {x: 5, y: 0}
+  isFlipKey: 0
+  isLeft: 0
+  isRight: 0
+  isStop: 0
+  stopGroundLeft: 0
+  stopGroundRight: 0
+  isFlip: 0
+--- !u!114 &1658767248055020102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2363234522061934474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61c24efcb9d5b44408a903f1d9c15e73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  excatlySkill: 0
+  buttonStar: {fileID: 0}
+  starPower: {fileID: 0}
+  fireRender: {fileID: 0}
+  move: {fileID: 0}
+  fireBall: {fileID: 0}
+  dameSkill: 0
+  starEnable: 0
 --- !u!114 &-1926848928194310396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,25 +397,6 @@ MonoBehaviour:
   mana: {fileID: 0}
   delay: 0
   manaAmount: 0
---- !u!114 &1658767248055020102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2363234522061934474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61c24efcb9d5b44408a903f1d9c15e73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  excatlySkill: 0
-  buttonStar: {fileID: 0}
-  starPower: {fileID: 0}
-  fireRender: {fileID: 0}
-  move: {fileID: 0}
-  fireBall: {fileID: 0}
-  starEnable: 0
 --- !u!1 &5612474334171528951
 GameObject:
   m_ObjectHideFlags: 0

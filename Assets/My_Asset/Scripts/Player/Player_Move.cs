@@ -16,6 +16,7 @@ public class Player_Move : MonoBehaviour
     public bool stopGroundLeft;
     public bool stopGroundRight;
     public bool isFlip = false;
+
     private void PlayerMove()
     {
         var direction = moveDirection;
