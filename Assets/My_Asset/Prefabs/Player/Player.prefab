@@ -54,6 +54,8 @@ GameObject:
   - component: {fileID: 1658767248055020102}
   - component: {fileID: -1926848928194310396}
   - component: {fileID: 2964668129651964004}
+  - component: {fileID: 4494275664301464282}
+  - component: {fileID: 8479484245027556633}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -230,7 +232,6 @@ MonoBehaviour:
   healthComponent: {fileID: 0}
   attackComponent: {fileID: 0}
   beAttackComponent: {fileID: 0}
-  dieComponent: {fileID: 0}
   jumpComponent: {fileID: 0}
   moveComponent: {fileID: 0}
   skillFireComponent: {fileID: 0}
@@ -397,6 +398,40 @@ MonoBehaviour:
   mana: {fileID: 0}
   delay: 0
   manaAmount: 0
+--- !u!114 &4494275664301464282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2363234522061934474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7af9b2b2981228438677c5d2b8a7e95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneHome: 
+  sceneSpawn: 
+  character: {fileID: 0}
+  dieBar: {fileID: 0}
+  home: 0
+  spawn: 0
+--- !u!114 &8479484245027556633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2363234522061934474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c37c98d08adb55f4bbd1d676bdc4eba7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpPoint: {fileID: 0}
+  jumpBonusPoint: {x: 0, y: 0}
+  player2D: {fileID: 0}
+  bonusPoint: {fileID: 0}
 --- !u!1 &5612474334171528951
 GameObject:
   m_ObjectHideFlags: 0

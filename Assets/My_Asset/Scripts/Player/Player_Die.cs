@@ -10,7 +10,7 @@ public class Player_Die : MonoBehaviour
     public bool isDieAnim;
     private void Death()
     {
-        if(character.Health <= 0)
+        if(character.isDead)
         {
             animator.SetTrigger(isDieParaname);
             isDieAnim = true;

@@ -10,8 +10,8 @@ public class HealthCharacter : MonoBehaviour
     [SerializeField] private float maxHealth;
     public float Health { get => health ; private set => health = value; }
     public float MaxHealth { get => maxHealth ; private set => maxHealth = value; }
-    public bool isAlive => Health > 0;
-    public bool isDead => Health <= 0;
+    public bool isAlive => health > 0;
+    public bool isDead => health <= 0;
 
     private void Awake()
     {
