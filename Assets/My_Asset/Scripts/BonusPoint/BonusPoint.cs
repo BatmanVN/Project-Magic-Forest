@@ -6,7 +6,6 @@ public class BonusPoint : MonoBehaviour
 {
     [SerializeField] private Jump_BonusPoint jumpBonus;
     [SerializeField] private GameObject PointBonus;
-    [SerializeField] private float delay;
     public bool jumpEnabled;
     private void OnTriggerEnter2D(Collider2D bonusPoint)
     {

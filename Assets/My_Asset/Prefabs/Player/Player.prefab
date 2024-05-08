@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 2964668129651964004}
   - component: {fileID: 4494275664301464282}
   - component: {fileID: 8479484245027556633}
-  - component: {fileID: 7677122841768783727}
+  - component: {fileID: 4005193144941211418}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -468,7 +468,7 @@ MonoBehaviour:
   bonusPoint: {fileID: 0}
   playerAnim: {fileID: 0}
   isJumpBonus: 0
---- !u!114 &7677122841768783727
+--- !u!114 &4005193144941211418
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -480,13 +480,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b8ec53d14c8198438714d59b6930290, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  move: {fileID: 0}
-  character: {fileID: 0}
-  index: []
-  bonuspoint: []
-  dame: 0
-  health: 0
-  speed: 0
 --- !u!1 &5612474334171528951
 GameObject:
   m_ObjectHideFlags: 0

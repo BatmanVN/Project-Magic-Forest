@@ -13252,7 +13252,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpBonus: {fileID: 1600842432}
   PointBonus: {fileID: 1387871367}
-  delay: 0.4
   jumpEnabled: 0
 --- !u!61 &906976891
 BoxCollider2D:
@@ -17990,6 +17989,50 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4005193144941211418, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+      propertyPath: move
+      value: 
+      objectReference: {fileID: 929075730}
+    - target: {fileID: 4005193144941211418, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 929075734}
+    - target: {fileID: 4005193144941211418, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005193144941211418, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+      propertyPath: timeBonus
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005193144941211418, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+      propertyPath: healAmount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005193144941211418, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+      propertyPath: speedBonus
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005193144941211418, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+      propertyPath: bonusComponent
+      value: 
+      objectReference: {fileID: 1600842434}
+    - target: {fileID: 4005193144941211418, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+      propertyPath: index.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005193144941211418, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+      propertyPath: index.Array.data[0]
+      value: 
+      objectReference: {fileID: 1956073759}
+    - target: {fileID: 4005193144941211418, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+      propertyPath: index.Array.data[1]
+      value: 
+      objectReference: {fileID: 1696779312}
+    - target: {fileID: 4005193144941211418, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+      propertyPath: index.Array.data[2]
+      value: 
+      objectReference: {fileID: 1059465300}
     - target: {fileID: 4494275664301464282, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
       propertyPath: spawn
       value: 0
@@ -18138,6 +18181,10 @@ PrefabInstance:
       propertyPath: index.Array.data[2]
       value: 
       objectReference: {fileID: 1059465300}
+    - target: {fileID: 7870081722653476929, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+      propertyPath: bonusSpeed
+      value: 
+      objectReference: {fileID: 1600842434}
     - target: {fileID: 8154746538907212035, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -860.51
@@ -24791,6 +24838,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c37c98d08adb55f4bbd1d676bdc4eba7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1600842434 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4005193144941211418, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+  m_PrefabInstance: {fileID: 1104657082}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b8ec53d14c8198438714d59b6930290, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1615689908
@@ -33732,7 +33790,7 @@ MonoBehaviour:
   - {fileID: 1696779312}
   - {fileID: 1059465300}
   bonusCount: 0
-  bonusDisAble: 0
+  bonusEnabled: 0
 --- !u!1 &2053291371
 GameObject:
   m_ObjectHideFlags: 0

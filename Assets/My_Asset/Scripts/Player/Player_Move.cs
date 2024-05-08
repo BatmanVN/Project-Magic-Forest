@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player_Move : MonoBehaviour
 {
     private const string isWalkingParaname = "isWalking";
+    [SerializeField] private BonusExtra bonusSpeed;
     [SerializeField] private Rigidbody2D player2D;
     [SerializeField] private SpriteRenderer playerSprite;
     [SerializeField] private Animator animator;
@@ -22,6 +23,10 @@ public class Player_Move : MonoBehaviour
         var direction = moveDirection;
         direction.y = player2D.velocity.y;
         var isWalking = isLeft == true || isRight == true;
+        if (bonusSpeed.speedIndex == true)
+        {
+            direction *= bonusSpeed.Speed;
+        }
         if (isWalking)
         {
             var scale = transform.localScale;

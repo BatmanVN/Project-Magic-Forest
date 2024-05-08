@@ -8,7 +8,7 @@ public class BonusIndex : MonoBehaviour
     [SerializeField] private BonusPoint bonusPoint;
     [SerializeField] private GameObject[] bonusIndex;
     public int bonusCount;
-    public bool bonusDisAble;
+    public bool bonusEnabled;
     private void RandomBonus()
     {
         if (bonusPoint.jumpEnabled == true)
@@ -16,6 +16,7 @@ public class BonusIndex : MonoBehaviour
             bonusCount = Random.Range(0, bonusIndex.Length);
             GameObject selectIndex = bonusIndex[bonusCount];
             selectIndex.SetActive(true);
+            bonusEnabled = true;
         }
     }
     private void Update()
