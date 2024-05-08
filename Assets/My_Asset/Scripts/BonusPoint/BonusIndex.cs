@@ -5,22 +5,25 @@ using UnityEngine;
 
 public class BonusIndex : MonoBehaviour
 {
-    [SerializeField] private BonusPoint bonusPoint;
+    [SerializeField] private Jump_BonusPoint bonusPoint;
     [SerializeField] private GameObject[] bonusIndex;
     public int bonusCount;
     public bool bonusEnabled;
     private void RandomBonus()
     {
-        if (bonusPoint.jumpEnabled == true)
+        if (bonusPoint.isJumpBonus == true)
         {
-            bonusCount = Random.Range(0, bonusIndex.Length);
             GameObject selectIndex = bonusIndex[bonusCount];
             selectIndex.SetActive(true);
-            bonusEnabled = true;
+            bonusPoint.isJumpBonus = false;
         }
     }
     private void Update()
     {
-         RandomBonus();
+        RandomBonus();
+    }
+    private void Start()
+    {
+        bonusCount = Random.Range(0, bonusIndex.Length);
     }
 }

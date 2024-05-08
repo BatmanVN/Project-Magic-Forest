@@ -6,6 +6,7 @@ public class BonusExtra : MonoBehaviour
 {
     [SerializeField] private MonoBehaviour bonusComponent;
     [SerializeField] private HealthCharacter character;
+    [SerializeField] private Attack_Player attacker;
     [SerializeField] private GameObject[] index;
     [SerializeField] private float Defdame;
     [SerializeField] private float healAmount;
@@ -22,12 +23,12 @@ public class BonusExtra : MonoBehaviour
             defIndex = true;
             index[0].SetActive(false);
         }
-        if(Player.CompareTag("HealIndex"))
+        else if(Player.CompareTag("HealIndex"))
         {
             healIndex = true;
             index[1].SetActive(false);
         }
-        if(Player.CompareTag("SpeedIndex"))
+        else if(Player.CompareTag("SpeedIndex"))
         {
             speedIndex = true;
             index[2].SetActive(false);
@@ -37,7 +38,8 @@ public class BonusExtra : MonoBehaviour
     {
         if (defIndex == true)
         {
-            character.TakeDame(Defdame);
+            attacker.isAttk = false;
+            Debug.Log("Def");
         }
         if(healIndex == true)
         {
@@ -46,6 +48,7 @@ public class BonusExtra : MonoBehaviour
         if(speedIndex == true)
         {
             Speed = speedBonus;
+            Debug.Log("speed");
         }
         if(defIndex == false || healIndex == false || speedIndex == false)
         {
@@ -58,21 +61,27 @@ public class BonusExtra : MonoBehaviour
         {
             yield return new WaitForSeconds(timeBonus);
             defIndex = false;
+            Debug.Log(timeBonus);
         }
         if(healIndex == true)
         {
             yield return new WaitForSeconds(timeBonus);
             healIndex = false;
+            Debug.Log(timeBonus);
         }
         if (speedIndex == true)
         {
             yield return new WaitForSeconds(timeBonus);
             speedIndex = false;
-        }    
+            Debug.Log(timeBonus);
+        }
     }
     private void Update()
     {
         BonusIndex();
+    }
+    private void Start()
+    {
         bonusTime();
     }
 }

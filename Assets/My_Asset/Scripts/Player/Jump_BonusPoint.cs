@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Jump_BonusPoint : MonoBehaviour
 {
+    [SerializeField] private GameObject PointBonus;
     private const string jumpbonusParaname = "isBonus";
     [SerializeField] private BonusPoint jumpPoint;
     [SerializeField] private Vector2 jumpBonusPoint;
@@ -16,16 +17,21 @@ public class Jump_BonusPoint : MonoBehaviour
         var bonus = jumpBonusPoint;
         if (bonusPoint.jumpEnabled == true)
         {
-            isJumpBonus = true;
             bonus *= 2;
             player2D.velocity = bonus;
             playerAnim.SetTrigger(jumpbonusParaname);
+            isJumpBonus = true;
+            Destroy(PointBonus);
             bonusPoint.jumpEnabled = false;
         }
         if (bonusPoint.jumpEnabled == false)
         {
             return;
         }
+        //if(isJumpBonus == true)
+        //{
+        //    Destroy(PointBonus);
+        //}
     }
     private void Update()
     {

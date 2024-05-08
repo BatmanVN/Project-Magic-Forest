@@ -10,6 +10,8 @@ public class Player_Move : MonoBehaviour
     [SerializeField] private SpriteRenderer playerSprite;
     [SerializeField] private Animator animator;
     [SerializeField] private Vector2 moveDirection;
+    [SerializeField] private float speed;
+    [SerializeField] private float defaultSpeed;
     public bool isFlipKey;
     public bool isLeft;
     public bool isRight;
@@ -18,15 +20,15 @@ public class Player_Move : MonoBehaviour
     public bool stopGroundRight;
     public bool isFlip = false;
 
+    public void BonusSpeed()
+    {
+        
+    }
     private void PlayerMove()
     {
         var direction = moveDirection;
         direction.y = player2D.velocity.y;
         var isWalking = isLeft == true || isRight == true;
-        if (bonusSpeed.speedIndex == true)
-        {
-            direction *= bonusSpeed.Speed;
-        }
         if (isWalking)
         {
             var scale = transform.localScale;

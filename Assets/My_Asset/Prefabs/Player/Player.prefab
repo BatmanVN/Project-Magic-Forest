@@ -87,7 +87,6 @@ GameObject:
   - component: {fileID: 2964668129651964004}
   - component: {fileID: 4494275664301464282}
   - component: {fileID: 8479484245027556633}
-  - component: {fileID: 4005193144941211418}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -371,6 +370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff51bffb6b8882e44bb5d566bc6fc771, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bonusSpeed: {fileID: 0}
   player2D: {fileID: 4913562842587177108}
   playerSprite: {fileID: 1797759950627781869}
   animator: {fileID: 5396419360059184052}
@@ -462,24 +462,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c37c98d08adb55f4bbd1d676bdc4eba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PointBonus: {fileID: 0}
   jumpPoint: {fileID: 0}
   jumpBonusPoint: {x: 0, y: 0}
   player2D: {fileID: 0}
   bonusPoint: {fileID: 0}
   playerAnim: {fileID: 0}
   isJumpBonus: 0
---- !u!114 &4005193144941211418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2363234522061934474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b8ec53d14c8198438714d59b6930290, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5612474334171528951
 GameObject:
   m_ObjectHideFlags: 0

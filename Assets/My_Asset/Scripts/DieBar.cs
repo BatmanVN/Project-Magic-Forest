@@ -17,14 +17,20 @@ public class DieBar : MonoBehaviour
         if(character.isDead)
         {
             dieBar.SetActive(true);
-            if (home)
-            {
-                SceneManager.LoadScene(sceneHome);
-            }
-            if (spawn)
-            {
-                SceneManager.LoadScene(sceneSpawn);
-            }
+            Time.timeScale = 0;
+        }
+    }
+    private void ClickButton()
+    {
+        if (home)
+        {
+            SceneManager.LoadScene(sceneHome);
+            Time.timeScale = 1;
+        }
+        if (spawn)
+        {
+            SceneManager.LoadScene(sceneSpawn);
+            Time.timeScale = 1;
         }
     }
     public void HomeButton()
@@ -39,6 +45,6 @@ public class DieBar : MonoBehaviour
     private void Update()
     {
         EnableDieBar();
-
+        ClickButton();
     }
 }
