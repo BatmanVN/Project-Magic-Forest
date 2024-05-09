@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Player_jump : MonoBehaviour
 {
+    [SerializeField] private Player_beAttack beAttack;
     [SerializeField] private Player_Move moveComponent;
     [SerializeField] private Rigidbody2D player2D;
     [SerializeField] private SpriteRenderer playerSprite;
@@ -33,6 +34,19 @@ public class Player_jump : MonoBehaviour
         if (collision.CompareTag("Canjump"))
         {
             isGroundDouble = false;
+        }
+    }
+    private void JumpBeAttk()
+    {
+        if (beAttack.beAttack == true)
+        {
+            jumpDirection *= beAttack.JumpRec;
+            player2D.velocity = jumpDirection;
+            beAttack.beAttack = false;
+        }
+        else
+        {
+            return;
         }
     }
     private void Start()
@@ -112,6 +126,7 @@ public class Player_jump : MonoBehaviour
     {
         KeyJump();
         RestJump();
+        JumpBeAttk();
     }
     
 }

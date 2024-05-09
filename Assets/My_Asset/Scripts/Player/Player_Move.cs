@@ -5,13 +5,13 @@ using UnityEngine;
 public class Player_Move : MonoBehaviour
 {
     private const string isWalkingParaname = "isWalking";
-    [SerializeField] private BonusExtra bonusSpeed;
+    [SerializeField] private BonusSpeed speedUp;
+    [SerializeField] private Player_BonusSPD bonusSPD;
     [SerializeField] private Rigidbody2D player2D;
     [SerializeField] private SpriteRenderer playerSprite;
     [SerializeField] private Animator animator;
     [SerializeField] private Vector2 moveDirection;
-    [SerializeField] private float speed;
-    [SerializeField] private float defaultSpeed;
+    [SerializeField] private float speedDefault;
     public bool isFlipKey;
     public bool isLeft;
     public bool isRight;
@@ -19,11 +19,6 @@ public class Player_Move : MonoBehaviour
     public bool stopGroundLeft;
     public bool stopGroundRight;
     public bool isFlip = false;
-
-    public void BonusSpeed()
-    {
-        
-    }
     private void PlayerMove()
     {
         var direction = moveDirection;
@@ -35,15 +30,32 @@ public class Player_Move : MonoBehaviour
             isFlip = isLeft == true;
             if (isFlip)
             {
-                direction.x *= -1;
                 scale.x = -2;
+                if (speedUp.speedUp == true)
+                {
+                    direction.x *= -(speedDefault * bonusSPD.SpeedBonus);
+                }
+                else if(speedUp.speedUp == false)
+                {
+                    direction.x *= -speedDefault;
+                }
             }
             else
             {
                 scale.x = 2;
+                if (speedUp.speedUp == true)
+                {
+                    direction.x *= (speedDefault * bonusSPD.SpeedBonus);
+
+                }
+                else if (speedUp.speedUp == false)
+                {
+                    direction.x *= speedDefault;
+                }
             }
             transform.localScale = scale;
             player2D.velocity = direction;
+            animator.SetBool(isWalkingParaname, true);
         }
     }
     private void KeyMove()
@@ -55,21 +67,40 @@ public class Player_Move : MonoBehaviour
         {
             isFlip = Input.GetKey(KeyCode.A) || isLeft == true;
             var scale = transform.localScale;
-            if(isFlip)
+            if (isFlip)
             {
-                direction.x *= -1;
                 scale.x = -2;
-            }    
+                if (speedUp.speedUp == true)
+                {
+                    direction.x *= -(speedDefault * bonusSPD.SpeedBonus);
+                    Debug.Log(direction.x);
+                }
+                else if (speedUp.speedUp == false)
+                {
+                    direction.x *= -speedDefault;
+                }
+            }
             else
             {
                 scale.x = 2;
+                if (speedUp.speedUp == true)
+                {
+                    direction.x *= (speedDefault * bonusSPD.SpeedBonus);
+                    Debug.Log(direction.x);
+                }
+                else if (speedUp.speedUp == false)
+                {
+                    direction.x *= speedDefault;
+                }
             }
             transform.localScale = scale;
             player2D.velocity = direction;
+            animator.SetBool(isWalkingParaname, true);
         }
         if(!keyWalking)
         {
             player2D.velocity = new Vector2(direction.x*0,direction.y);
+            animator.SetBool(isWalkingParaname, false);
         }
     }
     public void Stopmove()

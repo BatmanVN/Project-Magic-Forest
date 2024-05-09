@@ -6,18 +6,16 @@ public class Player_beAttack : MonoBehaviour
 {
     private const string beAttackParaname = "beAttack";
     [SerializeField] private HealthCharacter character;
-    [SerializeField] private Attack_Player attacker;
     [SerializeField] private Animator playerAnim;
-    //private float takeDame;
-    private void BeAttack()
+    [SerializeField] private float jumpRec;
+    public float JumpRec { get => jumpRec; private set => jumpRec = value; }
+    public bool beAttack;
+    private void OnTriggerEnter2D(Collider2D player)
     {
-        if(attacker.isAttk == true)
+        if(player.CompareTag("KinghtMonster"))
         {
             playerAnim.SetTrigger(beAttackParaname);
+            beAttack = true;
         }
-    }
-    private void Update()
-    {
-        BeAttack();
     }
 }
