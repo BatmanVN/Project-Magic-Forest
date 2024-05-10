@@ -16,6 +16,7 @@ public class Player_jump : MonoBehaviour
     [SerializeField] private float maxJump;
     [SerializeField] private float maxJumpDouble;
     [SerializeField] private float jumpLeft;
+    [SerializeField] private float jumpHeight;
     bool isGroundDouble;
     bool isGrounded;
     bool isJumping;
@@ -36,11 +37,11 @@ public class Player_jump : MonoBehaviour
             isGroundDouble = false;
         }
     }
-    private void JumpBeAttk()
+    public void JumpBeAttk(float jump)
     {
         if (beAttack.beAttack == true)
         {
-            jumpDirection *= beAttack.JumpRec;
+            jumpDirection *= jump;
             player2D.velocity = jumpDirection;
             beAttack.beAttack = false;
         }
@@ -127,7 +128,6 @@ public class Player_jump : MonoBehaviour
     {
         KeyJump();
         RestJump();
-        JumpBeAttk();
     }
     
 }

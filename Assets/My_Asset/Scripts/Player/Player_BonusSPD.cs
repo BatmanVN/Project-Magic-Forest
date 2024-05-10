@@ -5,26 +5,23 @@ using UnityEngine;
 public class Player_BonusSPD : MonoBehaviour
 {
     [SerializeField] private Player_BonusSPD disable;
-    [SerializeField] private BonusSpeed bonusSpeed;
+    [SerializeField] private Player_Move moveSpeed;
     [SerializeField] private Animator speedAnim;
     [SerializeField] private GameObject speedObj;
     [SerializeField] private float timeBonus;
     [SerializeField] private float speedBonus;
-    public float SpeedBonus { get => speedBonus; private set => speedBonus = value; }
 
-    private void SpeedEffect()
+    public void EnableEffect()
     {
-        if(bonusSpeed.speedUp == true)
-        {
+            moveSpeed.EnableSpeedUP(speedBonus);
             speedObj.SetActive(true);
             speedAnim.SetTrigger("speedEffect");
             StartCoroutine(BonusTime());
-        }
     }
     private void Desttroybonus()
     {
         speedObj.SetActive(false);
-        bonusSpeed.speedUp = false;
+        moveSpeed.EnableSpeedUP(-speedBonus);
         Destroy(disable);
     }
     private IEnumerator BonusTime()
@@ -34,6 +31,6 @@ public class Player_BonusSPD : MonoBehaviour
     }
     private void Update()
     {
-        SpeedEffect();
+        
     }
 }

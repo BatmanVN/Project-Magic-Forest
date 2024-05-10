@@ -6,25 +6,26 @@ public class Player_BonusDef : MonoBehaviour
 {
     private const string defEffectParaname = "defEffect";
     [SerializeField] private Player_BonusDef player_bonusDef;
-    [SerializeField] private BonusDef bonusDef;
+    [SerializeField] private HealthCharacter takeDame;
     [SerializeField] private GameObject defObj;
-    [SerializeField] private Attack_Player attack_Player;
+    [SerializeField] private Player_beAttack beAttack;
     [SerializeField] private Animator defEffect;
+    [SerializeField] private float dameDef;
     [SerializeField] private float timeBonus;
-    private void BonusDEF()
+    public bool enableEffect;
+    public void BonusDEF()
     {
-        if(bonusDef.eatDef == true)
-        {
             defObj.SetActive(true);
             defEffect.SetTrigger(defEffectParaname);
+            takeDame?.TakeDame(dameDef);
+            enableEffect = true;
             StartCoroutine(TimeBonus());
-        }
     }
     private void DisableEffect()
     {
+        enableEffect = false;
         player_bonusDef.enabled = false;
         defObj.SetActive(false);
-        bonusDef.eatDef = false;
     }
     private IEnumerator TimeBonus()
     {
@@ -33,6 +34,6 @@ public class Player_BonusDef : MonoBehaviour
     }
     private void Update()
     {
-        BonusDEF();
+        
     }
 }

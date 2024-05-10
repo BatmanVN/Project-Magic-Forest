@@ -6,14 +6,14 @@ public class BonusDef : MonoBehaviour
 {
     [SerializeField] private GameObject defObj;
     [SerializeField] private GameObject effect;
-    public bool eatDef;
+    [SerializeField] private Player_BonusDef bonusDef;
     private void OnTriggerEnter2D(Collider2D bonusSpeed)
     {
         if (bonusSpeed.CompareTag("Player"))
         {
-            eatDef = true;
             defObj.SetActive(false);
             effect.SetActive(false);
+            bonusDef?.BonusDEF();
         }
     }
 }

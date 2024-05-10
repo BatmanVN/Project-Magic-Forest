@@ -13526,7 +13526,7 @@ Transform:
   m_GameObject: {fileID: 908255525}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 75.58022, y: 0.80999994, z: -9.597078}
+  m_LocalPosition: {x: 75.57022, y: 0.81999993, z: -9.597078}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17233,7 +17233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedObj: {fileID: 1059465300}
   effect: {fileID: 2063446684}
-  speedUp: 0
+  bonusSPD: {fileID: 1600842434}
 --- !u!1 &1069335614
 GameObject:
   m_ObjectHideFlags: 0
@@ -17921,6 +17921,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6409066554987826123, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
     - target: {fileID: -4396169491694653612, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+      propertyPath: bonusDef
+      value: 
+      objectReference: {fileID: 1600842438}
+    - target: {fileID: -4396169491694653612, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+      propertyPath: takeDame
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -4396169491694653612, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
       propertyPath: character
       value: 
       objectReference: {fileID: 929075734}
@@ -17982,11 +17990,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1208243408123778392, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 68.11
+      value: 68.1
       objectReference: {fileID: 0}
     - target: {fileID: 1208243408123778392, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.01
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 1208243408123778392, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18061,6 +18069,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 629424707}
     - target: {fileID: 1625543700040714337, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+      propertyPath: moveSpeed
+      value: 
+      objectReference: {fileID: 929075730}
+    - target: {fileID: 1625543700040714337, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
       propertyPath: speedAnim
       value: 
       objectReference: {fileID: 629424710}
@@ -18074,7 +18086,7 @@ PrefabInstance:
       objectReference: {fileID: 1059465305}
     - target: {fileID: 1625543700040714337, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
       propertyPath: speedBonus
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1658767248055020102, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
       propertyPath: move
@@ -18415,7 +18427,7 @@ PrefabInstance:
     - target: {fileID: 7870081722653476929, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
       propertyPath: speedUp
       value: 
-      objectReference: {fileID: 1059465305}
+      objectReference: {fileID: 1600842434}
     - target: {fileID: 7870081722653476929, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
       propertyPath: bonusSPD
       value: 
@@ -18517,9 +18529,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 291836880}
     - target: {fileID: 9074676333822450332, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
-      propertyPath: bonusDef
+      propertyPath: dameDef
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9074676333822450332, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+      propertyPath: beAttack
       value: 
-      objectReference: {fileID: 1956073764}
+      objectReference: {fileID: 1600842428}
+    - target: {fileID: 9074676333822450332, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+      propertyPath: bonusDef
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9074676333822450332, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+      propertyPath: takeDame
+      value: 
+      objectReference: {fileID: 929075734}
     - target: {fileID: 9074676333822450332, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
       propertyPath: defEffect
       value: 
@@ -30099,7 +30123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defObj: {fileID: 1956073759}
   effect: {fileID: 2063446684}
-  eatDef: 0
+  bonusDef: {fileID: 1600842438}
 --- !u!1 &1966875802
 GameObject:
   m_ObjectHideFlags: 0
@@ -30682,7 +30706,7 @@ Transform:
   m_GameObject: {fileID: 2021252185}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 75.58022, y: 0.80999994, z: -9.597078}
+  m_LocalPosition: {x: 75.57022, y: 0.81999993, z: -9.597078}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

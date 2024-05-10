@@ -5,8 +5,7 @@ using UnityEngine;
 public class Player_Move : MonoBehaviour
 {
     private const string isWalkingParaname = "isWalking";
-    [SerializeField] private BonusSpeed speedUp;
-    [SerializeField] private Player_BonusSPD bonusSPD;
+    [SerializeField] private Player_BonusSPD speedUp;
     [SerializeField] private Rigidbody2D player2D;
     [SerializeField] private SpriteRenderer playerSprite;
     [SerializeField] private Animator animator;
@@ -19,6 +18,11 @@ public class Player_Move : MonoBehaviour
     public bool stopGroundLeft;
     public bool stopGroundRight;
     public bool isFlip = false;
+
+    public void EnableSpeedUP(float speedUp)
+    {
+        speedDefault += speedUp;
+    }
     private void PlayerMove()
     {
         var direction = moveDirection;
@@ -31,27 +35,12 @@ public class Player_Move : MonoBehaviour
             if (isFlip)
             {
                 scale.x = -2;
-                if (speedUp.speedUp == true)
-                {
-                    direction.x *= -(speedDefault * bonusSPD.SpeedBonus);
-                }
-                else if(speedUp.speedUp == false)
-                {
-                    direction.x *= -speedDefault;
-                }
+                direction.x *= -speedDefault;
+                
             }
             else
             {
                 scale.x = 2;
-                if (speedUp.speedUp == true)
-                {
-                    direction.x *= (speedDefault * bonusSPD.SpeedBonus);
-
-                }
-                else if (speedUp.speedUp == false)
-                {
-                    direction.x *= speedDefault;
-                }
             }
             transform.localScale = scale;
             player2D.velocity = direction;
@@ -63,35 +52,18 @@ public class Player_Move : MonoBehaviour
         var keyWalking = Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D);
         var direction = moveDirection;
         direction.y = player2D.velocity.y;
-        if (keyWalking )
+        if (keyWalking)
         {
             isFlip = Input.GetKey(KeyCode.A) || isLeft == true;
             var scale = transform.localScale;
             if (isFlip)
             {
                 scale.x = -2;
-                if (speedUp.speedUp == true)
-                {
-                    direction.x *= -(speedDefault * bonusSPD.SpeedBonus);
-                    Debug.Log(direction.x);
-                }
-                else if (speedUp.speedUp == false)
-                {
-                    direction.x *= -speedDefault;
-                }
+                direction.x *= -speedDefault;
             }
             else
             {
                 scale.x = 2;
-                if (speedUp.speedUp == true)
-                {
-                    direction.x *= (speedDefault * bonusSPD.SpeedBonus);
-                    Debug.Log(direction.x);
-                }
-                else if (speedUp.speedUp == false)
-                {
-                    direction.x *= speedDefault;
-                }
             }
             transform.localScale = scale;
             player2D.velocity = direction;

@@ -6,14 +6,15 @@ public class BonusSpeed : MonoBehaviour
 {
     [SerializeField] private GameObject speedObj;
     [SerializeField] private GameObject effect;
-    public bool speedUp;
+    [SerializeField] private Player_BonusSPD bonusSPD; 
+
     private void OnTriggerEnter2D(Collider2D bonusSpeed)
     {
         if(bonusSpeed.CompareTag("Player"))
         {
-            speedUp = true;
             speedObj.SetActive(false);
             effect.SetActive(false);
+            bonusSPD?.EnableEffect();
         }
     }
 }
