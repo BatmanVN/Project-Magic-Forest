@@ -103,6 +103,7 @@ public class Player_jump : MonoBehaviour
                 //player2D.AddForce(jumpRection);
                 player2D.velocity = jumpRection;
                 jumpLeft--;
+                //animator.SetTrigger("notJump");
             }
             isJumping = true;
         }

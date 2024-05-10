@@ -14,30 +14,40 @@ public class Attack_Player : MonoBehaviour
 
     private const string isAttackParaname = "isAttack";
     [SerializeField] private Animator animator;
-    [SerializeField] private float dame;
+    [SerializeField] private float dameDefautl;
+    [SerializeField] private float currentDame;
     [SerializeField] private HealthCharacter character;
     //[SerializeField] private Player_Move playerFlip;
-    public float delay;
     public bool isAttk;
-    public float Dame { get => dame; private set => dame = value; }
     private void TakeDame() //Plan 1
     {
         var hit = Physics2D.OverlapCircle(swordPoint.position, rangeAttk, player);
-        var scale = enemyTransform.localScale;
+        var scale = transform.localScale;
         if(isAttk == false)
         {
             if (hit)
             {
-                if(bonusDef.eatDef == true)
+                //for (float angle = 0; angle < 90; angle++)
+                //{
+                //    float radiusLeft = angle * Mathf.Rad2Deg;
+                //    float x = Mathf.Cos(radiusLeft) * rangeAttk;
+                //    float y = Mathf.Sin(radiusLeft) * rangeAttk;
+                //    scale.x = -(float)1.4f;
+                //}
+                //for (float angle = 90; angle < 180; angle++)
+                //{
+                //    float radiusRigt = angle * Mathf.Rad2Deg;
+                //    float x = Mathf.Cos(radiusRigt) * rangeAttk;
+                //    float y = Mathf.Sin(radiusRigt) * rangeAttk;
+                //    scale.x = (float)1.4f;
+                //}
+                if (bonusDef.eatDef == false)
                 {
-                    Dame = 0;
-                }
-                else if(bonusDef.eatDef == false)
-                {
-                    Dame = 3;
+                    currentDame = dameDefautl;
                 }
                 animator.SetTrigger(isAttackParaname);
-                character.TakeDame(Dame);
+                character.TakeDame(currentDame);
+                transform.localScale = scale;
                 isAttk = true;
             }
         }
@@ -73,9 +83,9 @@ public class Attack_Player : MonoBehaviour
     {
         TakeDame();
     }
-    //public void OnDrawGizmos()
-    //{
-    //    Gizmos.color = Color.red;
-    //    Gizmos.DrawWireSphere(swordPoint.position, rangeAttk);
-    //}
+    public void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(swordPoint.position, rangeAttk);
+    }
 }
