@@ -4,47 +4,73 @@ using UnityEngine;
 
 public class AutoMove : MonoBehaviour
 {
+    [SerializeField] private Attack_Player monster;
     [SerializeField] private GameObject pointA;
     [SerializeField] private GameObject pointB;
     [SerializeField] private Rigidbody2D monster2D;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Animator monsterAnim;
     [SerializeField] private float speed;
-    private Transform currentPoint;    
-    private void AutoMoveMonster()
+    private Transform currentPoint;
+    //private void AutoMoveMonster() //Plan 1 Sida
+    //{
+    //    var scale = transform.localScale;
+    //    if (scale.x > 0  && monster.isAttk == true)
+    //    {
+    //        currentPoint = pointB.transform;
+    //        monster2D.velocity = new Vector2(speed, 0);
+    //    }
+    //    if (scale.x < 0 && monster.isAttk == true)
+    //    {
+    //        currentPoint = pointA.transform;
+    //        monster2D.velocity = new Vector2(-speed, 0);
+    //    }
+    //    if (Vector2.Distance(transform.position, currentPoint.position) < 0.2f) // khi cham diem B
+    //    {
+    //        currentPoint = pointA.transform;
+    //        monster2D.velocity = new Vector2(-speed, 0);
+    //        scale.x = (float)-1.4;
+    //    }
+    //    if (Vector2.Distance(transform.position, currentPoint.position) < 0.2f) // khi cham diem A
+    //    {
+    //        currentPoint = pointB.transform;
+    //        monster2D.velocity = new Vector2(speed, 0);
+    //        scale.x = (float)1.4;
+    //    }
+    //    transform.localScale = scale;
+    //}
+    private void StartMove() //Plan 2 bot siDA
     {
         var scale = transform.localScale;
-       if(currentPoint == pointA.transform)
-        {
-            monster2D.velocity = new Vector2(-speed,0);
-        }
-       if(currentPoint == pointB.transform)
-        {
-            monster2D.velocity = new Vector2(speed,0);
-        }
-       if(Vector2.Distance(transform.position,currentPoint.position) < 1f && currentPoint == pointA.transform)
-        {
-            currentPoint = pointB.transform;
-            scale.x = (float)1.4;
-        }
-       if(Vector2.Distance(transform.position,currentPoint.position)< 1f && currentPoint == pointB.transform)
+        if (Vector2.Distance(transform.position, pointB.transform.position) < 0.2f)
         {
             currentPoint = pointA.transform;
-            scale.x = (float)-1.4;
+            scale.x *= -1;
         }
-       transform.localScale = scale;
-    }
-    private void StartMove()
-    {
-        currentPoint = pointB.transform;
+        if (Vector2.Distance(transform.position, pointA.transform.position) < 0.2f)
+        {
+            currentPoint = pointB.transform;
+            scale.x *= -1;
+        }
+        if (scale.x > 0 && monster.isAttk == true)
+        {
+            currentPoint = pointB.transform;
+        }
+        if (scale.x < 0  && monster.isAttk == true)
+        {
+            currentPoint = pointA.transform;
+        }
+        transform.position = Vector2.MoveTowards(transform.position, currentPoint.transform.position, speed * Time.deltaTime);
+        transform.localScale = scale;
     }
     private void Start()
     {
-        monster2D = GetComponent<Rigidbody2D>();
-        StartMove();
+        currentPoint = pointB.transform;
+        //monster2D.velocity = new Vector2(speed, 0);
     }
     private void Update()
     {
-        AutoMoveMonster();
+        StartMove();
+        //AutoMoveMonster();
     }
 }

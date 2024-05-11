@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4faf74db18fc58e4ab4536fd90875b78
+guid: 356ef9b0e0494424cbeaf1b9f8588a4b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -45,7 +45,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -108,112 +108,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Gate1_1
-      rect:
-        serializedVersion: 2
-        x: 1181
-        y: 0
-        width: 253
-        height: 239
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6d615470168995c47a759cac508ae143
-      internalID: -1476638847
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Gate1 1_0
-      rect:
-        serializedVersion: 2
-        x: 742
-        y: 145
-        width: 105
-        height: 168
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6949cf60c6a86644c83bcdbc58038a8b
-      internalID: -1026563701
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Gate1 1_1
-      rect:
-        serializedVersion: 2
-        x: 138
-        y: 309
-        width: 534
-        height: 465
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b2739f37b201ec14f9aabf72d04247b0
-      internalID: 1728954786
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Gate1 1_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1016
-        width: 108
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 65f8bd664cf28394698d93a072da94c1
-      internalID: 1076759379
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Gate1 1_3
-      rect:
-        serializedVersion: 2
-        x: 1942
-        y: 984
-        width: 291
-        height: 86
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c256ba6ae5236514e8242f87edcda444
-      internalID: -790745286
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -224,13 +119,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Gate1 1_0: -1026563701
-      Gate1 1_1: 1728954786
-      Gate1 1_2: 1076759379
-      Gate1 1_3: -790745286
-      Gate1_0: -484314849
-      Gate1_1: -1476638847
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

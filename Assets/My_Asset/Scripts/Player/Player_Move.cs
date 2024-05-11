@@ -41,6 +41,7 @@ public class Player_Move : MonoBehaviour
             else
             {
                 scale.x = 2;
+                direction.x *= speedDefault;
             }
             transform.localScale = scale;
             player2D.velocity = direction;
@@ -64,6 +65,7 @@ public class Player_Move : MonoBehaviour
             else
             {
                 scale.x = 2;
+                direction.x *= speedDefault;
             }
             transform.localScale = scale;
             player2D.velocity = direction;

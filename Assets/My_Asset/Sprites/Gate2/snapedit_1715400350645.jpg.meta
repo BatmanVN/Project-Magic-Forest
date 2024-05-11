@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4faf74db18fc58e4ab4536fd90875b78
+guid: 2096807b27d065a48a1f19c470f67ec3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -45,7 +45,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Gate1_1
+      name: snapedit_1715400350645_0
       rect:
         serializedVersion: 2
-        x: 1181
+        x: 822
         y: 0
-        width: 253
-        height: 239
+        width: 175
+        height: 280
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d615470168995c47a759cac508ae143
-      internalID: -1476638847
+      spriteID: 760a84e5674f9984c8e9b44628490b02
+      internalID: -766963165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gate1 1_0
+      name: snapedit_1715400350645_1
       rect:
         serializedVersion: 2
-        x: 742
-        y: 145
-        width: 105
-        height: 168
+        x: 586
+        y: 0
+        width: 271
+        height: 161
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6949cf60c6a86644c83bcdbc58038a8b
-      internalID: -1026563701
+      spriteID: 1609a6b5a9958e74e8b93d6dc4eec490
+      internalID: 243633421
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gate1 1_1
+      name: snapedit_1715400350645_3
       rect:
         serializedVersion: 2
-        x: 138
-        y: 309
-        width: 534
-        height: 465
+        x: 960
+        y: 0
+        width: 37
+        height: 200
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,50 +166,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2739f37b201ec14f9aabf72d04247b0
-      internalID: 1728954786
+      spriteID: 0662fab25bfe8514087aa72aeed29e1f
+      internalID: -2084241037
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gate1 1_2
+      name: snapedit_1715400350645_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1016
-        width: 108
-        height: 64
+        x: 825
+        y: 163
+        width: 172
+        height: 115
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65f8bd664cf28394698d93a072da94c1
-      internalID: 1076759379
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Gate1 1_3
-      rect:
-        serializedVersion: 2
-        x: 1942
-        y: 984
-        width: 291
-        height: 86
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c256ba6ae5236514e8242f87edcda444
-      internalID: -790745286
+      spriteID: b9bb398d3ddb7954d964d2b6cab94b78
+      internalID: 1446289815
       vertices: []
       indices: 
       edges: []
@@ -225,12 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Gate1 1_0: -1026563701
-      Gate1 1_1: 1728954786
-      Gate1 1_2: 1076759379
-      Gate1 1_3: -790745286
-      Gate1_0: -484314849
-      Gate1_1: -1476638847
+      snapedit_1715400350645_0: -766963165
+      snapedit_1715400350645_1: 243633421
+      snapedit_1715400350645_2: 1446289815
+      snapedit_1715400350645_3: -2084241037
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

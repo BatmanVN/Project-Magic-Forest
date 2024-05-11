@@ -11,7 +11,6 @@ public class CrossEnable : MonoBehaviour
     {
         if(cross.CompareTag("Player"))
         {
-            //crossEnable = true;
             crossObject.SetActive(true);
         }
     }
@@ -21,31 +20,6 @@ public class CrossEnable : MonoBehaviour
         if(cross.CompareTag("Player"))
         {
             crossObject.SetActive(false);
-            //crossEnable = false;
         }
     }
-    //private void CrossAppear()
-    //{
-    //    if(crossEnable == true)
-    //    {
-    //        crossObject.SetActive(true);
-    //    }
-    //}
-    //private void CrossDisable()
-    //{
-    //    if (crossEnable == false)
-    //    {
-    //        crossObject.SetActive(false);
-    //    }
-    //}
-    //private IEnumerator Cross()
-    //{
-    //    yield return new WaitForSeconds(delay);
-    //    CrossDisable();
-    //}
-    //private void Update()
-    //{
-    //    CrossAppear();
-    //    StartCoroutine(Cross());
-    //}
 }

@@ -536,7 +536,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 3409384953111840695}
+  bonusDef: {fileID: 0}
+  monster: []
   playerAnim: {fileID: 5396419360059184052}
+  jump: {fileID: 0}
   jumpRec: 0
   beAttack: 0
 --- !u!114 &2796690226886084481
@@ -592,7 +595,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedUp: {fileID: 0}
-  bonusSPD: {fileID: 0}
   player2D: {fileID: 4913562842587177108}
   playerSprite: {fileID: 1797759950627781869}
   animator: {fileID: 5396419360059184052}
@@ -705,7 +707,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disable: {fileID: 0}
-  bonusSpeed: {fileID: 0}
+  moveSpeed: {fileID: 0}
   speedAnim: {fileID: 0}
   speedObj: {fileID: 0}
   timeBonus: 0
@@ -739,11 +741,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player_bonusDef: {fileID: 0}
-  bonusDef: {fileID: 0}
+  takeDame: {fileID: 0}
   defObj: {fileID: 0}
-  attack_Player: {fileID: 0}
+  beAttack: {fileID: 0}
   defEffect: {fileID: 0}
+  dameDef: 0
   timeBonus: 0
+  enableEffect: 0
 --- !u!1 &5612474334171528951
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,6 +820,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7076811448059974922}
   - component: {fileID: 675667296286700734}
+  - component: {fileID: 4421616452442905124}
   m_Layer: 3
   m_Name: DefEffect
   m_TagString: Untagged
@@ -890,6 +895,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &4421616452442905124
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6177803718457843820}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e424e7667885d1a4e8f6fbc08fbfbe44, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6826445030500768740
 GameObject:
   m_ObjectHideFlags: 0

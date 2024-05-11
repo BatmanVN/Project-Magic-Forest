@@ -347,13 +347,11 @@ MonoBehaviour:
   player:
     serializedVersion: 2
     m_Bits: 8
-  enemyTransform: {fileID: 0}
-  bonusDef: {fileID: 0}
+  enemyTransform: {fileID: 1208243408123778392, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
   animator: {fileID: 3092956610261973948}
-  dameDefautl: 3
-  currentDame: 0
-  character: {fileID: 3409384953111840695, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+  monsterDame: 2
   isAttk: 0
+  isEnemy: 0
 --- !u!1 &5282484827160549392
 GameObject:
   m_ObjectHideFlags: 0

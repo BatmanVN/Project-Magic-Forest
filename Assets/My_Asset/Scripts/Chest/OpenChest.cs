@@ -9,6 +9,7 @@ public class OpenChest : MonoBehaviour
     [SerializeField] private GameObject chest;
     [SerializeField] private Collider2D chestCollider;
     [SerializeField] private Animator chestAnim;
+    [SerializeField] private EnableChestOnHead enableChestOn;
     public bool hasRewardChest;
     private void OnTriggerEnter2D(Collider2D Chest)
     {
@@ -16,6 +17,7 @@ public class OpenChest : MonoBehaviour
         {
             hasRewardChest = true;
             chestAnim.SetTrigger(isOpenParaname);
+            enableChestOn?.EnableChest();
         }
     }
     private void Update()

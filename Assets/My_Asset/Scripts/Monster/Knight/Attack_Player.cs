@@ -12,37 +12,33 @@ public class Attack_Player : MonoBehaviour
     [SerializeField] private LayerMask player;
     [SerializeField] private Transform enemyTransform;
     [SerializeField] private Animator animator;
-    [SerializeField] private float takeDame;
-    //[SerializeField] private Player_Move playerFlip;
+    [SerializeField] private float monsterDame;
+    public float DameKnight { get => monsterDame; private set => monsterDame = value; }
+
     public bool isAttk;
     public bool isEnemy;
 
     private void TakeDame() //Plan 1
     {
         var hit = Physics2D.OverlapCircle(swordPoint.position, rangeAttk, player);
-        var scale = transform.localScale;
-        if(isAttk == false)
+        var scale = transform.position;
+        var localScale = transform.localScale;
+        if (isAttk == false)
         {
             if (hit)
             {
-            //{
-            //    for (float angle = 0; angle < 90; angle++)
-            //    {
-            //        float radiusLeft = angle * Mathf.Rad2Deg;
-            //        float x = Mathf.Cos(radiusLeft) * rangeAttk;
-            //        float y = Mathf.Sin(radiusLeft) * rangeAttk;
-            //       isEnemy = true;
-            //    }
-            //    for (float angle = 90; angle < 180; angle++)
-            //    {
-            //        float radiusRigt = angle * Mathf.Rad2Deg;
-            //        float x = Mathf.Cos(radiusRigt) * rangeAttk;
-            //        float y = Mathf.Sin(radiusRigt) * rangeAttk;
-            //        isEnemy = false;
-            //    }
+                if (scale.x > enemyTransform.transform.position.x) // khi nhan vat o ben trai //Lon trai
+                {
+                    localScale.x = (float)-1.4f;
+                }
+                else if (scale.x < enemyTransform.transform.position.x) // khi nhan vat o ben phai //Nho Phai
+                {
+                    localScale.x = (float)1.4f;
+                }
                 animator.SetTrigger(isAttackParaname);
-                transform.localScale = scale;
+                transform.localScale = localScale;
                 isAttk = true;
+                isEnemy = true;
             }
         }
         if (!hit)
