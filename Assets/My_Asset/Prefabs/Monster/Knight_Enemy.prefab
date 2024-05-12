@@ -88,12 +88,12 @@ GameObject:
   - component: {fileID: 7289274890264962685}
   - component: {fileID: 5301046548935617292}
   - component: {fileID: 2647636606917279022}
-  - component: {fileID: 8858068656923490305}
   - component: {fileID: 3092956610261973948}
+  - component: {fileID: 8858068656923490305}
   - component: {fileID: 4946057970891289528}
   - component: {fileID: 4860447528427664204}
-  - component: {fileID: 6001511636293249311}
   - component: {fileID: 6409066554987826123}
+  - component: {fileID: 6001511636293249311}
   m_Layer: 0
   m_Name: Knight_Enemy
   m_TagString: KinghtMonster
@@ -242,24 +242,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1879104, y: 1.4797553}
   m_EdgeRadius: 0
---- !u!114 &8858068656923490305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3455507160608125945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f490d26217620547b6f23674d375c7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointA: {fileID: 3455507160608125945}
-  pointB: {fileID: 3455507160608125945}
-  monster2D: {fileID: 5301046548935617292}
-  spriteRenderer: {fileID: 7289274890264962685}
-  monsterAnim: {fileID: 3092956610261973948}
-  speed: 2
 --- !u!95 &3092956610261973948
 Animator:
   serializedVersion: 5
@@ -281,6 +263,25 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8858068656923490305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3455507160608125945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f490d26217620547b6f23674d375c7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monster: {fileID: 0}
+  pointA: {fileID: 3455507160608125945}
+  pointB: {fileID: 3455507160608125945}
+  monster2D: {fileID: 5301046548935617292}
+  spriteRenderer: {fileID: 7289274890264962685}
+  monsterAnim: {fileID: 3092956610261973948}
+  speed: 2
 --- !u!114 &4946057970891289528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,23 +314,6 @@ MonoBehaviour:
   healthBar: {fileID: 7381432069853411867}
   health: 0
   maxHealth: 9
---- !u!114 &6001511636293249311
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3455507160608125945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9121615bff2b4cd4ba25b2175c696d5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 3092956610261973948}
-  character: {fileID: 4860447528427664204}
-  characterObj: {fileID: 3455507160608125945}
-  timeDelay: 2
-  isDie: 0
 --- !u!114 &6409066554987826123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -352,6 +336,23 @@ MonoBehaviour:
   monsterDame: 2
   isAttk: 0
   isEnemy: 0
+--- !u!114 &6001511636293249311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3455507160608125945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9121615bff2b4cd4ba25b2175c696d5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 3092956610261973948}
+  character: {fileID: 4860447528427664204}
+  characterObj: {fileID: 3455507160608125945}
+  timeDelay: 2
+  isDie: 0
 --- !u!1 &5282484827160549392
 GameObject:
   m_ObjectHideFlags: 0

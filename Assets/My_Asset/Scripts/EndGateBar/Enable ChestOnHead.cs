@@ -8,6 +8,8 @@ public class EnableChestOnHead : MonoBehaviour
 {
     [SerializeField] private OpenChest[] hasChest;
     [SerializeField] private Image[] enableImage;
+    [SerializeField] private KeyGate keyGate;
+    [SerializeField] private GameObject enableKey;
 
     public void EnableChest()
     {
@@ -19,6 +21,14 @@ public class EnableChestOnHead : MonoBehaviour
                 color.a = 250;
                 enableImage[i].color = color;
             }
+        }
+    }
+
+    public void EnableKey()
+    {
+        if(keyGate.getKey == true)
+        {
+            enableKey.SetActive(true);
         }
     }
 }

@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class MonsterController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private List<MonoBehaviour> monsterComponents;
+    [SerializeField] private AutoMove automove;
+    [SerializeField] private Knight_BeAttack monsterBeAttk;
+    [SerializeField] private HealthCharacter monsterHealth;
+    [SerializeField] private Attack_Player attackPlayer;
 
-    // Update is called once per frame
-    void Update()
+    private void GetComponents()
     {
-        
+        monsterComponents = new List<MonoBehaviour>
+        {
+            monsterBeAttk,
+            monsterHealth,
+            attackPlayer,
+            attackPlayer
+        };
+        //monsterComponents.Add(automove);
+        //monsterComponents.Add(monsterBeAttk);
+        //monsterComponents.Add(monsterHealth);
+        //monsterComponents.Add(attackPlayer);
     }
 }
