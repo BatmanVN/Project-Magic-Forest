@@ -17898,6 +17898,22 @@ PrefabInstance:
       propertyPath: powerBar
       value: 
       objectReference: {fileID: 303464142}
+    - target: {fileID: 36254310436777086, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4442759
+      objectReference: {fileID: 0}
+    - target: {fileID: 36254310436777086, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2147
+      objectReference: {fileID: 0}
+    - target: {fileID: 36254310436777086, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 36254310436777086, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.7742
+      objectReference: {fileID: 0}
     - target: {fileID: 480543524921314833, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -17917,6 +17933,10 @@ PrefabInstance:
     - target: {fileID: 675667296286700734, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
       propertyPath: m_SortingOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 839878886258597555, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1155340942398906465, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
       propertyPath: m_Color.b
@@ -18383,6 +18403,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1059465300}
     - target: {fileID: 7870081722653476929, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+      propertyPath: runAnim
+      value: 
+      objectReference: {fileID: 1600842442}
+    - target: {fileID: 7870081722653476929, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
       propertyPath: speedUp
       value: 
       objectReference: {fileID: 1600842434}
@@ -18481,6 +18505,10 @@ PrefabInstance:
     - target: {fileID: 8479484245027556633, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
       propertyPath: jumpBonusPoint.y
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515842804523539027, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9074676333822450332, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
       propertyPath: defObj
@@ -25203,6 +25231,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d765db57d51c25f46a604340ce3373f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1600842442 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4931918507828641618, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+  m_PrefabInstance: {fileID: 1104657082}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b48f274a959fd894e864f44f975d8e8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1615689908

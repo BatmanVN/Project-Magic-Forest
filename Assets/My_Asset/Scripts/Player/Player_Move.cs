@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player_Move : MonoBehaviour
 {
     private const string isWalkingParaname = "isWalking";
+    [SerializeField] private Run_Animation runAnim;
     [SerializeField] private Player_BonusSPD speedUp;
     [SerializeField] private Rigidbody2D player2D;
     [SerializeField] private SpriteRenderer playerSprite;
@@ -18,6 +19,7 @@ public class Player_Move : MonoBehaviour
     public bool stopGroundLeft;
     public bool stopGroundRight;
     public bool isFlip = false;
+    public bool isRunning;
 
     public void EnableSpeedUP(float speedUp)
     {
@@ -46,7 +48,9 @@ public class Player_Move : MonoBehaviour
             transform.localScale = scale;
             player2D.velocity = direction;
             animator.SetBool(isWalkingParaname, true);
+            isRunning = true;
         }
+        runAnim?.EnableRunAnim();
     }
     private void KeyMove()
     {
@@ -70,18 +74,22 @@ public class Player_Move : MonoBehaviour
             transform.localScale = scale;
             player2D.velocity = direction;
             animator.SetBool(isWalkingParaname, true);
+            isRunning = true;
         }
         if(!keyWalking)
         {
             player2D.velocity = new Vector2(direction.x*0,direction.y);
             animator.SetBool(isWalkingParaname, false);
+            isRunning = false;
         }
+        runAnim?.EnableRunAnim();
     }
     public void Stopmove()
     {
         player2D.velocity = new Vector2(player2D.velocity.x * 0, player2D.velocity.y);
         animator.SetBool(isWalkingParaname, false);
         isStop = true;
+        isRunning = false;
     }
     private void OnTriggerEnter2D(Collider2D Player)
     {
