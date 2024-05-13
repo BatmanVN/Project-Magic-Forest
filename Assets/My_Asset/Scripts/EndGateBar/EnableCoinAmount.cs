@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class EnableCoinAmount : MonoBehaviour
 {
     [SerializeField] private Text coinBar;
-    [SerializeField] protected Text coinAmount;
+    [SerializeField] private Text coinAmount;
     private void CoinBar()
     {
         coinBar.text = coinAmount.text;

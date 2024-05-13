@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 83e5eadb1d24e1b4a92c0525f975878d
+guid: 91cc47cf6e173534889cfda56c0ed91a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,43 +110,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: z5434082800627_06839a8a49aaeb49561d656d15a7dfab_0
+      name: snapedit_1715566277825_0
       rect:
         serializedVersion: 2
-        x: 1676
-        y: 1532
-        width: 1229
-        height: 207
+        x: 1061
+        y: 0
+        width: 219
+        height: 452
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d76d05cb67dce7f43a47054caeb815f8
-      internalID: -259319510
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: z5434082800627_06839a8a49aaeb49561d656d15a7dfab_1
-      rect:
-        serializedVersion: 2
-        x: 2724
-        y: 830
-        width: 168
-        height: 693
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c015bba556d021644ac99af5dcc7f645
-      internalID: -1445063488
+      spriteID: 260d79e0d77839246ba86ca549114214
+      internalID: 1842298653
       vertices: []
       indices: 
       edges: []
@@ -162,8 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      z5434082800627_06839a8a49aaeb49561d656d15a7dfab_0: -259319510
-      z5434082800627_06839a8a49aaeb49561d656d15a7dfab_1: -1445063488
+      snapedit_1715566277825_0: 1842298653
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -118,7 +118,7 @@ TextureImporter:
         width: 16
         height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -139,7 +139,7 @@ TextureImporter:
         width: 19
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,7 +160,7 @@ TextureImporter:
         width: 18
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,6 +168,48 @@ TextureImporter:
       bones: []
       spriteID: 9622a3da8a0ec314099f8515bcb5a99b
       internalID: 1269616382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-5-256x256-Uncompressed-Atlas-b40f6ea0_3
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 199
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eb3bb1e6a00d1340901b2ee40fa5c98
+      internalID: -1552341603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-5-256x256-Uncompressed-Atlas-b40f6ea0_4
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 181
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e432a4d9e10fdb442bf6624509f5b113
+      internalID: 1870373282
       vertices: []
       indices: 
       edges: []
@@ -186,6 +228,8 @@ TextureImporter:
       sactx-5-256x256-Uncompressed-Atlas-b40f6ea0_0: -45601920
       sactx-5-256x256-Uncompressed-Atlas-b40f6ea0_1: -811046187
       sactx-5-256x256-Uncompressed-Atlas-b40f6ea0_2: 1269616382
+      sactx-5-256x256-Uncompressed-Atlas-b40f6ea0_3: -1552341603
+      sactx-5-256x256-Uncompressed-Atlas-b40f6ea0_4: 1870373282
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
