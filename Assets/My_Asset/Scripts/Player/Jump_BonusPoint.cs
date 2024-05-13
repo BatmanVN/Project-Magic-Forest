@@ -6,7 +6,6 @@ public class Jump_BonusPoint : MonoBehaviour
 {
     [SerializeField] private GameObject PointBonus;
     private const string jumpbonusParaname = "isBonus";
-    [SerializeField] private BonusPoint jumpPoint;
     [SerializeField] private Vector2 jumpBonusPoint;
     [SerializeField] private Rigidbody2D player2D;
     [SerializeField] private BonusPoint bonusPoint;
