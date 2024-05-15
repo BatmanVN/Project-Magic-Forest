@@ -1,29 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player_skillFire : MonoBehaviour
 {
-    [SerializeField] private int excatlySkill;
+    [SerializeField] private Image skillBar;
     [SerializeField] private GameObject buttonStar;
     [SerializeField] private GameObject starPower;
     [SerializeField] private SpriteRenderer fireRender;
     [SerializeField] private Player_Move move;
     [SerializeField] private Transform fireBall;
-    public float dameSkill;
-    public bool starEnable;
+    [SerializeField] private float dameskill;
+    [SerializeField] private float excatlySkill;
+    [SerializeField] private float maxSkillAmount;
+    public float dameSkill { get => dameskill;private set => dameskill = value; }
+    public bool starEnable => excatlySkill >= maxSkillAmount;
+    public void SkilltoSke()
+    {
+        dameskill -= 2;
+    }
     public void SkillAmount()
     {
-        excatlySkill += 1;
-        if(excatlySkill > 5)
+        if(starEnable)
         {
             return;
         }
-        if(excatlySkill == 5)
-        {
-            buttonStar.SetActive(true);
-            starEnable = true;
-        }
+        excatlySkill += 1;
+        skillBar.fillAmount = excatlySkill / maxSkillAmount;
     }
     public void FirePower()
     {
@@ -38,7 +42,8 @@ public class Player_skillFire : MonoBehaviour
         if (starEnable == true)
         {
             Instantiate(starPower,fireBall.position,Quaternion.identity);
-            excatlySkill -= 5;
+            excatlySkill -= maxSkillAmount;
+            skillBar.fillAmount = excatlySkill / maxSkillAmount;
         }
     }
     private void Update()

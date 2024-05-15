@@ -9,8 +9,11 @@ public class Player_attack : MonoBehaviour
     [SerializeField] private Player_Move move;
     [SerializeField] private SpriteRenderer fireRender;
     [SerializeField] private Mana useMana;
-    public float dame;
+    [SerializeField] private float Dame;
+    [SerializeField] private float dameSke;
     public float mana;
+    public float dame { get => Dame; private set => Dame = value; }
+    public float DameSke { get => dameSke; private set => dameSke = value; }
     public void Attack()
     {
         if (move.isFlip == true)
@@ -20,6 +23,10 @@ public class Player_attack : MonoBehaviour
         if (move.isFlip == false)
         {
             fireRender.flipX = false;
+        }
+        if(useMana.MaNa <= 0)
+        {
+            return;
         }
         Instantiate(fireBall, fireBallRight.position, Quaternion.identity);
         useMana.ConsumeMana(mana);

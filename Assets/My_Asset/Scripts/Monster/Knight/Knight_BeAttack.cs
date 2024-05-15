@@ -17,7 +17,6 @@ public class Knight_BeAttack : MonoBehaviour
         {
             monsterAnim.SetTrigger(isAttackParaname);
             monsterCharacter.TakeDame(takeDame.dame);
-            beAttack = true;
             starFire?.SkillAmount();
         }
         if(Monster.CompareTag("StarSkill"))

@@ -5,28 +5,31 @@ using UnityEngine;
 public class Ske_Awake : MonoBehaviour
 {
     private const string awakeParaname = "skeWake";
-    private const string sleepParaname = "skeSleep";
+    [SerializeField] private GameObject groundBoss;
     [SerializeField] private SkeAuto_Move skeMove;
     [SerializeField] private Animator skeAnim;
     [SerializeField] private float rangeAtk;
     [SerializeField] private Transform skeLeton;
     [SerializeField] private LayerMask player;
-    [SerializeField] private Transform point;
+    [SerializeField] private GameObject skeHealthBar;
+    [SerializeField] private HealthCharacter skeHealth;
     private void SkeAwake()
     {
-        var skeAwake = Physics2D.OverlapCircle(skeLeton.position, rangeAtk,player);
-        var skeawake = Physics2D.OverlapCircle(point.position, rangeAtk, player);
-        if (skeAwake || skeawake)
+        var skeAwake = Physics2D.OverlapCircle(skeLeton.position, rangeAtk, player);
+
+        if (skeAwake)
         {
             skeAnim.SetTrigger(awakeParaname);
+            skeHealthBar.SetActive(true);
             skeMove.enabled = true;
+            groundBoss.SetActive(true);
         }
-        if(!skeAwake && !skeawake)
+        if(skeHealth.isDead)
         {
-            skeAnim.SetTrigger(sleepParaname);
-            skeMove.enabled = false;
+            groundBoss.SetActive(false);
         }
     }
+
     private void Update()
     {
         SkeAwake();

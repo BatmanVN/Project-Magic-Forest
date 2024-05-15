@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MonsterController : MonoBehaviour
+public class Knight_Controller : MonoBehaviour
 {
     [SerializeField] private List<MonoBehaviour> monsterComponents;
     [SerializeField] private AutoMove automove;
@@ -12,16 +12,9 @@ public class MonsterController : MonoBehaviour
 
     private void GetComponents()
     {
-        monsterComponents = new List<MonoBehaviour>
-        {
-            monsterBeAttk,
-            monsterHealth,
-            attackPlayer,
-            attackPlayer
-        };
-        //monsterComponents.Add(automove);
-        //monsterComponents.Add(monsterBeAttk);
-        //monsterComponents.Add(monsterHealth);
-        //monsterComponents.Add(attackPlayer);
+        monsterComponents.Add(automove);
+        monsterComponents.Add(monsterBeAttk);
+        monsterComponents.Add(monsterHealth);
+        monsterComponents.Add(attackPlayer);
     }
 }

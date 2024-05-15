@@ -6,12 +6,14 @@ using UnityEngine;
 public class Player_beAttack : MonoBehaviour
 {
     private const string beAttackParaname = "beAttack";
+    private const string isDieParaname = "isDie";
     [SerializeField] private HealthCharacter character;
     [SerializeField] private Player_BonusDef bonusDef;
     [SerializeField] private Attack_Player[] monster;
     [SerializeField] private Animator playerAnim;
     [SerializeField] private Player_jump jump;
     [SerializeField] private float jumpRec;
+    [SerializeField] private DieBar dieBar;
     public bool beAttack;
     //private void OnTriggerEnter2D(Collider2D player)
     //{
@@ -33,6 +35,11 @@ public class Player_beAttack : MonoBehaviour
                 character?.TakeDame(monster[i].DameKnight);
                 monster[i].isEnemy = false;
                 beAttack = true;
+                if (character.isDead)
+                {
+                    playerAnim.SetTrigger(isDieParaname);
+                    dieBar?.ClickButton();
+                }
             }
         }
     }

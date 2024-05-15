@@ -10,33 +10,6 @@ public class AutoMove : MonoBehaviour
     [SerializeField] private Animator monsterAnim;
     [SerializeField] private float speed;
     private Transform currentPoint;
-    //private void AutoMoveMonster() //Plan 1 Sida
-    //{
-    //    var scale = transform.localScale;
-    //    if (scale.x > 0  && monster.isAttk == true)
-    //    {
-    //        currentPoint = pointB.transform;
-    //        monster2D.velocity = new Vector2(speed, 0);
-    //    }
-    //    if (scale.x < 0 && monster.isAttk == true)
-    //    {
-    //        currentPoint = pointA.transform;
-    //        monster2D.velocity = new Vector2(-speed, 0);
-    //    }
-    //    if (Vector2.Distance(transform.position, currentPoint.position) < 0.2f) // khi cham diem B
-    //    {
-    //        currentPoint = pointA.transform;
-    //        monster2D.velocity = new Vector2(-speed, 0);
-    //        scale.x = (float)-1.4;
-    //    }
-    //    if (Vector2.Distance(transform.position, currentPoint.position) < 0.2f) // khi cham diem A
-    //    {
-    //        currentPoint = pointB.transform;
-    //        monster2D.velocity = new Vector2(speed, 0);
-    //        scale.x = (float)1.4;
-    //    }
-    //    transform.localScale = scale;
-    //}
     private void StartMove() //Plan 2 bot siDA
     {
         var scale = transform.localScale;
@@ -64,11 +37,9 @@ public class AutoMove : MonoBehaviour
     private void Start()
     {
         currentPoint = pointB.transform;
-        //monster2D.velocity = new Vector2(speed, 0);
     }
     private void Update()
     {
         StartMove();
-        //AutoMoveMonster();
     }
 }
