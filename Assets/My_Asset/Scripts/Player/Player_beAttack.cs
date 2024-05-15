@@ -8,8 +8,10 @@ public class Player_beAttack : MonoBehaviour
     private const string beAttackParaname = "beAttack";
     private const string isDieParaname = "isDie";
     [SerializeField] private HealthCharacter character;
+    [SerializeField] private Collider2D player2D;
     [SerializeField] private Player_BonusDef bonusDef;
     [SerializeField] private Attack_Player[] monster;
+    [SerializeField] private Ske_attack skeAttk;
     [SerializeField] private Animator playerAnim;
     [SerializeField] private Player_jump jump;
     [SerializeField] private float jumpRec;
@@ -34,13 +36,21 @@ public class Player_beAttack : MonoBehaviour
                 playerAnim.SetTrigger(beAttackParaname);
                 character?.TakeDame(monster[i].DameKnight);
                 monster[i].isEnemy = false;
-                beAttack = true;
-                if (character.isDead)
-                {
-                    playerAnim.SetTrigger(isDieParaname);
-                    dieBar?.ClickButton();
-                }
+                //beAttack = true;
             }
+        }
+        if(skeAttk.isEnemy == true && bonusDef.enableEffect == false)
+        {
+            jump?.JumpBeAttk(jumpRec);
+            playerAnim.SetTrigger(beAttackParaname);
+            character?.TakeDame(skeAttk.Dame);
+            skeAttk.isEnemy = false;
+        }
+        if (character.isDead)
+        {
+            player2D.enabled = false;
+            playerAnim.SetTrigger(isDieParaname);
+            dieBar?.EnableBar();
         }
     }
     private void Update()

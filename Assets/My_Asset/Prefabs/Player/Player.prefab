@@ -293,7 +293,6 @@ GameObject:
   - component: {fileID: 3409384953111840695}
   - component: {fileID: 8300130075343802544}
   - component: {fileID: -4396169491694653612}
-  - component: {fileID: 2796690226886084481}
   - component: {fileID: 4751454707115782111}
   - component: {fileID: 7870081722653476929}
   - component: {fileID: 1658767248055020102}
@@ -481,15 +480,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ed30217aeb275345ac7dc72b72c2c76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  components: []
-  healthComponent: {fileID: 0}
-  attackComponent: {fileID: 0}
-  beAttackComponent: {fileID: 0}
-  jumpComponent: {fileID: 0}
-  moveComponent: {fileID: 0}
-  skillFireComponent: {fileID: 0}
-  manaComponent: {fileID: 0}
-  restoremanaComponent: {fileID: 0}
+  components:
+  - {fileID: 3409384953111840695}
+  - {fileID: 8300130075343802544}
+  - {fileID: -4396169491694653612}
+  - {fileID: 4751454707115782111}
+  - {fileID: 7870081722653476929}
+  - {fileID: 1658767248055020102}
+  - {fileID: -1926848928194310396}
+  - {fileID: 2964668129651964004}
+  - {fileID: 8479484245027556633}
+  - {fileID: 1625543700040714337}
+  - {fileID: 6792490653169530873}
+  - {fileID: 9074676333822450332}
+  - {fileID: 4931918507828641618}
+  healthComponent: {fileID: 3409384953111840695}
 --- !u!114 &3409384953111840695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -522,7 +527,8 @@ MonoBehaviour:
   move: {fileID: 0}
   fireRender: {fileID: 0}
   useMana: {fileID: 0}
-  dame: 3
+  Dame: 0
+  dameSke: 0
   mana: 0
 --- !u!114 &-4396169491694653612
 MonoBehaviour:
@@ -539,25 +545,12 @@ MonoBehaviour:
   character: {fileID: 3409384953111840695}
   bonusDef: {fileID: 0}
   monster: []
+  skeAttk: {fileID: 0}
   playerAnim: {fileID: 5396419360059184052}
   jump: {fileID: 0}
   jumpRec: 0
+  dieBar: {fileID: 0}
   beAttack: 0
---- !u!114 &2796690226886084481
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2363234522061934474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a89fdf2459338c489f9b5b08554a4cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  character: {fileID: 0}
-  animator: {fileID: 0}
-  isDieAnim: 0
 --- !u!114 &4751454707115782111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -622,14 +615,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61c24efcb9d5b44408a903f1d9c15e73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  excatlySkill: 0
+  skillBar: {fileID: 0}
   buttonStar: {fileID: 0}
   starPower: {fileID: 0}
   fireRender: {fileID: 0}
   move: {fileID: 0}
   fireBall: {fileID: 0}
-  dameSkill: 0
-  starEnable: 0
+  dameskill: 0
+  excatlySkill: 0
+  maxSkillAmount: 0
 --- !u!114 &-1926848928194310396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -691,7 +685,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PointBonus: {fileID: 0}
-  jumpPoint: {fileID: 0}
   jumpBonusPoint: {x: 0, y: 0}
   player2D: {fileID: 0}
   bonusPoint: {fileID: 0}

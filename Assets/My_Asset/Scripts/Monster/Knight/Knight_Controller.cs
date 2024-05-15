@@ -5,16 +5,47 @@ using UnityEngine;
 public class Knight_Controller : MonoBehaviour
 {
     [SerializeField] private List<MonoBehaviour> monsterComponents;
-    [SerializeField] private AutoMove automove;
-    [SerializeField] private Knight_BeAttack monsterBeAttk;
     [SerializeField] private HealthCharacter monsterHealth;
-    [SerializeField] private Attack_Player attackPlayer;
+    private bool isAlive = false;
 
-    private void GetComponents()
+    private void Start()
     {
-        monsterComponents.Add(automove);
-        monsterComponents.Add(monsterBeAttk);
-        monsterComponents.Add(monsterHealth);
-        monsterComponents.Add(attackPlayer);
+        StartBattle();
+    }
+    private void StartBattle()
+    {
+        isAlive = true;
+        EnableComponents();
+    }
+    private void EndBattle()
+    {
+        isAlive = false;
+        DisableComponents();
+    }
+    private void EnableComponents()
+    {
+        SetActiveComponents(true);
+    }
+    private void DisableComponents()
+    {
+        SetActiveComponents(false);
+    }
+    private void SetActiveComponents(bool active)
+    {
+        foreach (var component in monsterComponents)
+        {
+            component.enabled = active;
+        }
+    }
+    private void Update()
+    {
+        if(!isAlive)
+        {
+            return;
+        }
+        if(monsterHealth.isDead)
+        {
+            EndBattle();
+        }
     }
 }

@@ -14,15 +14,15 @@ public class DieBar : MonoBehaviour
     [SerializeField] private bool spawn;
     private void EnableDieBar()
     {
-        if (character.isDead)
-        {
-            dieBar.SetActive(true);
-            Time.timeScale = 0;
-        }
+        dieBar.SetActive(true);
+        Time.timeScale = 0;
     }
-    public void ClickButton()
+    public void EnableBar()
     {
-        StartCoroutine(EnableBar());
+        StartCoroutine(Delay());
+    }
+    private void ClickButton()
+    {
         if (home)
         {
             SceneManager.LoadScene(sceneHome);
@@ -42,13 +42,13 @@ public class DieBar : MonoBehaviour
     {
         spawn = true;
     }
-    private IEnumerator EnableBar()
+    private IEnumerator Delay()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1.9f);
         EnableDieBar();
     }
-    private void Start()
+    private void Update()
     {
-
+        ClickButton();
     }
 }

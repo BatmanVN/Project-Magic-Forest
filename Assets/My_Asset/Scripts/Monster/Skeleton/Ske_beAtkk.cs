@@ -5,10 +5,14 @@ using UnityEngine;
 public class Ske_beAtkk : MonoBehaviour
 {
     private const string beAttackParaname = "beAttack";
+    private const string isDieParaname = "isDie";
     [SerializeField] private Animator skeAnim;
+    [SerializeField] private GameObject skeObj;
     [SerializeField] private HealthCharacter skeHealth;
     [SerializeField] private Player_attack takeDame;
     [SerializeField] private Player_skillFire skillDame;
+    [SerializeField] private SkeAuto_Move skeMove;
+    [SerializeField] private float changeSpeed;
     public bool attkSke;
     private void OnTriggerEnter2D(Collider2D skeleton)
     {
@@ -26,6 +30,29 @@ public class Ske_beAtkk : MonoBehaviour
             skillDame?.SkilltoSke();
             skeHealth?.TakeDame(skillDame.dameSkill);
         }
+        if(skeHealth.isDead)
+        {
+            skeAnim.SetTrigger(isDieParaname);
+            StartCoroutine(Delay());
+        }
+        ChangeAttack();
+    }
+    private void ChangeAttack()
+    {
+        if(skeHealth.Health <= 10)
+        {
+            skeMove?.ChangeSpeed(changeSpeed);
+            skeMove.isChange = false;
+        }
+    }
+    private void DisableObj()
+    {
+        skeObj.SetActive(false);
+    }
+    private IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(5);
+        DisableObj();
     }
     private void Update()
     {
