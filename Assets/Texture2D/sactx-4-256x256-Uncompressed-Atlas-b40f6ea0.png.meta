@@ -1017,9 +1017,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 22
-        y: 63
+        y: 65
         width: 12
-        height: 15
+        height: 13
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1038,9 +1038,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 41
-        y: 42
+        y: 44
         width: 14
-        height: 17
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1079,10 +1079,10 @@ TextureImporter:
       name: sactx-4-256x256-Uncompressed-Atlas-b40f6ea0_46
       rect:
         serializedVersion: 2
-        x: 83
-        y: 40
-        width: 20
-        height: 16
+        x: 85
+        y: 42
+        width: 16
+        height: 9
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1101,9 +1101,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 106
-        y: 40
+        y: 42
         width: 14
-        height: 16
+        height: 12
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1163,9 +1163,9 @@ TextureImporter:
       name: sactx-4-256x256-Uncompressed-Atlas-b40f6ea0_50
       rect:
         serializedVersion: 2
-        x: 98
+        x: 100
         y: 0
-        width: 20
+        width: 16
         height: 13
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1184,10 +1184,10 @@ TextureImporter:
       name: sactx-4-256x256-Uncompressed-Atlas-b40f6ea0_51
       rect:
         serializedVersion: 2
-        x: 76
+        x: 80
         y: 0
-        width: 22
-        height: 13
+        width: 16
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1227,9 +1227,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 19
+        y: 21
         width: 18
-        height: 21
+        height: 17
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1332,9 +1332,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 22
-        width: 19
-        height: 22
+        y: 24
+        width: 16
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1373,9 +1373,9 @@ TextureImporter:
       name: sactx-4-256x256-Uncompressed-Atlas-b40f6ea0_60
       rect:
         serializedVersion: 2
-        x: 17
+        x: 20
         y: 0
-        width: 21
+        width: 16
         height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1394,9 +1394,9 @@ TextureImporter:
       name: sactx-4-256x256-Uncompressed-Atlas-b40f6ea0_61
       rect:
         serializedVersion: 2
-        x: 38
+        x: 40
         y: 0
-        width: 20
+        width: 16
         height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1957,6 +1957,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: sactx-4-256x256-Uncompressed-Atlas-b40f6ea0_88
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 68
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc48eb8e7995fad459f485942c34d08a
+      internalID: -2099066800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -2055,6 +2076,7 @@ TextureImporter:
       sactx-4-256x256-Uncompressed-Atlas-b40f6ea0_85: 2009319830
       sactx-4-256x256-Uncompressed-Atlas-b40f6ea0_86: -1219778560
       sactx-4-256x256-Uncompressed-Atlas-b40f6ea0_87: 1713555584
+      sactx-4-256x256-Uncompressed-Atlas-b40f6ea0_88: -2099066800
       sactx-4-256x256-Uncompressed-Atlas-b40f6ea0_9: -1201653486
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0

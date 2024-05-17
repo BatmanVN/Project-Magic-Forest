@@ -21,26 +21,10 @@ public class DieBar : MonoBehaviour
     {
         StartCoroutine(Delay());
     }
-    private void ClickButton()
+    public void ClickButton(string sceneName)
     {
-        if (home)
-        {
-            SceneManager.LoadScene(sceneHome);
+            SceneManager.LoadScene(sceneName);
             Time.timeScale = 1;
-        }
-        if (spawn)
-        {
-            SceneManager.LoadScene(sceneSpawn);
-            Time.timeScale = 1;
-        }
-    }
-    public void HomeButton()
-    {
-        home = true;
-    }
-    public void ReSpwan()
-    {
-        spawn = true;
     }
     private IEnumerator Delay()
     {
@@ -49,6 +33,6 @@ public class DieBar : MonoBehaviour
     }
     private void Update()
     {
-        ClickButton();
+
     }
 }
