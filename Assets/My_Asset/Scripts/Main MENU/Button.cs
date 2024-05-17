@@ -34,37 +34,6 @@ public class Button : MonoBehaviour
             mainCamera.transform.position = maxLocation;
         }
     }
-    private void MoveBackGround()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            lefMove = Input.mousePosition.x;
-        }
-        if (Input.GetMouseButtonUp(0))
-        {
-            rightMove = Input.mousePosition.x;
-        }
-        if(lefMove > rightMove)
-        {
-            moveMenu = true;
-        }
-        if (lefMove <= minLocation.x)
-        {
-            moveMenu = false;
-        }
-        if (mainCamera.transform.position.x >= maxLocation.x)
-        {
-            mainCamera.transform.position = maxLocation;
-        }
-    }
-    //public void PointDown()
-    //{
-    //    moveMenu = true;
-    //}
-    //public void PointUp()
-    //{
-    //    moveMenu = false;
-    //}
     private void Update()
     {
         MoveMenu();

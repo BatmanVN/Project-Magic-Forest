@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -22,20 +23,24 @@ public class Open_Gate : MonoBehaviour
             if (keyGate.getKey == true)
             {
                 gateAnim.SetTrigger("isOpen");
-                endGate.SetActive(true);
-                chest?.RewardChest();
-                Time.timeScale = 0;
+                StartCoroutine(Delay());
             }
         }
     }
-    public void PlayAgain()
+    private void EnableBar()
     {
-        SceneManager.LoadScene(sceneAgain);
-        Time.timeScale = 1;
+        endGate.SetActive(true);
+        chest?.RewardChest();
+        Time.timeScale = 0;
     }
-    public void Home()
+    private IEnumerator Delay()
     {
-        SceneManager.LoadScene(sceneHome);
+        yield return new WaitForSeconds(3);
+        EnableBar();
+    }
+    public void SelectScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
         Time.timeScale = 1;
     }
     private void Update()

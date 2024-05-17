@@ -2379,6 +2379,10 @@ PrefabInstance:
       propertyPath: chestCollider
       value: 
       objectReference: {fileID: 1629580769}
+    - target: {fileID: 4877617340998851380, guid: 4980bf7e1b396e54f8842e7cae51ef8f, type: 3}
+      propertyPath: enableChestOn
+      value: 
+      objectReference: {fileID: 1655582857}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3068,6 +3072,10 @@ PrefabInstance:
       propertyPath: chestCollider
       value: 
       objectReference: {fileID: 132047203}
+    - target: {fileID: 4824484532827429532, guid: 331843f2affeddd4ab353375a3d0b87d, type: 3}
+      propertyPath: enableChestOn
+      value: 
+      objectReference: {fileID: 1655582857}
     - target: {fileID: 9168896740674016135, guid: 331843f2affeddd4ab353375a3d0b87d, type: 3}
       propertyPath: m_MaskInteraction
       value: 1
@@ -7853,6 +7861,10 @@ PrefabInstance:
       propertyPath: chestCollider
       value: 
       objectReference: {fileID: 349138359}
+    - target: {fileID: 4877617340998851380, guid: 4980bf7e1b396e54f8842e7cae51ef8f, type: 3}
+      propertyPath: enableChestOn
+      value: 
+      objectReference: {fileID: 1655582857}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
