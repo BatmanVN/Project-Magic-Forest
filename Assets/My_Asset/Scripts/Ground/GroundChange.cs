@@ -5,7 +5,6 @@ using UnityEngine;
 public class GroundChange : MonoBehaviour
 {
     [SerializeField] private float subsidence;
-    private Vector2 currentTransform;
     public bool isTrigger;
     private void OnTriggerEnter2D(Collider2D ground)
     {

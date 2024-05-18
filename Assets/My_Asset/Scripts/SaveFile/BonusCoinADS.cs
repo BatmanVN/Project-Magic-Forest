@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class BonusCoinADS : MonoBehaviour
 {
-    [SerializeField] private GameObject adsBar;
-    public void ClickX()
+    [SerializeField] private GameObject[] barNumber;
+    public void ClickX(int number)
     {
-        adsBar.SetActive(false);
+        barNumber[number].SetActive(false);
+    }
+    private void Update()
+    {
+        
     }
 }
