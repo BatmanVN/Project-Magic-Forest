@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/My_Asset/Scenes/MainMenu.unity
     guid: 20d22ac51e48aa447969b53958b3a4c8
   - enabled: 1
+    path: Assets/My_Asset/Scenes/HeroShop.unity
+    guid: d6e89cb36c4a60144a1174889074947c
+  - enabled: 1
     path: Assets/My_Asset/Scenes/Gate1.unity
     guid: 4bed7a334e6a43a45a27773e86af2c47
   - enabled: 1

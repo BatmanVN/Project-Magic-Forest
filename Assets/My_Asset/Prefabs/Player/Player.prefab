@@ -509,7 +509,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
   health: 0
-  maxHealth: 10
+  maxHealth: 25
 --- !u!114 &8300130075343802544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -543,6 +543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 3409384953111840695}
+  player2D: {fileID: 0}
   bonusDef: {fileID: 0}
   monster: []
   skeAttk: {fileID: 0}
@@ -593,7 +594,7 @@ MonoBehaviour:
   player2D: {fileID: 4913562842587177108}
   playerSprite: {fileID: 1797759950627781869}
   animator: {fileID: 5396419360059184052}
-  moveDirection: {x: 5, y: 0}
+  moveDirection: {x: 4.2, y: 0}
   speedDefault: 0
   isFlipKey: 0
   isLeft: 0
@@ -638,7 +639,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerBar: {fileID: 0}
   mana: 0
-  maxMana: 0
+  maxMana: 5
 --- !u!114 &2964668129651964004
 MonoBehaviour:
   m_ObjectHideFlags: 0
