@@ -10,8 +10,6 @@ public class DieBar : MonoBehaviour
     [SerializeField] private HealthCharacter character;
     [SerializeField] private GameObject dieBar;
 
-    [SerializeField] private bool home;
-    [SerializeField] private bool spawn;
     private void EnableDieBar()
     {
         dieBar.SetActive(true);

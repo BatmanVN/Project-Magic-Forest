@@ -6,12 +6,13 @@ public class BonusHealth : MonoBehaviour
 {
     [SerializeField] private GameObject healthObj;
     [SerializeField] private GameObject effect;
-    public bool eatHeart;
+    [SerializeField] private Bool_Class eatHeart;
+    //public bool eatHeart;
     private void OnTriggerEnter2D(Collider2D bonusSpeed)
     {
         if (bonusSpeed.CompareTag("Player"))
         {
-            eatHeart = true;
+            eatHeart?.CheckBool(true);
             healthObj.SetActive(false);
             effect.SetActive(false);
         }

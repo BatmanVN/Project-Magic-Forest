@@ -8,13 +8,14 @@ public class Player_BonusHeart : MonoBehaviour
     [SerializeField] private BonusHealth bonusHealth;
     [SerializeField] private HealthCharacter character;
     [SerializeField] private float healAmount;
+    [SerializeField] private Bool_Class eatHeart;
     private void BonusHeart()
     {
-        if(bonusHealth.eatHeart == true)
+        if(eatHeart.boolRef == true)
         {
             character.Heal(healAmount);
-            bonusHealth.eatHeart = false;
-            if(bonusHealth.eatHeart == false)
+            eatHeart.boolRef = false;
+            if(eatHeart.boolRef == false)
             {
                 DestroyBonus();
             }
@@ -22,7 +23,7 @@ public class Player_BonusHeart : MonoBehaviour
     }
     private void DestroyBonus()
     {
-        if (bonusHealth.eatHeart == false)
+        if (eatHeart.boolRef == false)
         {
             Destroy(bonusHeart);
         }

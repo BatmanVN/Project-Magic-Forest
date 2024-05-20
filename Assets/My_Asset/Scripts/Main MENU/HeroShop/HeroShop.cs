@@ -48,10 +48,6 @@ public class HeroShop : MonoBehaviour
             if (heroNumber[i] == heroNumber[number])
             {
                 heroNumber[number].SetActive(true);
-                if (number >= heroNumber.Length)
-                {
-                    return;
-                }
             }
             else
             {

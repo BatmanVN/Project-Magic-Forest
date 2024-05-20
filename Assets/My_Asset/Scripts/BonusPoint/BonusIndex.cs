@@ -9,8 +9,8 @@ public class BonusIndex : MonoBehaviour
     [SerializeField] private Jump_BonusPoint bonusPoint;
     [SerializeField] private GameObject[] bonusIndex;
     [SerializeField] private GameObject effect;
-    public int bonusCount;
-    public bool bonusEnabled;
+    [SerializeField] private int bonusCount;
+
     private void RandomBonus()
     {
         if (bonusPoint.isJumpBonus == true)

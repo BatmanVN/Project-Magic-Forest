@@ -12,6 +12,7 @@ public class Player_Move : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private Vector2 moveDirection;
     [SerializeField] private float speedDefault;
+    [SerializeField] private Bool_Class boolRef;
     public bool isFlipKey;
     public bool isLeft;
     public bool isRight;
