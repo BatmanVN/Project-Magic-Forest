@@ -16,17 +16,17 @@ public class Player_jump : MonoBehaviour
     [SerializeField] private float maxJump;
     [SerializeField] private float maxJumpDouble;
     [SerializeField] private float jumpLeft;
-    bool isGroundDouble;
-    bool isGrounded;
-    bool isJumping;
+    private bool isGroundDouble;
+    private bool isGrounded;
+    private bool isJumping;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Canjump"))
         {
             isGroundDouble = true;
-            moveComponent.isRight = false;
-            moveComponent.isLeft = false;
+            moveComponent.IsRight = false;
+            moveComponent.IsLeft = false;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)

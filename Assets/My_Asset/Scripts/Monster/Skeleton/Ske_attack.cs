@@ -9,9 +9,10 @@ public class Ske_attack : MonoBehaviour
     [SerializeField] private float rangeAttk;
     [SerializeField] private LayerMask playerMask;
     [SerializeField] private float dame;
-    public bool isAttk;
-    public bool isEnemy;
+    private bool isAttk;
+    private bool isEnemy;
     public float Dame { get => dame; private set => dame = value; }
+    public bool IsEnemy { get => isEnemy; set => isEnemy = value; }
 
     private void AttackPlayer()
     {
@@ -23,7 +24,7 @@ public class Ske_attack : MonoBehaviour
             if (hit)
             {
                 isAttk = true;
-                isEnemy = true;
+                IsEnemy = true;
             }
         }
         else if(!hit)

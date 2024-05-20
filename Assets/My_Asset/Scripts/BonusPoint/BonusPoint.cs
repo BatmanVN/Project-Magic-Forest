@@ -6,12 +6,15 @@ public class BonusPoint : MonoBehaviour
     [SerializeField] private Jump_BonusPoint jumpBonus;
     [SerializeField] private GameObject PointBonus;
 
-    public bool jumpEnabled;
+    private bool jumpEnabled;
+
+    public bool JumpEnabled { get => jumpEnabled; set => jumpEnabled = value; }
+
     private void OnTriggerEnter2D(Collider2D bonusPoint)
     {
         if(bonusPoint.CompareTag("Player"))
         {
-            jumpEnabled = true;
+            JumpEnabled = true;
         }
     }
 }

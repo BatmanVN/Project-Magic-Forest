@@ -21,7 +21,7 @@ public class FireBall : MonoBehaviour
         }
         fireball2D.velocity = speedForce;
         fireballAnim.SetTrigger("isFly");
-        if(beAttack.beAttack == false)
+        if(beAttack.BeAttack == false)
         {
             Color color = fireball.color;
             color.a -= disableTime *Time.deltaTime;

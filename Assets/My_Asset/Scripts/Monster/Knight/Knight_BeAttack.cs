@@ -12,7 +12,10 @@ public class Knight_BeAttack : MonoBehaviour
     [SerializeField] private Player_attack takeDame;
     [SerializeField] private Player_skillFire skillDame;
     private Player_skillFire starFire;
-    public bool beAttack;
+    private bool beAttack;
+
+    public bool BeAttack { get => beAttack; set => beAttack = value; }
+
     private void OnTriggerEnter2D(Collider2D Monster)
     {
         if (Monster.CompareTag("FireBall"))

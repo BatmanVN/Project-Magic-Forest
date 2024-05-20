@@ -13,13 +13,13 @@ public class BonusIndex : MonoBehaviour
 
     private void RandomBonus()
     {
-        if (bonusPoint.isJumpBonus == true)
+        if (bonusPoint.IsJumpBonus == true)
         {
             GameObject selectIndex = bonusIndex[bonusCount];
             selectIndex.SetActive(true);
             effect.SetActive(true);
             effectAnim.SetTrigger("isEffect");
-            bonusPoint.isJumpBonus = false;
+            bonusPoint.IsJumpBonus = false;
         }
     }
     private void Update()

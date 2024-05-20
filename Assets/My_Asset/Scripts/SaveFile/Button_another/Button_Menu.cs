@@ -14,13 +14,17 @@ public class Button_Menu : MonoBehaviour
             if (adsBar[i] == adsBar[number])
             {
                 adsBar[number].SetActive(true);
-                if (adsBar[i] == adsBar[4])
+                if (adsBar[i] == adsBar[5])
                 {
                     SceneManager.LoadScene(sceneName);
                 }
             }
             else
             {
+                if (adsBar[i] == adsBar[5])
+                {
+                    return;
+                }
                 adsBar[i].SetActive(false);
             }
         }

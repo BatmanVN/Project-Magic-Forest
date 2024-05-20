@@ -10,20 +10,23 @@ public class Jump_BonusPoint : MonoBehaviour
     [SerializeField] private Rigidbody2D player2D;
     [SerializeField] private BonusPoint bonusPoint;
     [SerializeField] private Animator playerAnim;
-    public bool isJumpBonus;
+    private bool isJumpBonus;
+
+    public bool IsJumpBonus { get => isJumpBonus; set => isJumpBonus = value; }
+
     private void BonusPoint()
     {
         var bonus = jumpBonusPoint;
-        if (bonusPoint.jumpEnabled == true)
+        if (bonusPoint.JumpEnabled == true)
         {
             bonus *= 2;
             player2D.velocity = bonus;
             playerAnim.SetTrigger(jumpbonusParaname);
-            isJumpBonus = true;
+            IsJumpBonus = true;
             Destroy(PointBonus);
-            bonusPoint.jumpEnabled = false;
+            bonusPoint.JumpEnabled = false;
         }
-        if (bonusPoint.jumpEnabled == false)
+        if (bonusPoint.JumpEnabled == false)
         {
             return;
         }

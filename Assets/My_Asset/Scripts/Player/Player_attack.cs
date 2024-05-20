@@ -11,16 +11,16 @@ public class Player_attack : MonoBehaviour
     [SerializeField] private Mana useMana;
     [SerializeField] private float Dame;
     [SerializeField] private float dameSke;
-    public float mana;
+    [SerializeField] private float mana;
     public float dame { get => Dame; private set => Dame = value; }
     public float DameSke { get => dameSke; private set => dameSke = value; }
     public void Attack()
     {
-        if (move.isFlip == true)
+        if (move.IsFlip == true)
         {
             fireRender.flipX = true;
         }
-        if (move.isFlip == false)
+        if (move.IsFlip == false)
         {
             fireRender.flipX = false;
         }

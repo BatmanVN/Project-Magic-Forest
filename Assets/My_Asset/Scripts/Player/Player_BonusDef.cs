@@ -12,18 +12,21 @@ public class Player_BonusDef : MonoBehaviour
     [SerializeField] private Animator defEffect;
     [SerializeField] private float dameDef;
     [SerializeField] private float timeBonus;
-    public bool enableEffect;
+    private bool enableEffect;
+
+    public bool EnableEffect { get => enableEffect; set => enableEffect = value; }
+
     public void BonusDEF()
     {
             defObj.SetActive(true);
             defEffect.SetTrigger(defEffectParaname);
             takeDame?.TakeDame(dameDef);
-            enableEffect = true;
+            EnableEffect = true;
             StartCoroutine(TimeBonus());
     }
     private void DisableEffect()
     {
-        enableEffect = false;
+        EnableEffect = false;
         player_bonusDef.enabled = false;
         defObj.SetActive(false);
     }

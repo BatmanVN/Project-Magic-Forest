@@ -15,7 +15,7 @@ public class EnableChestOnHead : MonoBehaviour
     {
         for(int i = 0; i < hasChest.Length; i++)
         {
-            if (hasChest[i].hasRewardChest)
+            if (hasChest[i].HasRewardChest)
             {
                 Color color = enableImage[i].color;
                 color.a = 250;
@@ -26,7 +26,7 @@ public class EnableChestOnHead : MonoBehaviour
 
     public void EnableKey()
     {
-        if(keyGate.getKey == true)
+        if(keyGate.GetKey == true)
         {
             enableKey.SetActive(true);
         }

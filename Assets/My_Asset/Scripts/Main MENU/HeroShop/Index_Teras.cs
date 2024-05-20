@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Ignius_Indexs : MonoBehaviour
+public class Index_Teras : MonoBehaviour
 {
     [SerializeField] private Index_Bar index;
-    [SerializeField] private Image[] igniusBar;
+    [SerializeField] private Image[] terasBar;
     [SerializeField] private float health;
     [SerializeField] private float maxhealth;
     [SerializeField] private float power;
@@ -18,47 +18,47 @@ public class Ignius_Indexs : MonoBehaviour
     [SerializeField] private int level;
     [SerializeField] private int maxlevel;
 
-    
-    public void IndexsOfIgnius()
+
+    public void IndexsOfTeras()
     {
-        for (int i = 0; i < igniusBar.Length; i++)
+        for (int i = 0; i < terasBar.Length; i++)
         {
-            if(i == 0)
+            if (i == 0)
             {
-                igniusBar[0].fillAmount = health / index.MaxHealthbar;
+                terasBar[0].fillAmount = health / index.MaxHealthbar;
             }
-            if(i == 1)
+            if (i == 1)
             {
-                igniusBar[1].fillAmount = power / index.MaxPowerbar;
+                terasBar[1].fillAmount = power / index.MaxPowerbar;
             }
-            if(i == 2)
+            if (i == 2)
             {
-                igniusBar[2].fillAmount = speed / index.MaxSpeedbar;
+                terasBar[2].fillAmount = speed / index.MaxSpeedbar;
             }
             else
             {
-                igniusBar[3].fillAmount = starDame / index.MaxStarbar;
+                terasBar[3].fillAmount = starDame / index.MaxStarbar;
             }
         }
     }
-    //public void HealthIgnius()
+    //public void HealthTeras()
     //{
     //    igniusBar[0].fillAmount = health / index.MaxHealthbar;
     //}
-    //public void PowerIgnius()
+    //public void PowerTeras()
     //{
     //    igniusBar[1].fillAmount = power / index.MaxPowerbar;
     //}
-    //public void SpeedIgnius()
+    //public void SpeedTeras()
     //{
     //    igniusBar[2].fillAmount = speed / index.MaxSpeedbar;
     //}
-    //public void StarIgnius()
+    //public void StarTeras()
     //{
     //    igniusBar[3].fillAmount = starDame / index.MaxStarbar;
     //}
     private void Start()
     {
-        IndexsOfIgnius();
+        IndexsOfTeras();
     }
 }

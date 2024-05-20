@@ -20,7 +20,7 @@ public class Open_Gate : MonoBehaviour
         var openGate = Physics2D.OverlapCircle(pointGate.position, radius, player);
         if(openGate)
         {
-            if (keyGate.getKey == true)
+            if (keyGate.GetKey == true)
             {
                 gateAnim.SetTrigger("isOpen");
                 StartCoroutine(Delay());

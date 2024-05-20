@@ -8,6 +8,7 @@ public class HeroShop : MonoBehaviour
     [SerializeField] private GameObject[] heroNumber;
     [SerializeField] private GameObject[] indexBar;
     [SerializeField] private GameObject[] noteIndex;
+    [SerializeField] private GameObject[] indexHero;
     [SerializeField] private GameObject xButton;
     [SerializeField] private GameObject noteButton;
     [SerializeField] private GameObject buttonNext;

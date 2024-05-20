@@ -13,12 +13,15 @@ public class Ske_beAtkk : MonoBehaviour
     [SerializeField] private Player_skillFire skillDame;
     [SerializeField] private SkeAuto_Move skeMove;
     [SerializeField] private float changeSpeed;
-    public bool attkSke;
+    private bool attkSke;
+
+    public bool AttkSke { get => attkSke; set => attkSke = value; }
+
     private void OnTriggerEnter2D(Collider2D skeleton)
     {
         if(skeleton.CompareTag("FireBall"))
         {
-            attkSke = true;
+            AttkSke = true;
             skeAnim.SetTrigger(beAttackParaname);
             skeHealth.TakeDame(takeDame.DameSke);
             skillDame?.SkillAmount();
@@ -42,7 +45,7 @@ public class Ske_beAtkk : MonoBehaviour
         if(skeHealth.Health <= 10)
         {
             skeMove?.ChangeSpeed(changeSpeed);
-            skeMove.isChange = false;
+            skeMove.IsChange = false;
         }
     }
     private void DisableObj()

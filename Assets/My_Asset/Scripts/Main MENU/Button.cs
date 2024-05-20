@@ -12,7 +12,10 @@ public class Button : MonoBehaviour
     [SerializeField] private float lefMove;
     [SerializeField] private float rightMove;
     private Vector3 dragMouse;
-    public bool moveMenu;
+    private bool moveMenu;
+
+    public bool MoveMenu1 { get => moveMenu; set => moveMenu = value; }
+
     private void MoveMenu()
     {
         if (Input.GetMouseButtonDown(0))

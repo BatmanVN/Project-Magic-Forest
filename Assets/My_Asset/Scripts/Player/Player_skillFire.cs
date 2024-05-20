@@ -31,11 +31,11 @@ public class Player_skillFire : MonoBehaviour
     }
     public void FirePower()
     {
-        if (move.isFlip == true)
+        if (move.IsFlip == true)
         {
             fireRender.flipX = true;
         }
-        if (move.isFlip == false)
+        if (move.IsFlip == false)
         {
             fireRender.flipX = false;
         }

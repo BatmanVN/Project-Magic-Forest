@@ -23,11 +23,11 @@ public class AutoMove : MonoBehaviour
             currentPoint = pointB.transform;
             scale.x *= -1;
         }
-        if (scale.x > 0 && monster.isAttk == true)
+        if (scale.x > 0 && monster.IsAttk == true)
         {
             currentPoint = pointB.transform;
         }
-        if (scale.x < 0  && monster.isAttk == true)
+        if (scale.x < 0  && monster.IsAttk == true)
         {
             currentPoint = pointA.transform;
         }

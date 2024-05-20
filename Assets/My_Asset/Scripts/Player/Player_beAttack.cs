@@ -16,35 +16,25 @@ public class Player_beAttack : MonoBehaviour
     [SerializeField] private Player_jump jump;
     [SerializeField] private float jumpRec;
     [SerializeField] private DieBar dieBar;
-    public bool beAttack;
-    //private void OnTriggerEnter2D(Collider2D player)
-    //{
-    //    if(player.CompareTag("KinghtMonster"))
-    //    {
-    //        beAttack = true;
-    //        playerAnim.SetTrigger(beAttackParaname);
-    //        jump?.JumpBeAttk(jumpRec);
-    //    }
-    //}
+
     private void TakeDame()
     {
         for(int i = 0; i < monster.Length; i++)
         {
-            if (monster[i].isEnemy == true && bonusDef.enableEffect == false)
+            if (monster[i].IsEnemy == true && bonusDef.EnableEffect == false)
             {
                 jump?.JumpBeAttk(jumpRec);
                 playerAnim.SetTrigger(beAttackParaname);
                 character?.TakeDame(monster[i].DameKnight);
-                monster[i].isEnemy = false;
-                //beAttack = true;
+                monster[i].IsEnemy = false;
             }
         }
-        if(skeAttk.isEnemy == true && bonusDef.enableEffect == false)
+        if(skeAttk.IsEnemy == true && bonusDef.EnableEffect == false)
         {
             jump?.JumpBeAttk(jumpRec);
             playerAnim.SetTrigger(beAttackParaname);
             character?.TakeDame(skeAttk.Dame);
-            skeAttk.isEnemy = false;
+            skeAttk.IsEnemy = false;
         }
         if (character.isDead)
         {

@@ -10,13 +10,16 @@ public class SkeAuto_Move : MonoBehaviour
     [SerializeField] private Animator skeAnim;
     [SerializeField] private float speed;
     private Transform currentPoint;
-    public bool isChange;
+    private bool isChange;
+
+    public bool IsChange { get => isChange; set => isChange = value; }
+
     public void ChangeSpeed(float speedChange)
     {
-        if(isChange == false)
+        if(IsChange == false)
         {
             speed += speedChange;
-            isChange = true;
+            IsChange = true;
         }
     }
     private void StartMove() //Plan 2 bot siDA

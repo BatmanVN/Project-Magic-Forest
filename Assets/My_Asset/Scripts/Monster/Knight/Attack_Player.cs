@@ -13,16 +13,18 @@ public class Attack_Player : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private float monsterDame;
     public float DameKnight { get => monsterDame; private set => monsterDame = value; }
+    public bool IsAttk { get => isAttk; set => isAttk = value; }
+    public bool IsEnemy { get => isEnemy; set => isEnemy = value; }
 
-    public bool isAttk;
-    public bool isEnemy;
+    private bool isAttk;
+    private bool isEnemy;
 
     private void TakeDame() //Plan 1
     {
         var hit = Physics2D.OverlapCircle(swordPoint.position, rangeAttk, player);
         var scale = transform.position;
         var localScale = transform.localScale;
-        if (isAttk == false)
+        if (IsAttk == false)
         {
             if (hit)
             {
@@ -36,13 +38,13 @@ public class Attack_Player : MonoBehaviour
                 }
                 animator.SetTrigger(isAttackParaname);
                 transform.localScale = localScale;
-                isAttk = true;
-                isEnemy = true;
+                IsAttk = true;
+                IsEnemy = true;
             }
         }
         if (!hit)
         {
-            isAttk = false;
+            IsAttk = false;
         }
     }
     private void Update()

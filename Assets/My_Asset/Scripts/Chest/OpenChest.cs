@@ -10,12 +10,15 @@ public class OpenChest : MonoBehaviour
     [SerializeField] private Collider2D chestCollider;
     [SerializeField] private Animator chestAnim;
     [SerializeField] private EnableChestOnHead enableChestOn;
-    public bool hasRewardChest;
+    private bool hasRewardChest;
+
+    public bool HasRewardChest { get => hasRewardChest; set => hasRewardChest = value; }
+
     private void OnTriggerEnter2D(Collider2D Chest)
     {
         if (Chest.CompareTag("Player"))
         {
-            hasRewardChest = true;
+            HasRewardChest = true;
             chestAnim.SetTrigger(isOpenParaname);
             enableChestOn?.EnableChest();
         }

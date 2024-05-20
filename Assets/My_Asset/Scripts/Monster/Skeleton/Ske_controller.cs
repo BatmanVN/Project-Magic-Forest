@@ -7,7 +7,7 @@ public class Ske_controller : MonoBehaviour
     [SerializeField] private List<MonoBehaviour> skeComponents;
     [SerializeField] private HealthCharacter skeHealth;
 
-    public bool Active = false;
+    private bool Active = false;
 
     private void Start()
     {

@@ -12,19 +12,20 @@ public class Player_Move : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private Vector2 moveDirection;
     [SerializeField] private float speedDefault;
-    [SerializeField] private Bool_Class boolRef;
-    public bool isFlipKey;
-    public bool isLeft;
-    public bool isRight;
-    public bool isStop;
-    public bool stopGroundLeft;
-    public bool stopGroundRight;
-    public bool isFlip = false;
+    [SerializeField] private StopGround stopGround;
+
+    private bool isLeft;
+    private bool isRight;
+    private bool isFlip = false;
     public bool isRunning;
 
-    public void EnableSpeedUP(float speedUp)
+    public bool IsLeft { get => isLeft; set => isLeft = value; }
+    public bool IsRight { get => isRight; set => isRight = value; }
+    public bool IsFlip { get => isFlip; set => isFlip = value; }
+
+    public void EnableSpeedUP(float speed)
     {
-        speedDefault += speedUp;
+        speedDefault += speed;
     }
     private void PlayerMove()
     {
@@ -60,9 +61,9 @@ public class Player_Move : MonoBehaviour
         direction.y = player2D.velocity.y;
         if (keyWalking)
         {
-            isFlip = Input.GetKey(KeyCode.A) || isLeft == true;
+            IsFlip = Input.GetKey(KeyCode.A) || isLeft == true;
             var scale = transform.localScale;
-            if (isFlip)
+            if (IsFlip)
             {
                 scale.x = -2;
                 direction.x *= -speedDefault;
@@ -89,41 +90,16 @@ public class Player_Move : MonoBehaviour
     {
         player2D.velocity = new Vector2(player2D.velocity.x * 0, player2D.velocity.y);
         animator.SetBool(isWalkingParaname, false);
-        isStop = true;
         isRunning = false;
-    }
-    private void OnTriggerEnter2D(Collider2D Player)
-    {
-        if(Player.CompareTag("StopGround"))
-        {
-            isLeft = false;
-            stopGroundLeft = true;
-        }
-        if (Player.CompareTag("StopGroundRight"))
-        {
-            isRight = false;
-            stopGroundRight = true;
-        }
-    }
-    private void OnTriggerExit2D(Collider2D Player)
-    {
-        if (Player.CompareTag("StopGround"))
-        {
-            stopGroundLeft = false;
-        }
-        if (Player.CompareTag("StopGroundRight"))
-        {
-            stopGroundRight = false;
-        }
     }
     public void DownLeft()
     {
-        if (stopGroundLeft == false)
-            isLeft = true;
+        if (stopGround.StopGroundLeft == false)
+           isLeft = true;
     }
     public void DownRight()
     {
-        if(stopGroundRight == false)
+        if(stopGround.StopGroundRight == false)
             isRight = true;
     }
     public void UpLeft()

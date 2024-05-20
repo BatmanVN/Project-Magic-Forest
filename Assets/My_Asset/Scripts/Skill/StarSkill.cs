@@ -11,7 +11,7 @@ public class StarSkill : MonoBehaviour
     [SerializeField] private Animator starAnimator;
     [SerializeField] private GameObject starPrefabs;
     [SerializeField] private float delay;
-    public bool isAnim;
+    private bool isAnim;
     private void OnTriggerEnter2D(Collider2D starSkill)
     {
         if(starSkill.CompareTag("KinghtMonster"))
