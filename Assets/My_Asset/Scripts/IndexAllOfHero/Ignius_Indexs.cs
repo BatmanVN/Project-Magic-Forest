@@ -57,7 +57,7 @@ public class Ignius_Indexs : MonoBehaviour
     //{
     //    igniusBar[3].fillAmount = starDame / index.MaxStarbar;
     //}
-    private void Start()
+    private void Update()
     {
         IndexsOfIgnius();
     }

@@ -306,7 +306,7 @@ GameObject:
   - component: {fileID: 4931918507828641618}
   - component: {fileID: 7214493997093115159}
   m_Layer: 3
-  m_Name: Player
+  m_Name: Ignius
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -375,7 +375,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 98
-  m_Sprite: {fileID: -329737678, guid: ec44ceebc393752428e18a3da1993c64, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -383,7 +383,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &4913562842587177108
@@ -552,7 +552,6 @@ MonoBehaviour:
   jump: {fileID: 0}
   jumpRec: 0
   dieBar: {fileID: 0}
-  beAttack: 0
 --- !u!114 &4751454707115782111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -597,11 +596,7 @@ MonoBehaviour:
   animator: {fileID: 5396419360059184052}
   moveDirection: {x: 4.2, y: 0}
   speedDefault: 0
-  isLeft: 0
-  isRight: 0
-  stopGroundLeft: 0
-  stopGroundRight: 0
-  isFlip: 0
+  stopGround: {fileID: 0}
   isRunning: 0
 --- !u!114 &1658767248055020102
 MonoBehaviour:
@@ -687,7 +682,6 @@ MonoBehaviour:
   player2D: {fileID: 0}
   bonusPoint: {fileID: 0}
   playerAnim: {fileID: 0}
-  isJumpBonus: 0
 --- !u!114 &1625543700040714337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -719,10 +713,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bonusHeart: {fileID: 0}
-  bonusHealth: {fileID: 0}
   character: {fileID: 0}
   healAmount: 0
-  eatHeart: {fileID: 0}
 --- !u!114 &9074676333822450332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -742,7 +734,6 @@ MonoBehaviour:
   defEffect: {fileID: 0}
   dameDef: 0
   timeBonus: 0
-  enableEffect: 0
 --- !u!114 &4931918507828641618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -769,6 +760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96df3cbf400eddf4d8e228909ca73992, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  move: {fileID: 0}
 --- !u!1 &5612474334171528951
 GameObject:
   m_ObjectHideFlags: 0

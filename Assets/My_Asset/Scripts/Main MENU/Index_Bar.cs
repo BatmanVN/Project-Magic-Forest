@@ -13,4 +13,8 @@ public class Index_Bar : MonoBehaviour
     public float MaxPowerbar { get => maxPowerbar; private set => maxPowerbar = value; }
     public float MaxSpeedbar { get => maxSpeedbar; private set => maxSpeedbar = value; }
     public float MaxStarbar { get => maxStarbar; private set => maxStarbar = value; }
+    private void Update()
+    {
+        
+    }
 }

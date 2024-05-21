@@ -134,6 +134,8 @@ GameObject:
   - component: {fileID: 36515598}
   - component: {fileID: 36515597}
   - component: {fileID: 36515596}
+  - component: {fileID: 36515600}
+  - component: {fileID: 36515599}
   m_Layer: 0
   m_Name: Witch
   m_TagString: Untagged
@@ -203,7 +205,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 99
-  m_Sprite: {fileID: 21300000, guid: 3d70cdc1b6b25f942bb95163a0a01e1c, type: 2}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -211,7 +213,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &36515598
@@ -229,6 +231,39 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &36515599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36515595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afcbc767cdb1adb4488fad642e698a7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyName: Index
+  value: 0
+--- !u!114 &36515600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36515595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa04727df1165ff488becf4c5fd158de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderers:
+  - {fileID: -329737678, guid: ec44ceebc393752428e18a3da1993c64, type: 3}
+  - {fileID: -1880549288, guid: 00827af9fbfa84b46af35cb29786131b, type: 3}
+  - {fileID: -354936349, guid: 00827af9fbfa84b46af35cb29786131b, type: 3}
+  characterSprite: {fileID: 36515597}
+  playerPrefsIntReader: {fileID: 36515599}
+  index: 0
 --- !u!1 &69986938
 GameObject:
   m_ObjectHideFlags: 0

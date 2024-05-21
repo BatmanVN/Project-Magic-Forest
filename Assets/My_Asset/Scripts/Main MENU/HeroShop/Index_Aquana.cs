@@ -18,7 +18,6 @@ public class Index_Aquana : MonoBehaviour
     [SerializeField] private int level;
     [SerializeField] private int maxlevel;
 
-
     public void IndexsOfAquana()
     {
         for (int i = 0; i < aquanaBar.Length; i++)
@@ -57,7 +56,7 @@ public class Index_Aquana : MonoBehaviour
     //{
     //    igniusBar[3].fillAmount = starDame / index.MaxStarbar;
     //}
-    private void Start()
+    private void Update()
     {
         IndexsOfAquana();
     }

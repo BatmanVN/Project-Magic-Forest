@@ -57,7 +57,7 @@ public class Index_Teras : MonoBehaviour
     //{
     //    igniusBar[3].fillAmount = starDame / index.MaxStarbar;
     //}
-    private void Start()
+    private void Update()
     {
         IndexsOfTeras();
     }
