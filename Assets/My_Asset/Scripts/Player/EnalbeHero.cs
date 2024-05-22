@@ -8,20 +8,26 @@ public class EnalbeHero : MonoBehaviour
     [SerializeField] private string keyName;
     [SerializeField] private int index;
 
+    public int Index { get => index; set => index = value; }
+
     [ContextMenu("IndexEnable")]
 
+    private void Awake()
+    {
+        IndexEnable();
+    }
     private int IndexEnable()
     {
-        index = PlayerPrefs.GetInt(keyName,index);
-        return index;
+        Index = PlayerPrefs.GetInt(keyName,Index);
+        return Index;
     }
     private void HeroEnable()
     {
         for (int i = 0; i <= objHero.Length; i++)
         {
-            if (objHero[i] == objHero[index])
+            if (objHero[i] == objHero[Index])
             {
-                objHero[index].SetActive(true);
+                objHero[Index].SetActive(true);
                 break;
             }
             else
@@ -30,12 +36,8 @@ public class EnalbeHero : MonoBehaviour
             }
         }
     }
-    private void Update()
-    {
-        HeroEnable();
-    }
     private void Start()
     {
-        IndexEnable();
+        HeroEnable();
     }
 }

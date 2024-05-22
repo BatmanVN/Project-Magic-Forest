@@ -4,7 +4,7 @@ using System.Threading;
 using UnityEngine;
 
 public class Attack_Player : MonoBehaviour
-{   //Plan 1
+{   
     private const string isAttackParaname = "isAttack";
     [SerializeField] private Transform swordPoint;
     [SerializeField] private float rangeAttk;

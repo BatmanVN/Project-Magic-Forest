@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 6040331156701343692}
   - component: {fileID: 417163968107180933}
   - component: {fileID: 8866258082406518882}
-  - component: {fileID: 8492334628652942012}
   - component: {fileID: -7214512561221864995}
+  - component: {fileID: -2420485897432519617}
   m_Layer: 0
   m_Name: WaterFire
   m_TagString: FireBall
@@ -160,25 +160,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.625, y: 1}
   m_EdgeRadius: 0
---- !u!114 &8492334628652942012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4088376587669765261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4af484959d04d1149826912074ba2dbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireObj: {fileID: 4088376587669765261}
-  fireball2D: {fileID: 417163968107180933}
-  speed: {x: 10, y: 0}
-  fireballAnim: {fileID: -7214512561221864995}
-  fireball: {fileID: 6040331156701343692}
-  beAttack: {fileID: 4946057970891289528, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
-  disableTime: 0.5
 --- !u!95 &-7214512561221864995
 Animator:
   serializedVersion: 5
@@ -200,3 +181,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-2420485897432519617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4088376587669765261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4af484959d04d1149826912074ba2dbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireObj: {fileID: 4088376587669765261}
+  fireball2D: {fileID: 417163968107180933}
+  speed: {x: 10, y: 0}
+  fireballAnim: {fileID: -7214512561221864995}
+  fireball: {fileID: 6040331156701343692}
+  beAttack: {fileID: 4946057970891289528, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
+  disableTime: 0.5

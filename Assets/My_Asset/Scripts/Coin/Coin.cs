@@ -15,8 +15,8 @@ public class Coin : MonoBehaviour
         if(coin.CompareTag("Player"))
         {
             coinAnim.SetTrigger("isCollect");
-            isAnimator = true;
             amount?.CountCoin();
+            StartCoroutine(Delay());
         }
     }
     private void OnTriggerExit2D(Collider2D coin)
@@ -32,11 +32,8 @@ public class Coin : MonoBehaviour
     }
     private IEnumerator Delay()
     {
-        if (isAnimator == true)
-        {
             yield return new WaitForSeconds(timeDelay);
             WhenCollect();
-        }
     }
     private void Start()
     {
@@ -44,6 +41,6 @@ public class Coin : MonoBehaviour
     }
     private void Update()
     {
-        StartCoroutine(Delay());
+        
     }
 }

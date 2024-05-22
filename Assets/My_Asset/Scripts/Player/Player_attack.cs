@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Player_attack : MonoBehaviour
 {
-    [SerializeField] private GameObject fireBall;
-    [SerializeField] private Transform fireBallRight;
+    [SerializeField] private GameObject[] ballAttack;
+    [SerializeField] private ChangeSprite indexSprites;
+    [SerializeField] private Transform ballAttackRight;
     [SerializeField] private Player_Move move;
-    [SerializeField] private SpriteRenderer fireRender;
+    [SerializeField] private SpriteRenderer[] fireRender;
     [SerializeField] private Mana useMana;
     [SerializeField] private float Dame;
     [SerializeField] private float dameSke;
@@ -16,20 +17,44 @@ public class Player_attack : MonoBehaviour
     public float DameSke { get => dameSke; private set => dameSke = value; }
     public void Attack()
     {
-        if (move.IsFlip == true)
+
+        for(int i = 0; i < ballAttack.Length; i++)
         {
-            fireRender.flipX = true;
+            if(indexSprites.Index == 0)
+            {
+                if (move.IsFlip == true)
+                {
+                    fireRender[indexSprites.Index].flipX = true;
+                }
+                if (move.IsFlip == false)
+                {
+                    fireRender[indexSprites.Index].flipX = false;
+                }
+                if (useMana.MaNa <= 0)
+                {
+                    return;
+                }
+                Instantiate(ballAttack[indexSprites.Index], ballAttackRight.position, Quaternion.identity);
+                useMana.ConsumeMana(mana);
+            }
+            if(indexSprites.Index == 1)
+            {
+                if (move.IsFlip == true)
+                {
+                    fireRender[indexSprites.Index].flipX = true;
+                }
+                if (move.IsFlip == false)
+                {
+                    fireRender[indexSprites.Index].flipX = false;
+                }
+                if (useMana.MaNa <= 0)
+                {
+                    return;
+                }
+                Instantiate(ballAttack[1], ballAttackRight.position, Quaternion.identity);
+                useMana.ConsumeMana(mana);
+            }
         }
-        if (move.IsFlip == false)
-        {
-            fireRender.flipX = false;
-        }
-        if(useMana.MaNa <= 0)
-        {
-            return;
-        }
-        Instantiate(fireBall, fireBallRight.position, Quaternion.identity);
-        useMana.ConsumeMana(mana);
     }
     private void Update()
     {

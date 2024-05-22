@@ -16,12 +16,12 @@ public class AutoMove : MonoBehaviour
         if (Vector2.Distance(transform.position, pointB.transform.position) < 0.3f)
         {
             currentPoint = pointA.transform;
-            scale.x *= -1;
+            scale.x = -1.4f;
         }
         if (Vector2.Distance(transform.position, pointA.transform.position) < 0.3f)
         {
             currentPoint = pointB.transform;
-            scale.x *= -1;
+            scale.x = 1.4f;
         }
         if (scale.x > 0 && monster.IsAttk == true)
         {

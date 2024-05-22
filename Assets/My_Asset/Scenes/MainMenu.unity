@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 67828415}
   - component: {fileID: 67828414}
-  - component: {fileID: 67828413}
+  - component: {fileID: 67828416}
   m_Layer: 0
   m_Name: HeroEnable
   m_TagString: Untagged
@@ -141,25 +141,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &67828413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 67828412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa04727df1165ff488becf4c5fd158de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteRenderers:
-  - {fileID: -329737678, guid: ec44ceebc393752428e18a3da1993c64, type: 3}
-  - {fileID: -1880549288, guid: 00827af9fbfa84b46af35cb29786131b, type: 3}
-  - {fileID: -1634493341, guid: 00827af9fbfa84b46af35cb29786131b, type: 3}
-  characterSprite: {fileID: 67828414}
-  keyName: Index
-  index: 0
 --- !u!212 &67828414
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -201,7 +182,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 99
-  m_Sprite: {fileID: -1880549288, guid: 00827af9fbfa84b46af35cb29786131b, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -209,7 +190,7 @@ SpriteRenderer:
   m_Size: {x: 0.875, y: 1.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &67828415
@@ -227,6 +208,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &67828416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67828412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 979685bf98bd7ca40aa93f6f7e2e555f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderers:
+  - {fileID: -329737678, guid: ec44ceebc393752428e18a3da1993c64, type: 3}
+  - {fileID: -1880549288, guid: 00827af9fbfa84b46af35cb29786131b, type: 3}
+  - {fileID: -354936349, guid: 00827af9fbfa84b46af35cb29786131b, type: 3}
+  characterSprite: {fileID: 67828414}
+  keyName: Index
+  index: 0
 --- !u!1 &69986938
 GameObject:
   m_ObjectHideFlags: 0
@@ -6707,6 +6707,7 @@ GameObject:
   - component: {fileID: 1343553528}
   - component: {fileID: 1343553530}
   - component: {fileID: 1343553529}
+  - component: {fileID: 1343553531}
   m_Layer: 0
   m_Name: CoinAmount
   m_TagString: Untagged
@@ -6776,6 +6777,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1343553527}
   m_CullTransparentMesh: 1
+--- !u!114 &1343553531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343553527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c44b7b93cfe11724ea3eaa7b615e0141, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinName: Coin
+  cointAmount: 0
 --- !u!1 &1478189024
 GameObject:
   m_ObjectHideFlags: 0

@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingOrder: 99
   m_Sprite: {fileID: -400986525, guid: 41f15b6b986e5e548b014ae3dd3f204f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.3125, y: 1}
@@ -159,7 +159,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &4159150756771754566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,11 +173,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   starRig2d: {fileID: 8083740232971630245}
-  starDirection: {x: 3, y: 0}
+  starDirection: {x: 4, y: 0}
   starRenderer: {fileID: 6391464101145324996}
   starAnimator: {fileID: 5277247637595123928}
   starPrefabs: {fileID: 2451934867016117595}
-  delay: 0.5
+  disableTime: 0.5
 --- !u!95 &5277247637595123928
 Animator:
   serializedVersion: 5

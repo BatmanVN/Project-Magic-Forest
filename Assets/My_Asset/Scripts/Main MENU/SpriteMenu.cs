@@ -1,19 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Animations;
 using UnityEngine;
 
-public class ChangeSprite : MonoBehaviour
+public class SpriteMenu : MonoBehaviour
 {
     [SerializeField] private Sprite[] spriteRenderers;
     [SerializeField] private SpriteRenderer characterSprite;
     [SerializeField] private string keyName;
     [SerializeField] private int index;
-    [SerializeField] private AnimatorController[] heroAnim;
-    [SerializeField] private Animator player;
-
-    public int Index { get => index; set => index = value; }
-
     [ContextMenu("Get")]
     private void Awake()
     {
@@ -21,10 +15,9 @@ public class ChangeSprite : MonoBehaviour
     }
     public void ChooseSprite()
     {
-        if(Index >= 0 && Index < spriteRenderers.Length)
+        if (index >= 0 && index < spriteRenderers.Length)
         {
-            characterSprite.sprite = spriteRenderers[Index];
-            player.runtimeAnimatorController = heroAnim[Index];
+            characterSprite.sprite = spriteRenderers[index];
         }
         else
         {
@@ -33,8 +26,8 @@ public class ChangeSprite : MonoBehaviour
     }
     private int Get()
     {
-        Index = PlayerPrefs.GetInt(keyName, Index);
-        return Index;
+        index = PlayerPrefs.GetInt(keyName, index);
+        return index;
     }
     private void Start()
     {

@@ -310,11 +310,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41525f9b0631b5e44bff8eeeed27e3a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  knightObj: {fileID: 0}
   monsterAnim: {fileID: 3092956610261973948}
   monsterCharacter: {fileID: 4860447528427664204}
   takeDame: {fileID: 8300130075343802544, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
   skillDame: {fileID: 0}
-  beAttack: 0
 --- !u!114 &4860447528427664204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -347,11 +347,9 @@ MonoBehaviour:
   player:
     serializedVersion: 2
     m_Bits: 8
-  enemyTransform: {fileID: 1208243408123778392, guid: 05bf3b4439f228540857ef776bbd386a, type: 3}
+  enemyTransform: {fileID: 6681393395830615391, guid: 55d578a2da775c34cb3167c54f34d2dc, type: 3}
   animator: {fileID: 3092956610261973948}
   monsterDame: 2
-  isAttk: 0
-  isEnemy: 0
 --- !u!1 &5282484827160549392
 GameObject:
   m_ObjectHideFlags: 0

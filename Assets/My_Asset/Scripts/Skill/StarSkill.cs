@@ -10,22 +10,29 @@ public class StarSkill : MonoBehaviour
     [SerializeField] private SpriteRenderer starRenderer;
     [SerializeField] private Animator starAnimator;
     [SerializeField] private GameObject starPrefabs;
-    [SerializeField] private float delay;
+    [SerializeField] private float disableTime;
     private bool isAnim;
     private void OnTriggerEnter2D(Collider2D starSkill)
     {
         if(starSkill.CompareTag("KinghtMonster"))
         {
             starAnimator.SetTrigger(hitParaname);
-            isAnim = true;
+            Color color = starRenderer.color;
+            color.a -= disableTime * Time.deltaTime;
+            starRenderer.color = color;
+            StartCoroutine(Delay());
         }
     }
     private void Destroy()
     {
-        if(isAnim)
-        {
-            Destroy(starPrefabs);
-        }
+
+        starPrefabs.SetActive(false);
+        starRig2d.velocity = Vector2.zero;
+    }
+    private IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(0.7f);
+        Destroy();
     }
     private void StarMove()
     {
@@ -39,7 +46,7 @@ public class StarSkill : MonoBehaviour
     }
     private void Start()
     {
-        InvokeRepeating(nameof(Destroy), delay, 0);
+        
     }
     void Update()
     {

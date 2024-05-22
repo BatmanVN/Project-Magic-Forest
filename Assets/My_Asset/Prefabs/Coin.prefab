@@ -168,4 +168,3 @@ MonoBehaviour:
   coinEnable: {fileID: 9212488827073163430}
   coinAnim: {fileID: -5076273199895031724}
   timeDelay: 0.2
-  isAnimator: 0
