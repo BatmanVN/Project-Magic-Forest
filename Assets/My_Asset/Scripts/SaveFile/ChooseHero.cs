@@ -7,7 +7,7 @@ public class ChooseHero : MonoBehaviour
     [SerializeField] private GameObject[] heroes;
     [SerializeField] private int indexHero;
     [SerializeField] private HeroManager manager;
-    private bool isClick;
+    [SerializeField] private PlayerPrefsIntSaver intSaver;
 
     public int IndexHero { get => indexHero; set => indexHero = value; }
 
@@ -18,6 +18,7 @@ public class ChooseHero : MonoBehaviour
             if (heroes[i] == heroes[manager.Number])
             {
                 IndexHero = manager.Number;
+                intSaver.Value = IndexHero;
             }
         }
     }

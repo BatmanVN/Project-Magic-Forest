@@ -3459,7 +3459,6 @@ GameObject:
   - component: {fileID: 971201783}
   - component: {fileID: 971201782}
   - component: {fileID: 971201781}
-  - component: {fileID: 971201784}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3541,20 +3540,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &971201784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 971201780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f4e9737b8f19eb479be9f5ee587245a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  keyName: Index
-  chooseHero: {fileID: 1800497745}
 --- !u!1 &991897566
 GameObject:
   m_ObjectHideFlags: 0
@@ -6229,6 +6214,8 @@ GameObject:
   - component: {fileID: 1741497560}
   - component: {fileID: 1741497559}
   - component: {fileID: 1741497558}
+  - component: {fileID: 1741497562}
+  - component: {fileID: 1741497561}
   m_Layer: 5
   m_Name: ChooseHero
   m_TagString: Untagged
@@ -6300,7 +6287,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1800497745}
+      - m_Target: {fileID: 1741497561}
         m_TargetAssemblyTypeName: ChooseHero, Assembly-CSharp
         m_MethodName: SelectHero
         m_Mode: 1
@@ -6350,6 +6337,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1741497556}
   m_CullTransparentMesh: 1
+--- !u!114 &1741497561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741497556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9b8c74ec86d8d04795480ec10d1d628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heroes:
+  - {fileID: 1576581141}
+  - {fileID: 953941980}
+  - {fileID: 2082857500}
+  indexHero: 0
+  manager: {fileID: 1800497744}
+  intSaver: {fileID: 1741497562}
+--- !u!114 &1741497562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741497556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f4e9737b8f19eb479be9f5ee587245a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyName: Index
+  value: 0
 --- !u!1 &1778458122
 GameObject:
   m_ObjectHideFlags: 0
@@ -6448,7 +6468,6 @@ GameObject:
   - component: {fileID: 1800497739}
   - component: {fileID: 1800497743}
   - component: {fileID: 1800497744}
-  - component: {fileID: 1800497745}
   m_Layer: 5
   m_Name: Button_Manager
   m_TagString: Untagged
@@ -6582,24 +6601,6 @@ MonoBehaviour:
   buttonNext: {fileID: 1714128447}
   buttonBack: {fileID: 1473960141}
   number: 0
---- !u!114 &1800497745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1800497738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9b8c74ec86d8d04795480ec10d1d628, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  heroes:
-  - {fileID: 1576581141}
-  - {fileID: 953941980}
-  - {fileID: 2082857500}
-  indexHero: 0
-  manager: {fileID: 1800497744}
 --- !u!1 &1807601625
 GameObject:
   m_ObjectHideFlags: 0
