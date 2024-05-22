@@ -7,10 +7,10 @@ public class ChooseHero : MonoBehaviour
     [SerializeField] private GameObject[] heroes;
     [SerializeField] private int indexHero;
     [SerializeField] private HeroManager manager;
-    [SerializeField] private PlayerPrefsIntSaver intSaver;
-
+    [SerializeField] private string keyName;
     public int IndexHero { get => indexHero; set => indexHero = value; }
 
+    [ContextMenu("SelectHero")]
     public void SelectHero()
     {
         for (int i = 0; i < heroes.Length; i++)
@@ -18,7 +18,7 @@ public class ChooseHero : MonoBehaviour
             if (heroes[i] == heroes[manager.Number])
             {
                 IndexHero = manager.Number;
-                intSaver.Value = IndexHero;
+                PlayerPrefs.SetInt(keyName,IndexHero);
             }
         }
     }

@@ -6,11 +6,12 @@ public class ChangeSprite : MonoBehaviour
 {
     [SerializeField] private Sprite[] spriteRenderers;
     [SerializeField] private SpriteRenderer characterSprite;
-    [SerializeField] private PlayerPrefsIntReader playerPrefsIntReader;
+    [SerializeField] private string keyName;
     [SerializeField] private int index;
+    [ContextMenu("Get")]
     public void ChooseSprite()
     {
-        if(index >=0 && index < spriteRenderers.Length)
+        if(index >= 0 && index < spriteRenderers.Length)
         {
             characterSprite.sprite = spriteRenderers[index];
         }
@@ -19,12 +20,17 @@ public class ChangeSprite : MonoBehaviour
             return;
         }
     }
+    private int Get()
+    {
+        index = PlayerPrefs.GetInt(keyName, index);
+        return index;
+    }
     private void Update()
     {
         ChooseSprite();
     }
     private void Start()
     {
-        index = playerPrefsIntReader.Value;
+        Get();
     }
 }
