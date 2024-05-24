@@ -5,21 +5,23 @@ using UnityEngine.UI;
 
 public class Mana : MonoBehaviour
 {
+    [SerializeField] private string powerKey;
     [SerializeField] private Image powerBar;
     [SerializeField] private float mana;
     [SerializeField] private float maxMana;
-
     public float MaNa { get => mana; set => mana = value; }
     public float MaxMana { get => maxMana; set => maxMana = value; }
-    public bool outMana => MaNa <=0;
-
-    private void Awake()
+    public bool outMana => MaNa<=0;
+    public string PowerKey { get => powerKey; set => powerKey = value; }
+    [ContextMenu("GetPower")]
+    private void Start()
     {
-        MaNa = MaxMana;
+        GetPower();
     }
-    private void Update()
+    private void GetPower()
     {
-        
+        MaxMana = PlayerPrefs.GetFloat(PowerKey,MaxMana);
+        MaNa = MaxMana;
     }
     public void ConsumeMana(float useMana)
     {

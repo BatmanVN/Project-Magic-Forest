@@ -5,32 +5,23 @@ using UnityEngine;
 public class Ignius_SaveData : MonoBehaviour
 {
     [SerializeField] private Ignius_Indexs ignius;
-    [SerializeField] private string keyName;
-    [SerializeField] private float healthSave;
-    [SerializeField] private float powerSave;
-    [SerializeField] private float speedSave;
-    [SerializeField] private float starSave;
+    [SerializeField] private string healthName;
+    [SerializeField] private string powerName;
+    [SerializeField] private string speedName;
+    [SerializeField] private string starName;
+    [SerializeField] private string levelName;
 
-    protected void IgniusData()
+    [ContextMenu("IgniusData")]
+    private void IgniusData()
     {
-        PlayerPrefs.SetString(keyName, JsonUtility.ToJson(healthSave));
-        PlayerPrefs.SetString(keyName, JsonUtility.ToJson(powerSave));
-        PlayerPrefs.SetString(keyName, JsonUtility.ToJson(speedSave));
-        PlayerPrefs.SetString(keyName, JsonUtility.ToJson(starSave));
+        PlayerPrefs.SetFloat(healthName, ignius.Health);
+        PlayerPrefs.SetFloat(powerName, ignius.Power);
+        PlayerPrefs.SetFloat(speedName, ignius.Speed);
+        PlayerPrefs.SetFloat(starName, ignius.StarDame);
+        PlayerPrefs.SetInt(levelName, ignius.Level);
     }
-    private void SaveData()
+    private void Start()
     {
-        healthSave = ignius.Health;
-        powerSave = ignius.Power;
-        speedSave = ignius.Speed;
-        starSave = ignius.StarDame;
+        IgniusData();
     }
-    private void Update()
-    {
-        SaveData();
-    }
-    //private void Start()
-    //{
-    //    IgniusData();
-    //}
 }

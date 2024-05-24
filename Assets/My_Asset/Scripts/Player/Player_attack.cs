@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player_attack : MonoBehaviour
 {
+    [SerializeField] private AudioSource attkKit;
     [SerializeField] private GameObject[] ballAttack;
     [SerializeField] private ChangeSprite indexSprites;
     [SerializeField] private Transform ballAttackRight;
@@ -17,44 +18,50 @@ public class Player_attack : MonoBehaviour
     public float DameSke { get => dameSke; private set => dameSke = value; }
     public void Attack()
     {
-
-        for(int i = 0; i < ballAttack.Length; i++)
+        if (useMana.MaNa > 1)
         {
-            if(indexSprites.Index == 0)
+            for (int i = 0; i < ballAttack.Length; i++)
             {
-                if (move.IsFlip == true)
+                attkKit.Play();
+                if (indexSprites.Index == 0)
                 {
-                    fireRender[indexSprites.Index].flipX = true;
+                    if (move.IsFlip == true)
+                    {
+                        fireRender[indexSprites.Index].flipX = true;
+                    }
+                    if (move.IsFlip == false)
+                    {
+                        fireRender[indexSprites.Index].flipX = false;
+                    }
+                    Instantiate(ballAttack[indexSprites.Index], ballAttackRight.position, Quaternion.identity);
                 }
-                if (move.IsFlip == false)
+                if (indexSprites.Index == 1)
                 {
-                    fireRender[indexSprites.Index].flipX = false;
+                    if (move.IsFlip == true)
+                    {
+                        fireRender[indexSprites.Index].flipX = true;
+                    }
+                    if (move.IsFlip == false)
+                    {
+                        fireRender[indexSprites.Index].flipX = false;
+                    }
+                    Instantiate(ballAttack[1], ballAttackRight.position, Quaternion.identity);
                 }
-                if (useMana.MaNa <= 0)
+                if (indexSprites.Index == 2)
                 {
-                    return;
+                    if (move.IsFlip == true)
+                    {
+                        fireRender[indexSprites.Index].flipX = true;
+                    }
+                    if (move.IsFlip == false)
+                    {
+                        fireRender[indexSprites.Index].flipX = false;
+                    }
+                    Instantiate(ballAttack[2], ballAttackRight.position, Quaternion.identity);
                 }
-                Instantiate(ballAttack[indexSprites.Index], ballAttackRight.position, Quaternion.identity);
-                useMana.ConsumeMana(mana);
             }
-            if(indexSprites.Index == 1)
-            {
-                if (move.IsFlip == true)
-                {
-                    fireRender[indexSprites.Index].flipX = true;
-                }
-                if (move.IsFlip == false)
-                {
-                    fireRender[indexSprites.Index].flipX = false;
-                }
-                if (useMana.MaNa <= 0)
-                {
-                    return;
-                }
-                Instantiate(ballAttack[1], ballAttackRight.position, Quaternion.identity);
-                useMana.ConsumeMana(mana);
-            }
-        }
+            useMana.ConsumeMana(mana);
+        } 
     }
     private void Start()
     {

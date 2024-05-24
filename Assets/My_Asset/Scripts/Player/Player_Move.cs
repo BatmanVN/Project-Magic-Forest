@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player_Move : MonoBehaviour
 {
+    [SerializeField] private string speedKey;
     [SerializeField] private AudioSource walkAudio;
     private const string isWalkingParaname = "isWalking";
     [SerializeField] private Run_Animation runAnim;
@@ -23,7 +24,9 @@ public class Player_Move : MonoBehaviour
     public bool IsLeft { get => isLeft; set => isLeft = value; }
     public bool IsRight { get => isRight; set => isRight = value; }
     public bool IsFlip { get => isFlip; set => isFlip = value; }
+    public string SpeedKey { get => speedKey; set => speedKey = value; }
 
+    [ContextMenu("GetSpeed")]
     public void EnableSpeedUP(float speed)
     {
         speedDefault += speed;
@@ -124,8 +127,12 @@ public class Player_Move : MonoBehaviour
         KeyMove();
         PlayerMove();
     }
-    //private void Start()
-    //{
-    //    walkAudio.enabled = false;
-    //}
+    private void GetSpeed()
+    {
+        speedDefault = PlayerPrefs.GetFloat(SpeedKey, speedDefault);
+    }
+    private void Start()
+    {
+        GetSpeed();
+    }
 }

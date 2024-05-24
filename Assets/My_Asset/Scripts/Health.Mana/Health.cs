@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class HealthCharacter : MonoBehaviour
 {
+    [SerializeField] private string healthName;
     [SerializeField] private Image healthBar;
     [SerializeField] private float health;
     [SerializeField] private float maxHealth;
@@ -13,13 +14,17 @@ public class HealthCharacter : MonoBehaviour
     public bool isAlive => health > 0;
     public bool isDead => health <= 0;
 
-    private void Awake()
+    public string HealthName { get => healthName; set => healthName = value; }
+    [ContextMenu("GetHealthKey")]
+
+    private void Start()
     {
-        Health = MaxHealth;
+        GetHealthKey();
     }
-    private void Update()
+    private void GetHealthKey()
     {
-        
+        MaxHealth = PlayerPrefs.GetFloat(HealthName,MaxHealth);
+        Health = MaxHealth;
     }
     public void TakeDame(float dame)
     {

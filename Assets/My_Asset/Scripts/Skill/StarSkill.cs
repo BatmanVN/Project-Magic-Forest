@@ -14,7 +14,7 @@ public class StarSkill : MonoBehaviour
     private bool isAnim;
     private void OnTriggerEnter2D(Collider2D starSkill)
     {
-        if(starSkill.CompareTag("KinghtMonster"))
+        if(starSkill.CompareTag("KnightMonster"))
         {
             starAnimator.SetTrigger(hitParaname);
             Color color = starRenderer.color;

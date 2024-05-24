@@ -17,6 +17,7 @@ TagManager:
   - DefIndex
   - HealIndex
   - SpeedIndex
+  - SkeMonster
   layers:
   - Default
   - TransparentFX

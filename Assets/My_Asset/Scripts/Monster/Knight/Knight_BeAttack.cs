@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class Knight_BeAttack : MonoBehaviour
@@ -11,7 +12,6 @@ public class Knight_BeAttack : MonoBehaviour
     [SerializeField] private HealthCharacter monsterCharacter;
     [SerializeField] private Player_attack takeDame;
     [SerializeField] private Player_skillFire skillDame;
-    private Player_skillFire starFire;
     private bool beAttack;
 
     public bool BeAttack { get => beAttack; set => beAttack = value; }
@@ -21,8 +21,12 @@ public class Knight_BeAttack : MonoBehaviour
         if (Monster.CompareTag("FireBall"))
         {
             monsterAnim.SetTrigger(isAttackParaname);
-            monsterCharacter.TakeDame(takeDame.dame);
-            starFire?.SkillAmount();
+            if (beAttack == false)
+            {
+                skillDame?.SkillAmount();
+                monsterCharacter.TakeDame(takeDame.dame);
+                beAttack = true;
+            }
         }
         if(Monster.CompareTag("StarSkill"))
         {
@@ -35,6 +39,13 @@ public class Knight_BeAttack : MonoBehaviour
             StartCoroutine(Delay());
         }
     }
+    private void OnTriggerExit2D(Collider2D Monster)
+    {
+        if (Monster.CompareTag("FireBall"))
+        {
+            beAttack = false;
+        }
+    }
     private void DisableObj()
     {
         knightObj.SetActive(false);
@@ -44,11 +55,6 @@ public class Knight_BeAttack : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         DisableObj();
-    }
-
-    private void Start()
-    {
-        starFire = FindAnyObjectByType<Player_skillFire>();
     }
 
 

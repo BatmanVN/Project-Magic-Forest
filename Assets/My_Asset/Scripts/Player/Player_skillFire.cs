@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Player_skillFire : MonoBehaviour
 {
+    [SerializeField] private AudioSource starKit;
+    [SerializeField] private string starName;
     [SerializeField] private Image skillBar;
     [SerializeField] private GameObject buttonStar;
     [SerializeField] private GameObject[] starPower;
@@ -17,6 +19,10 @@ public class Player_skillFire : MonoBehaviour
     [SerializeField] private float maxSkillAmount;
     public float dameSkill { get => dameskill;private set => dameskill = value; }
     public bool starEnable => excatlySkill >= maxSkillAmount;
+
+    public string StarName { get => starName; set => starName = value; }
+
+    [ContextMenu("GetStarDame")]
     public void SkilltoSke()
     {
         dameskill -= 2;
@@ -34,6 +40,7 @@ public class Player_skillFire : MonoBehaviour
     {
         for(int i = 0; i < starPower.Length; i++)
         {
+            starKit.Play();
             if (move.IsFlip == true)
             {
                 fireRender[indexHero.Index].flipX = true;
@@ -60,10 +67,23 @@ public class Player_skillFire : MonoBehaviour
                     skillBar.fillAmount = excatlySkill / maxSkillAmount;
                 }
             }
+            if (indexHero.Index == 2)
+            {
+                if (starEnable == true)
+                {
+                    Instantiate(starPower[2], fireBall.position, Quaternion.identity);
+                    excatlySkill -= maxSkillAmount;
+                    skillBar.fillAmount = excatlySkill / maxSkillAmount;
+                }
+            }
         }
     }
-    private void Update()
+    private void GetStarDame()
     {
-        
+        dameSkill = PlayerPrefs.GetFloat(StarName, dameSkill);
+    }
+    private void Start()
+    {
+        GetStarDame();
     }
 }

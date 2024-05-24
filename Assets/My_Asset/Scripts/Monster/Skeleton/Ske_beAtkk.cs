@@ -24,8 +24,6 @@ public class Ske_beAtkk : MonoBehaviour
             AttkSke = true;
             skeAnim.SetTrigger(beAttackParaname);
             skeHealth.TakeDame(takeDame.DameSke);
-            skillDame?.SkillAmount();
-           
         }
         if(skeleton.CompareTag("StarSkill"))
         {

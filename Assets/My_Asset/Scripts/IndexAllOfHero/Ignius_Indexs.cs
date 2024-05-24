@@ -23,7 +23,6 @@ public class Ignius_Indexs : MonoBehaviour
     [SerializeField] private int number;
 
 
-
     public float Health { get => health; set => health = value; }
     public float Power { get => power; set => power = value; }
     public float Speed { get => speed; set => speed = value; }
