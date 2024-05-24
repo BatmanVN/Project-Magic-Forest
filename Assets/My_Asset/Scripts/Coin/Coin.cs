@@ -15,7 +15,7 @@ public class Coin : MonoBehaviour
         if(coin.CompareTag("Player"))
         {
             coinAnim.SetTrigger("isCollect");
-            amount?.CountCoin();
+            amount?.CountCoinAmount();
             StartCoroutine(Delay());
         }
     }

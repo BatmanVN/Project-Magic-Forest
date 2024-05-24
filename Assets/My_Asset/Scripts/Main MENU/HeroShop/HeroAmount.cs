@@ -7,15 +7,15 @@ public class HeroAmount : MonoBehaviour
 {
     [SerializeField] private GameObject[] heroes;
     [SerializeField] private GameObject[] indexBar;
-    [SerializeField] private int index;
+    [SerializeField] private int heroNumber;
 
-    public int Index { get => index; set => index = value; }
+    public int Index { get => heroNumber; set => heroNumber = value; }
 
     public void HeroIndexBar()
     {
         for (int i = 0; i < indexBar.Length; i++)
         {
-            if (heroes[i] == heroes[index])
+            if (heroes[i] == heroes[Index])
             {
                 indexBar[Index].SetActive(true);
             }

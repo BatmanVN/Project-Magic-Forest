@@ -11,11 +11,23 @@ public class CoinAmount : MonoBehaviour
     [SerializeField] private string keyName;
     [SerializeField] private int countCoin;
     [SerializeField] private GameObject coinBar;
-    [ContextMenu("CountCoin")]
-    public void CountCoin()
+
+    public int CountCoin { get => countCoin; set => countCoin = value; }
+
+    [ContextMenu("GetCoin")]
+
+    private void Start()
     {
-        countCoin += 1;
-        coinText.text = countCoin.ToString();
-        PlayerPrefs.SetInt(keyName, countCoin);
+        GetCoin();
+    }
+    private int GetCoin()
+    {
+        CountCoin = PlayerPrefs.GetInt(keyName,countCoin);
+        return CountCoin;
+    }
+    public void CountCoinAmount()
+    {
+        CountCoin += 1;
+        coinText.text = CountCoin.ToString();
     }
 }

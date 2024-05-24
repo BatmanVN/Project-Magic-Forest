@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player_Move : MonoBehaviour
 {
+    [SerializeField] private AudioSource walkAudio;
     private const string isWalkingParaname = "isWalking";
     [SerializeField] private Run_Animation runAnim;
     [SerializeField] private Player_BonusSPD speedUp;
@@ -96,25 +97,35 @@ public class Player_Move : MonoBehaviour
     {
         if (stopGround.StopGroundLeft == false)
            isLeft = true;
+        
+        walkAudio.Play();
     }
     public void DownRight()
     {
         if(stopGround.StopGroundRight == false)
             isRight = true;
+        
+        walkAudio.Play();
     }
     public void UpLeft()
     {
         isLeft = false;
         Stopmove();
+        walkAudio.Pause();
     }
     public void UpRight()
     {
         isRight = false;
         Stopmove();
+        walkAudio.Pause();
     }
     private void Update()
     {
         KeyMove();
         PlayerMove();
     }
+    //private void Start()
+    //{
+    //    walkAudio.enabled = false;
+    //}
 }

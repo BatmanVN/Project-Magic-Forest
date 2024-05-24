@@ -806,10 +806,10 @@ TextureImporter:
       name: Ui_images_34
       rect:
         serializedVersion: 2
-        x: 88
-        y: 108
-        width: 16
-        height: 17
+        x: 89
+        y: 110
+        width: 15
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1481,7 +1481,7 @@ TextureImporter:
         x: 48
         y: 224
         width: 16
-        height: 15
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1544,7 +1544,7 @@ TextureImporter:
         x: 0
         y: 225
         width: 16
-        height: 14
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1878,9 +1878,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 89
-        y: 95
+        y: 96
         width: 18
-        height: 13
+        height: 12
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1898,9 +1898,9 @@ TextureImporter:
       name: Ui_images_16
       rect:
         serializedVersion: 2
-        x: 209
+        x: 208
         y: 128
-        width: 15
+        width: 16
         height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1921,7 +1921,7 @@ TextureImporter:
         serializedVersion: 2
         x: 240
         y: 128
-        width: 15
+        width: 16
         height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1961,9 +1961,9 @@ TextureImporter:
       name: Ui_images_88
       rect:
         serializedVersion: 2
-        x: 241
+        x: 240
         y: 112
-        width: 14
+        width: 16
         height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -2006,7 +2006,7 @@ TextureImporter:
         x: 208
         y: 112
         width: 16
-        height: 15
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2024,9 +2024,9 @@ TextureImporter:
       name: Ui_images_91
       rect:
         serializedVersion: 2
-        x: 191
+        x: 192
         y: 112
-        width: 17
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

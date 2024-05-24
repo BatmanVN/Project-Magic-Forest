@@ -6,13 +6,17 @@ using UnityEngine.UI;
 public class GetCoin : MonoBehaviour
 {
     [SerializeField] private string coinName;
-    [SerializeField] private int cointAmount;
-    public int CointAmount { get => cointAmount; set => cointAmount = value; }
+    [SerializeField] private int getCoin;
+    public int CointAmount { get => getCoin; set => getCoin = value; }
 
     [ContextMenu("Get")]
     private int Get()
     {
-        CointAmount = PlayerPrefs.GetInt(coinName,CointAmount);
-        return CointAmount;
+        getCoin = PlayerPrefs.GetInt(coinName, getCoin);
+        return getCoin;
+    }
+    private void Start()
+    {
+        Get();
     }
 }

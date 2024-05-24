@@ -7,16 +7,26 @@ public class Index_Aquana : MonoBehaviour
 {
     [SerializeField] private Index_Bar index;
     [SerializeField] private Image[] aquanaBar;
+    [SerializeField] private Text[] aquanaText;
     [SerializeField] private float health;
-    [SerializeField] private float maxhealth;
     [SerializeField] private float power;
-    [SerializeField] private float maxpower;
     [SerializeField] private float speed;
-    [SerializeField] private float maxspeed;
     [SerializeField] private float starDame;
-    [SerializeField] private float maxstarDame;
     [SerializeField] private int level;
-    [SerializeField] private int maxlevel;
+    [SerializeField] private Index_Bar index_Bar;
+    [SerializeField] private float fixHealth;
+    [SerializeField] private float fixPower;
+    [SerializeField] private float fixSpeed;
+    [SerializeField] private float fixStarDame;
+    [SerializeField] private int fixlevel;
+    [SerializeField] private int number;
+    public float Health { get => health; set => health = value; }
+    public float Power { get => power; set => power = value; }
+    public float Speed { get => speed; set => speed = value; }
+    public float StarDame { get => starDame; set => starDame = value; }
+    public int Level { get => level; set => level = value; }
+    public int Fixlevel { get => fixlevel; set => fixlevel = value; }
+    public int Number { get => number; set => number = value; }
 
     public void IndexsOfAquana()
     {
@@ -24,38 +34,42 @@ public class Index_Aquana : MonoBehaviour
         {
             if (i == 0)
             {
-                aquanaBar[0].fillAmount = health / index.MaxHealthbar;
+                aquanaText[0].text = Health.ToString();
+                aquanaBar[0].fillAmount = Health / index.MaxHealthbar;
             }
             if (i == 1)
             {
-                aquanaBar[1].fillAmount = power / index.MaxPowerbar;
+                aquanaText[1].text = Power.ToString();
+                aquanaBar[1].fillAmount = Power / index.MaxPowerbar;
             }
             if (i == 2)
             {
-                aquanaBar[2].fillAmount = speed / index.MaxSpeedbar;
+                aquanaText[2].text = Speed.ToString();
+                aquanaBar[2].fillAmount = Speed / index.MaxSpeedbar;
+            }
+            if(i == 3)
+            {
+                aquanaText[3].text = StarDame.ToString();
+                aquanaBar[3].fillAmount = StarDame / index.MaxStarbar;
             }
             else
             {
-                aquanaBar[3].fillAmount = starDame / index.MaxStarbar;
+                aquanaText[4].text = Level.ToString();
             }
         }
     }
-    //public void HealthAquana()
-    //{
-    //    igniusBar[0].fillAmount = health / index.MaxHealthbar;
-    //}
-    //public void PowerAquana()
-    //{
-    //    igniusBar[1].fillAmount = power / index.MaxPowerbar;
-    //}
-    //public void SpeedAquana()
-    //{
-    //    igniusBar[2].fillAmount = speed / index.MaxSpeedbar;
-    //}
-    //public void StarAquana()
-    //{
-    //    igniusBar[3].fillAmount = starDame / index.MaxStarbar;
-    //}
+    public void UpdateIndex()
+    {
+        if (Health > index_Bar.MaxHealthbar || Power > index_Bar.MaxPowerbar
+            || Speed > index_Bar.MaxSpeedbar || StarDame > index_Bar.MaxStarbar || Level >= index_Bar.MaxLevel)
+        {
+            return;
+        }
+        Health += fixHealth;
+        Power += fixPower;
+        Speed += fixSpeed;
+        StarDame += fixStarDame;
+    }
     private void Update()
     {
         IndexsOfAquana();

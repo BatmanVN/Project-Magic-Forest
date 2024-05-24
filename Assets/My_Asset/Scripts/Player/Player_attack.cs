@@ -56,7 +56,7 @@ public class Player_attack : MonoBehaviour
             }
         }
     }
-    private void Update()
+    private void Start()
     {
         
     }
