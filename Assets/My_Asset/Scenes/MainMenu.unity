@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 67828415}
   - component: {fileID: 67828414}
   - component: {fileID: 67828416}
+  - component: {fileID: 67828417}
   m_Layer: 0
   m_Name: HeroEnable
   m_TagString: Untagged
@@ -202,7 +203,7 @@ Transform:
   m_GameObject: {fileID: 67828412}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.87, y: -1.75, z: 0}
+  m_LocalPosition: {x: -1.9, y: -1.12, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -225,8 +226,34 @@ MonoBehaviour:
   - {fileID: -1880549288, guid: 00827af9fbfa84b46af35cb29786131b, type: 3}
   - {fileID: -354936349, guid: 00827af9fbfa84b46af35cb29786131b, type: 3}
   characterSprite: {fileID: 67828414}
+  animators:
+  - {fileID: 9100000, guid: 995e7c5dca8774e45a27e87bf11b537f, type: 2}
+  - {fileID: 9100000, guid: 4967632ed1cb5ed4387eadd0d24f905c, type: 2}
+  - {fileID: 9100000, guid: 1f3a7b3d66d09674086aab33215cf2b2, type: 2}
+  heroes: {fileID: 67828417}
   keyName: Index
   index: 0
+--- !u!95 &67828417
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67828412}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &69986938
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ public class Player_beAttack : MonoBehaviour
 {
     private const string beAttackParaname = "beAttack";
     private const string isDieParaname = "isDie";
+    [SerializeField] private AudioSource beAttackSound;
     [SerializeField] private HealthCharacter character;
     [SerializeField] private Collider2D player2D;
     [SerializeField] private Player_BonusDef bonusDef;
@@ -24,6 +25,7 @@ public class Player_beAttack : MonoBehaviour
             if (monster[i].IsEnemy == true && bonusDef.EnableEffect == false)
             {
                 jump?.JumpBeAttk(jumpRec);
+                beAttackSound.Play();
                 playerAnim.SetTrigger(beAttackParaname);
                 character?.TakeDame(monster[i].DameKnight);
                 monster[i].IsEnemy = false;
@@ -32,6 +34,7 @@ public class Player_beAttack : MonoBehaviour
         if(skeAttk.IsEnemy == true && bonusDef.EnableEffect == false)
         {
             jump?.JumpBeAttk(jumpRec);
+            beAttackSound.Play();
             playerAnim.SetTrigger(beAttackParaname);
             character?.TakeDame(skeAttk.Dame);
             skeAttk.IsEnemy = false;

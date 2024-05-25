@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class SpriteMenu : MonoBehaviour
 {
     [SerializeField] private Sprite[] spriteRenderers;
     [SerializeField] private SpriteRenderer characterSprite;
+    [SerializeField] private AnimatorController[] animators;
+    [SerializeField] private Animator heroes;
     [SerializeField] private string keyName;
     [SerializeField] private int index;
     [ContextMenu("Get")]
@@ -18,6 +21,7 @@ public class SpriteMenu : MonoBehaviour
         if (index >= 0 && index < spriteRenderers.Length)
         {
             characterSprite.sprite = spriteRenderers[index];
+            heroes.runtimeAnimatorController = animators[index];
         }
         else
         {

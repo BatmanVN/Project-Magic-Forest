@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Jump_BonusPoint : MonoBehaviour
 {
+    [SerializeField] private AudioSource bonusSound;
     [SerializeField] private GameObject PointBonus;
     private const string jumpbonusParaname = "isBonus";
     [SerializeField] private Vector2 jumpBonusPoint;
@@ -21,6 +22,7 @@ public class Jump_BonusPoint : MonoBehaviour
         {
             bonus *= 2;
             player2D.velocity = bonus;
+            bonusSound.Play();
             playerAnim.SetTrigger(jumpbonusParaname);
             IsJumpBonus = true;
             Destroy(PointBonus);

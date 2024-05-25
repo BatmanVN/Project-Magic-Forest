@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class CoinAmount : MonoBehaviour
 {
-
     [SerializeField] private Text coinText;
     [SerializeField] private Text coinTextBar;
     [SerializeField] private string keyName;

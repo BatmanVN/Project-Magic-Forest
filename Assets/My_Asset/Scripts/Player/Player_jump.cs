@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Player_jump : MonoBehaviour
 {
+    [SerializeField] private AudioSource jumpKit;
     [SerializeField] private Player_beAttack beAttack;
     [SerializeField] private Player_Move moveComponent;
     [SerializeField] private Rigidbody2D player2D;
@@ -52,8 +53,8 @@ public class Player_jump : MonoBehaviour
         {
             return;
         }
-        //player2D.AddForce(jumpRection);
         player2D.velocity = jumpRection;
+        jumpKit.Play();
         animator.SetTrigger("isJump");
         jumpLeft--;
         if(!isGrounded && jumpLeft > 0)

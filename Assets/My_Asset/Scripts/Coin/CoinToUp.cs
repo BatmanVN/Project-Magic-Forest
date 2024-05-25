@@ -21,6 +21,11 @@ public class CoinToUp : MonoBehaviour
     [ContextMenu("CointoUp")]
     public void UpgradeHero()
     {
+        if (coin.coinAmount < coinUp[igniusIndex.Number] || coin.coinAmount < coinUp[aquanaIndex.Number]
+        || coin.coinAmount < coinUp[terasIndex.Number])
+        {
+            return;
+        }
         for (int i = 0; i < textHero.Length; i++)
         {
             if (textHero[i] == textHero[amount.Index])

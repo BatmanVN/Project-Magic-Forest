@@ -10,6 +10,9 @@ public class Coin : MonoBehaviour
     [SerializeField] private Animator coinAnim;
     [SerializeField] private float timeDelay;
     private bool isAnimator;
+
+    public bool IsAnimator { get => isAnimator; set => isAnimator = value; }
+
     private void OnTriggerEnter2D(Collider2D coin)
     {
         if(coin.CompareTag("Player"))
@@ -23,7 +26,7 @@ public class Coin : MonoBehaviour
     {
         if (coin.CompareTag("Player"))
         {
-            isAnimator = false;
+            IsAnimator = false;
         }
     }
     private void WhenCollect()
