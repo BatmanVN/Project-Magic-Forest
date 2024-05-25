@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HeroManager : MonoBehaviour
 {
     [SerializeField] private GameObject[] heroNumber;
+    [SerializeField] private GameObject[] heroText;
+    [SerializeField] private GameObject[] heroTextBuy;
+    [SerializeField] private Buy_Hero[] buyHero;
     [SerializeField] private HeroAmount heroAmount;
     [SerializeField] private GameObject buttonNext;
     [SerializeField] private GameObject buttonBack;
@@ -45,14 +49,20 @@ public class HeroManager : MonoBehaviour
         NumberIndex();
         for (int i = 0; i < heroNumber.Length; i++)
         {
+            if (buyHero[0].WasBuy == false)
+            {
+
+            }
             if (heroNumber[i] == heroNumber[Number])
             {
-                heroNumber[Number].SetActive(true);
-                heroAmount.Index = Number;
+                    heroNumber[Number].SetActive(true);
+                    heroText[Number].SetActive(true);
+                    heroAmount.Index = Number;
             }
             else
             {
                 heroNumber[i].SetActive(false);
+                heroText[i].SetActive(false);
             }
         }
         heroAmount?.HeroIndexBar();
@@ -68,12 +78,14 @@ public class HeroManager : MonoBehaviour
         {
             if (heroNumber[i] == heroNumber[Number])
             {
-                heroNumber[Number].SetActive(true);
-                heroAmount.Index = Number;
+                    heroNumber[Number].SetActive(true);
+                    heroText[Number].SetActive(true);
+                    heroAmount.Index = Number;
             }
             else
             {
                 heroNumber[i].SetActive(false);
+                heroText[i].SetActive(false);
             }
         }
         heroAmount?.HeroIndexBar();

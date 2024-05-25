@@ -9,7 +9,6 @@ public class CoinToUp : MonoBehaviour
     [SerializeField] private HeroAmount amount;
     [SerializeField] private GetCoinShop coin;
     [SerializeField] private Index_Bar maxLevel;
-    //[SerializeField] private SaveCoinShop saveCoin;
     [SerializeField] private GameObject[] textHero;
     [SerializeField] private Ignius_Indexs igniusIndex;
     [SerializeField] private Index_Aquana aquanaIndex;
