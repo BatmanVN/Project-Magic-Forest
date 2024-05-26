@@ -12,7 +12,7 @@ public class Ignius_SaveData : MonoBehaviour
     [SerializeField] private string levelName;
 
     [ContextMenu("IgniusData")]
-    private void IgniusData()
+    public void IgniusData()
     {
         PlayerPrefs.SetFloat(healthName, ignius.Health);
         PlayerPrefs.SetFloat(powerName, ignius.Power);

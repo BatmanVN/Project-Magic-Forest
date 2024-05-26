@@ -448,7 +448,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 204763715}
+      - m_Target: {fileID: 1012282296}
         m_TargetAssemblyTypeName: Buy_Teras, Assembly-CSharp
         m_MethodName: Click
         m_Mode: 1
@@ -526,13 +526,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 204763710}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44d680e13f09c604db7eccd5ddc06c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   heroSell: 5000
-  heroManager: {fileID: 1800497744}
   coinShop: {fileID: 2811056070031495148}
   wasBuy: 0
   keyName: BuyTeras
@@ -944,9 +943,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indexAquana: {fileID: 632655649}
+  choose: {fileID: 1741497561}
+  upAqua: {fileID: 1419824172}
   coin: {fileID: 2811056070031495148}
   coinToUp: {fileID: 1012282295}
   amount: {fileID: 451949327}
+  priceCoin: 0
+  coinAffterText: {fileID: 1279169129}
+  priceText: {fileID: 1279169129}
   isClick: 0
 --- !u!114 &327821653
 MonoBehaviour:
@@ -1054,7 +1058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d6c1c94578b2c44c97d9e11699a9dd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonBuy: {fileID: 395985886}
+  buttonBuy: {fileID: 1012282297}
   buy: {fileID: 395985884}
   upgrade: {fileID: 1534138977}
   keyName: BuyAqua
@@ -1297,7 +1301,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 395985884}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f745b771b4f728f42b885971c3e598df, type: 3}
   m_Name: 
@@ -1352,7 +1356,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 395985886}
+      - m_Target: {fileID: 1012282297}
         m_TargetAssemblyTypeName: Buy_Aqua, Assembly-CSharp
         m_MethodName: Click
         m_Mode: 1
@@ -3995,9 +3999,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   igniusIndex: {fileID: 2140334373}
+  choose: {fileID: 1741497561}
+  upIgnius: {fileID: 491891818}
   coin: {fileID: 2811056070031495148}
   coinToUp: {fileID: 1012282295}
   amount: {fileID: 451949327}
+  priceCoin: 250
+  coinAffterText: {fileID: 322224480}
+  priceText: {fileID: 322224480}
   isClick: 0
 --- !u!1 &871595077
 GameObject:
@@ -4645,6 +4654,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1012282294}
   - component: {fileID: 1012282295}
+  - component: {fileID: 1012282297}
+  - component: {fileID: 1012282296}
   m_Layer: 5
   m_Name: UpgradeHero
   m_TagString: Untagged
@@ -4686,10 +4697,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d12442b41644524ea5528998617a849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priceText:
-  - {fileID: 322224480}
-  - {fileID: 1279169129}
-  - {fileID: 434870023}
   amount: {fileID: 451949327}
   coin: {fileID: 2811056070031495148}
   maxLevel: {fileID: 822446517}
@@ -4701,9 +4708,48 @@ MonoBehaviour:
   aquanaIndex: {fileID: 632655649}
   terasIndex: {fileID: 791938628}
   coinUp: fa000000f4010000ee020000e8030000
-  priceCoin: 250
-  coinAffterText: {fileID: 6017962311903729898}
-  keyName: SaveCoin
+  keyName: GetCoin
+  healthName: 
+  powerName: 
+  speedName: 
+  starName: 
+  levelName: 
+--- !u!114 &1012282296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012282293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d680e13f09c604db7eccd5ddc06c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heroSell: 5000
+  coinShop: {fileID: 2811056070031495148}
+  wasBuy: 0
+  keyName: BuyTeras
+  buyTeras: 0
+  isClick: 0
+--- !u!114 &1012282297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012282293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f745b771b4f728f42b885971c3e598df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heroSell: 2000
+  coinShop: {fileID: 2811056070031495148}
+  wasBuy: 0
+  keyName: BuyAqua
+  buyAqua: 0
+  isClick: 0
 --- !u!1 &1048022625
 GameObject:
   m_ObjectHideFlags: 0
@@ -7953,8 +7999,8 @@ MonoBehaviour:
   - {fileID: 1576581141}
   - {fileID: 953941980}
   - {fileID: 2082857500}
-  aquana: {fileID: 327821656}
-  teras: {fileID: 2079465488}
+  aquana: {fileID: 1012282297}
+  teras: {fileID: 1012282296}
   indexHero: 0
   manager: {fileID: 1800497744}
   keyName: Index
@@ -9569,9 +9615,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indexTeras: {fileID: 791938628}
+  choose: {fileID: 1741497561}
+  upTeras: {fileID: 1221204365}
   coin: {fileID: 2811056070031495148}
   coinToUp: {fileID: 1012282295}
   amount: {fileID: 451949327}
+  priceCoin: 0
+  coinAffterText: {fileID: 434870023}
+  priceText: {fileID: 434870023}
   isClick: 0
 --- !u!114 &2079465485
 MonoBehaviour:
@@ -9679,7 +9730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43dac3667b34dc147a43b92e159c0eb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonBuy: {fileID: 204763715}
+  buttonBuy: {fileID: 1012282296}
   buy: {fileID: 204763710}
   upgrade: {fileID: 1812752989}
   keyName: BuyTeras

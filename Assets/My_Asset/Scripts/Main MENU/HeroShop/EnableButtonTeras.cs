@@ -15,10 +15,11 @@ public class EnableButtonTeras : MonoBehaviour
     [ContextMenu("GetIndex")]
     private void EnableButton()
     {
-        if (buttonBuy.IsClick == true)
+        if (buttonBuy.BuyTeras == 2)
         {
             buy.SetActive(false);
             upgrade.SetActive(true);
+            GetIndex();
         }
         else
         {
@@ -26,14 +27,15 @@ public class EnableButtonTeras : MonoBehaviour
             upgrade.SetActive(false);
         }
     }
-    private void GetIndex()
+    private int GetIndex()
     {
-        BuyTeras = PlayerPrefs.GetInt(keyName, BuyTeras);
+        BuyTeras = PlayerPrefs.GetInt(keyName, buttonBuy.BuyTeras);
+        return BuyTeras;
     }
-    private void Start()
-    {
-        GetIndex();
-    }
+    //private void Start()
+    //{
+    //    GetIndex();
+    //}
     private void Update()
     {
         EnableButton();

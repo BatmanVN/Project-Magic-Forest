@@ -12,25 +12,30 @@ public class Buy_Aqua : MonoBehaviour
     [SerializeField] private bool isClick;
     public bool WasBuy { get => wasBuy; set => wasBuy = value; }
     public bool IsClick { get => isClick; set => isClick = value; }
+    public int BuyAqua { get => buyAqua; set => buyAqua = value; }
 
     [ContextMenu("WasBuyAqua")]
     private void BuyHeroes()
     {
-            if (IsClick == true)
+        if (IsClick == true)
+        {
+            if (coinShop.coinAmount >= heroSell)
             {
-                if (coinShop.coinAmount >= heroSell)
-                {
-                    coinShop.coinAmount -= heroSell;
-                    buyAqua = 1;
-                    WasBuy = true;
-                }
+                coinShop.coinAmount -= heroSell;
+                BuyAqua = 1;
+                WasBuy = true;
             }
+            if (coinShop.coinAmount < heroSell)
+            {
+                return;
+            }
+        }
     }
     private void WasBuyAqua()
     {
         if (wasBuy == true)
         {
-            PlayerPrefs.SetInt(keyName, buyAqua);
+            PlayerPrefs.SetInt(keyName, BuyAqua);
         }
     }
     public void Click()
@@ -43,6 +48,6 @@ public class Buy_Aqua : MonoBehaviour
     }
     private void Update()
     {
-       BuyHeroes();
+        BuyHeroes();
     }
 }

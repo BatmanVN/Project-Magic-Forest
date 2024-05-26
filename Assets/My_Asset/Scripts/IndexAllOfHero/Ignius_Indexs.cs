@@ -36,6 +36,7 @@ public class Ignius_Indexs : MonoBehaviour
     public int Fixlevel { get => fixlevel; set => fixlevel = value; }
     public int Number { get => number; set => number = value; }
 
+    [ContextMenu("GetIndex")]
     private void IndexsOfIgnius()
     {
         for (int i = 0; i < igniusBar.Length; i++)
@@ -66,31 +67,39 @@ public class Ignius_Indexs : MonoBehaviour
             }
         }
     }
-    //private float GetHealth()
-    //{
-    //    Health = PlayerPrefs.GetFloat(healthName, Health);
-    //    return Health;
-    //}
-    //private float GetPower()
-    //{
-    //    Power = PlayerPrefs.GetFloat(powerName, Power);
-    //    return Power;
-    //}
-    //private float GetSpeed()
-    //{
-    //    Speed = PlayerPrefs.GetFloat(speedName, Speed);
-    //    return Speed;
-    //}
-    //private float GetStarDame()
-    //{
-    //    StarDame = PlayerPrefs.GetFloat(starName, StarDame);
-    //    return StarDame;
-    //}
-    //private int GetLevel()
-    //{
-    //    Level = PlayerPrefs.GetInt(levelName, Level);
-    //    return Level;
-    //}
+    private void GetIndex()
+    {
+        GetHealth();
+        GetPower();
+        GetSpeed();
+        GetStarDame();
+        GetLevel();
+    }
+    private float GetHealth()
+    {
+        Health = PlayerPrefs.GetFloat(healthName, Health);
+        return Health;
+    }
+    private float GetPower()
+    {
+        Power = PlayerPrefs.GetFloat(powerName, Power);
+        return Power;
+    }
+    private float GetSpeed()
+    {
+        Speed = PlayerPrefs.GetFloat(speedName, Speed);
+        return Speed;
+    }
+    private float GetStarDame()
+    {
+        StarDame = PlayerPrefs.GetFloat(starName, StarDame);
+        return StarDame;
+    }
+    private int GetLevel()
+    {
+        Level = PlayerPrefs.GetInt(levelName, Level);
+        return Level;
+    }
     public void UpdateIndex()
     {
         if (Health > index_Bar.MaxHealthbar || Power > index_Bar.MaxPowerbar 
@@ -107,11 +116,12 @@ public class Ignius_Indexs : MonoBehaviour
     
     private void Start()
     {
-        //    GetHealth();
-        //    GetPower();
-        //    GetSpeed();
-        //    GetStarDame();
-        //    GetLevel();
+        GetIndex();
+        //GetHealth();
+        //GetPower();
+        //GetSpeed();
+        //GetStarDame();
+        //GetLevel();
     }
     private void Update()
     {
