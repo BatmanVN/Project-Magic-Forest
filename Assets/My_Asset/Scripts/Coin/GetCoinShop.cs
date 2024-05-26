@@ -8,7 +8,6 @@ public class GetCoinShop : MonoBehaviour
     [SerializeField] private string coinName;
     [SerializeField] private int getCoin;
     [SerializeField] private Text coinShop;
-    [SerializeField] private CoinToUp coinSave;
     public int coinAmount { get => getCoin; set => getCoin = value; }
 
     [ContextMenu("Get")]

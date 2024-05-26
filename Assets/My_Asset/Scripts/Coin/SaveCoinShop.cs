@@ -6,13 +6,12 @@ using UnityEngine.UI;
 public class SaveCoinShop : MonoBehaviour
 {
     [SerializeField] private string keyName;
-    //[SerializeField] private int saveCoin;
-    [SerializeField] private CoinToUp coinSave;
-    
+    [SerializeField] private int saveCoin;
+
     [ContextMenu("SaveCoin")]
     public void SaveCoin()
     {
-        //PlayerPrefs.SetInt(keyName, coinSave.CoinUp);
+        PlayerPrefs.SetInt(keyName, saveCoin);
     }
     private void Start()
     {

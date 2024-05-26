@@ -5,7 +5,8 @@ using UnityEngine;
 public class ChooseHero : MonoBehaviour
 {
     [SerializeField] private GameObject[] heroes;
-    [SerializeField] private Buy_Hero[] buyHero;
+    [SerializeField] private EnableButtonAqua aquana;
+    [SerializeField] private EnableButtonTeras teras;
     [SerializeField] private int indexHero;
     [SerializeField] private HeroManager manager;
     [SerializeField] private string keyName;
@@ -16,19 +17,21 @@ public class ChooseHero : MonoBehaviour
     {
         for (int i = 0; i < heroes.Length; i++)
         {
-            if (heroes[i] == heroes[manager.Number])
-            {
-                if (buyHero[0].WasBuy == false)
+                if (aquana.BuyAqua == 1)
                 {
-                    return;
+                    manager.Number = 1;
                 }
-                if (buyHero[1].WasBuy == false)
+
+                if (teras.BuyTeras == 2)
                 {
-                    return;
+                    manager.Number = 2;
+                }
+                if (i == 0)
+                {
+                    manager.Number = 0;
                 }
                 IndexHero = manager.Number;
                 PlayerPrefs.SetInt(keyName, IndexHero);
-            }
         }
     }
     private void Update()
