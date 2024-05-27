@@ -33,7 +33,7 @@ public class Player_Move : MonoBehaviour
     }
     private void PlayerMove()
     {
-        var direction = moveDirection;
+        var direction = moveDirection * Time.deltaTime;
         direction.y = player2D.velocity.y;
         var isWalking = isLeft == true || isRight == true;
         if (isWalking)
@@ -61,7 +61,7 @@ public class Player_Move : MonoBehaviour
     private void KeyMove()
     {
         var keyWalking = Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D);
-        var direction = moveDirection;
+        var direction = moveDirection * Time.deltaTime;
         direction.y = player2D.velocity.y;
         if (keyWalking)
         {

@@ -5,17 +5,26 @@ using UnityEngine.UI;
 
 public class ChangeTextHero : MonoBehaviour
 {
-    [SerializeField] private Buy_Aqua buy_Aqua;
-    [SerializeField] protected Buy_Teras buy_Teras;
+    [SerializeField] private Ignius_Indexs level;
     [SerializeField] private Text textBar;
     [SerializeField] private Text textCoin;
     
     private void ChangeText()
     {
-        if(buy_Aqua.WasBuy == true)
+        if(level.Level == 1)
         {
             textBar.text = "Upgrade For";
             textCoin.text = "250";
+        }
+        if (level.Level == 2)
+        {
+            textBar.text = "Upgrade For";
+            textCoin.text = "500";
+        }
+        if (level.Level == 3)
+        {
+            textBar.text = "Upgrade For";
+            textCoin.text = "750";
         }
     }
     private void Update()

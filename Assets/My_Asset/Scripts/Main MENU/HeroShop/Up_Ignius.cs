@@ -15,32 +15,28 @@ public class Up_Ignius : MonoBehaviour
     [SerializeField] private Text coinAffterText;
     [SerializeField] private Text priceText;
     [SerializeField] private bool isClick;
+    [SerializeField] private string price;
+
+    public int PriceCoin { get => priceCoin; set => priceCoin = value; }
+
+    [ContextMenu("GetPrice")]
     public void UpHero()
     {
         if (isClick == true)
         {
-            if(choose.IndexHero == 0)
+            if (coin.coinAmount < coinToUp.CoinUp[igniusIndex.Number])
             {
-                if (coin.coinAmount < coinToUp.CoinUp[igniusIndex.Number])
+                return;
+            }
+            if (amount.Index == 0)
+            {
+                igniusIndex?.UpdateIndex();
+                isClick = false;
+                if (igniusIndex.Level == igniusIndex.Number + 1)
                 {
-                    return;
-                }
-                if (amount.Index == 0)
-                {
-                    igniusIndex?.UpdateIndex();
-                    if (igniusIndex.Level == igniusIndex.Number + 1)
-                    {
-                        coinToUp?.UpIgnius();
-                        igniusIndex.Level += igniusIndex.Fixlevel;
-                        coinAffterText.text = coinToUp?.CoinUp[igniusIndex.Number].ToString();
-                        priceText.text = priceCoin.ToString();
-                        if (priceCoin >= 1000)
-                        {
-                            upIgnius.text = "Max";
-                            priceText.text = "Level";
-                        }
-                    }
-                    isClick = false;
+                    coinToUp?.UpIgnius();
+                    igniusIndex.Level += igniusIndex.Fixlevel;
+                    coinAffterText.text = coinToUp?.CoinUp[igniusIndex.Number].ToString();
                 }
             }
         }
@@ -48,13 +44,32 @@ public class Up_Ignius : MonoBehaviour
     public void IsClick()
     {
         isClick = true;
-        if (priceCoin < 1000)
+        if (PriceCoin < 1000)
         {
-            priceCoin += 250;
+            PriceCoin += 250;
         }
+    }
+    private void PriceText()
+    {
+        priceText.text = PriceCoin.ToString();
+        if (PriceCoin >= 1000)
+        {
+            upIgnius.text = "Max";
+            priceText.text = "Level";
+        }
+    }
+    private int GetPrice()
+    {
+        PriceCoin = PlayerPrefs.GetInt(price, priceCoin);
+        return PriceCoin;
+    }
+    private void Start()
+    {
+        GetPrice();
     }
     private void Update()
     {
         UpHero();
+        PriceText();
     }
 }

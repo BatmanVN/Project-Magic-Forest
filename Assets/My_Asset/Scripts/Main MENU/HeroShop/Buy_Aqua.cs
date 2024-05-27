@@ -24,6 +24,7 @@ public class Buy_Aqua : MonoBehaviour
                 coinShop.coinAmount -= heroSell;
                 BuyAqua = 1;
                 WasBuy = true;
+                IsClick = false;
             }
             if (coinShop.coinAmount < heroSell)
             {

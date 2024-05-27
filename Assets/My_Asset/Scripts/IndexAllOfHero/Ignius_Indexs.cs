@@ -26,6 +26,7 @@ public class Ignius_Indexs : MonoBehaviour
     [SerializeField] private string speedName;
     [SerializeField] private string starName;
     [SerializeField] private string levelName;
+    [SerializeField] private string coinUpName;
 
 
     public float Health { get => health; set => health = value; }
@@ -74,6 +75,7 @@ public class Ignius_Indexs : MonoBehaviour
         GetSpeed();
         GetStarDame();
         GetLevel();
+        GetCoin();
     }
     private float GetHealth()
     {
@@ -100,6 +102,11 @@ public class Ignius_Indexs : MonoBehaviour
         Level = PlayerPrefs.GetInt(levelName, Level);
         return Level;
     }
+    private int GetCoin()
+    {
+        Number = PlayerPrefs.GetInt(coinUpName, Number);
+        return Number;
+    }
     public void UpdateIndex()
     {
         if (Health > index_Bar.MaxHealthbar || Power > index_Bar.MaxPowerbar 
@@ -111,17 +118,12 @@ public class Ignius_Indexs : MonoBehaviour
         Power += fixPower;
         Speed += fixSpeed;
         StarDame += fixStarDame;
-        Level += Fixlevel;
+        //Level += Fixlevel;
     }
-    
+
     private void Start()
     {
         GetIndex();
-        //GetHealth();
-        //GetPower();
-        //GetSpeed();
-        //GetStarDame();
-        //GetLevel();
     }
     private void Update()
     {

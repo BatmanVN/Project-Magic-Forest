@@ -15,6 +15,9 @@ public class Open_Gate : MonoBehaviour
     [SerializeField] private LayerMask player;
     [SerializeField] private Transform pointGate;
     [SerializeField] private GameObject endGate;
+    [SerializeField] private string gateName;
+    [SerializeField] private int gateNumber;
+    [ContextMenu("SaveGate")]
     private void OpenGate()
     {
         var openGate = Physics2D.OverlapCircle(pointGate.position, radius, player);
@@ -23,9 +26,14 @@ public class Open_Gate : MonoBehaviour
             if (keyGate.GetKey == true)
             {
                 gateAnim.SetTrigger("isOpen");
+                SaveGate();
                 StartCoroutine(Delay());
             }
         }
+    }
+    private void SaveGate()
+    {
+        PlayerPrefs.SetInt(gateName, gateNumber);
     }
     private void EnableBar()
     {
@@ -47,6 +55,10 @@ public class Open_Gate : MonoBehaviour
     {
         OpenGate();
     }
+    //private void Start()
+    //{
+    //    SaveGate();
+    //}
     private void OnDrawGizmos()
     {
           Gizmos.color = Color.black;

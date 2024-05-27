@@ -24,6 +24,7 @@ public class Buy_Teras : MonoBehaviour
                 coinShop.coinAmount -= heroSell;
                 BuyTeras = 2;
                 WasBuy = true;
+                IsClick = false;
             }
             if (coinShop.coinAmount < heroSell)
             {

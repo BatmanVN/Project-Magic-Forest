@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,12 +17,15 @@ public class Up_Teras : MonoBehaviour
     [SerializeField] private Text coinAffterText;
     [SerializeField] private Text priceText;
     [SerializeField] private bool isClick;
+    [SerializeField] private string price;
+
+    public int PriceCoin { get => priceCoin; set => priceCoin = value; }
 
     private void UpHero()
     {
         if (isClick == true)
         {
-            if(choose.IndexHero == 2)
+            if(choose.WasChoose == true)
             {
                 if (coin.coinAmount < coinToUp.CoinUp[indexTeras.Number])
                 {
@@ -34,28 +39,33 @@ public class Up_Teras : MonoBehaviour
                         coinToUp?.UpTeras();
                         indexTeras.Level += indexTeras.Fixlevel;
                         coinAffterText.text = coinToUp?.CoinUp[indexTeras.Number].ToString();
-                        priceText.text = priceCoin.ToString();
-                        if (priceCoin >= 1000)
-                        {
-                            upTeras.text = "Max";
-                            priceText.text = "Level";
-                        }
                     }
                     isClick = false;
                 }
             }
         }
     }
-    public void IsClick()
+    private void PriceText()
     {
-        isClick = true;
-        if(priceCoin <= 1000)
+        priceText.text = PriceCoin.ToString();
+        if (PriceCoin >= 1000)
         {
-            priceCoin += 250;
+            upTeras.text = "Max";
+            priceText.text = "Level";
         }
+    }
+    private int GetPrice()
+    {
+        PriceCoin = PlayerPrefs.GetInt(price, PriceCoin);
+        return PriceCoin;
+    }
+    private void Start()
+    {
+        GetPrice();
     }
     private void Update()
     {
         UpHero();
+        PriceText();
     }
 }

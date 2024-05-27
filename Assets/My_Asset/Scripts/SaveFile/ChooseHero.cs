@@ -10,7 +10,9 @@ public class ChooseHero : MonoBehaviour
     [SerializeField] private int indexHero;
     [SerializeField] private HeroManager manager;
     [SerializeField] private string keyName;
+    [SerializeField] private bool wasChoose;
     public int IndexHero { get => indexHero; set => indexHero = value; }
+    public bool WasChoose { get => wasChoose; set => wasChoose = value; }
 
     [ContextMenu("SelectHero")]
     public void SelectHero()
@@ -30,6 +32,7 @@ public class ChooseHero : MonoBehaviour
                     manager.Number = 0;
                 }
                 IndexHero = manager.Number;
+                WasChoose = true;
                 PlayerPrefs.SetInt(keyName, IndexHero);
         }
     }

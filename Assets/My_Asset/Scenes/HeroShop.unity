@@ -572,7 +572,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -390.1222, y: 218}
+  m_AnchoredPosition: {x: -167, y: 218}
   m_SizeDelta: {x: 869.7556, y: 111}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &231334456
@@ -726,7 +726,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -79.08606, y: -69}
+  m_AnchoredPosition: {x: -119, y: -80}
   m_SizeDelta: {x: 109.8287, y: 75.7374}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &266954749
@@ -952,6 +952,7 @@ MonoBehaviour:
   coinAffterText: {fileID: 1279169129}
   priceText: {fileID: 1279169129}
   isClick: 0
+  price: Price1
 --- !u!114 &327821653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1904,7 +1905,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -400, y: 218}
+  m_AnchoredPosition: {x: -426, y: 195}
   m_SizeDelta: {x: 532, y: 52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &513108561
@@ -2161,7 +2162,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -79.08606, y: 81}
+  m_AnchoredPosition: {x: -112, y: 55}
   m_SizeDelta: {x: 109.8287, y: 75.7374}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &541049754
@@ -2464,6 +2465,12 @@ MonoBehaviour:
   fixStarDame: 1.5
   fixlevel: 1
   number: 0
+  healthName: AquaHealth
+  powerName: AuqaPower
+  speedName: AquaSpeed
+  starName: AquaStar
+  levelName: Number1
+  coinUpName: Price1
 --- !u!114 &632655650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2477,11 +2484,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aqua: {fileID: 632655649}
+  priceCoin: {fileID: 327821652}
   healthName: AquaHealth
   powerName: AuqaPower
   speedName: AquaSpeed
   starName: AquaStar
   levelName: AquaLevel
+  cointoUp: Number1
+  coinUp: Price1
 --- !u!1 &634636683
 GameObject:
   m_ObjectHideFlags: 0
@@ -2860,7 +2870,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -79.08606, y: 218}
+  m_AnchoredPosition: {x: -114, y: 195}
   m_SizeDelta: {x: 109.8287, y: 75.7374}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &703686310
@@ -3390,6 +3400,12 @@ MonoBehaviour:
   fixStarDame: 0
   fixlevel: 1
   number: 0
+  healthName: TerasHealth
+  powerName: TerasPower
+  speedName: TerasSpeed
+  starName: TerasStar
+  levelName: TerasLevel
+  coinUpName: Number2
 --- !u!114 &791938629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3403,11 +3419,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teras: {fileID: 791938628}
+  priceCoin: {fileID: 2079465484}
   healthName: TerasHealth
   powerName: TerasPower
   speedName: TerasSpeed
   starName: TerasStar
   levelName: TerasLevel
+  cointoUp: Number2
+  coinUp: Price2
 --- !u!1 &804800658
 GameObject:
   m_ObjectHideFlags: 0
@@ -3889,7 +3908,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -483, y: -218.2}
+  m_AnchoredPosition: {x: -504, y: -247}
   m_SizeDelta: {x: 650, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &863236199
@@ -4008,6 +4027,7 @@ MonoBehaviour:
   coinAffterText: {fileID: 322224480}
   priceText: {fileID: 322224480}
   isClick: 0
+  price: Price0
 --- !u!1 &871595077
 GameObject:
   m_ObjectHideFlags: 0
@@ -4603,7 +4623,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -394.35553, y: -69}
+  m_AnchoredPosition: {x: -174, y: -58}
   m_SizeDelta: {x: 861.2889, y: 111}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &991897568
@@ -4700,20 +4720,11 @@ MonoBehaviour:
   amount: {fileID: 451949327}
   coin: {fileID: 2811056070031495148}
   maxLevel: {fileID: 822446517}
-  textHero:
-  - {fileID: 1576581141}
-  - {fileID: 953941980}
-  - {fileID: 2082857500}
   igniusIndex: {fileID: 2140334373}
   aquanaIndex: {fileID: 632655649}
   terasIndex: {fileID: 791938628}
   coinUp: fa000000f4010000ee020000e8030000
   keyName: GetCoin
-  healthName: 
-  powerName: 
-  speedName: 
-  starName: 
-  levelName: 
 --- !u!114 &1012282296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6315,7 +6326,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -392.71106, y: 347.66}
+  m_AnchoredPosition: {x: -167, y: 352}
   m_SizeDelta: {x: 872.5779, y: 111}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1394200604
@@ -7113,7 +7124,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -62.2, y: -218.2}
+  m_AnchoredPosition: {x: -75, y: -247}
   m_SizeDelta: {x: 130, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1567448174
@@ -7804,7 +7815,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -83.08606, y: 347.66003}
+  m_AnchoredPosition: {x: -116, y: 331}
   m_SizeDelta: {x: 109.8287, y: 75.7374}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1727598092
@@ -8004,6 +8015,7 @@ MonoBehaviour:
   indexHero: 0
   manager: {fileID: 1800497744}
   keyName: Index
+  wasChoose: 0
 --- !u!1 &1778458122
 GameObject:
   m_ObjectHideFlags: 0
@@ -8791,7 +8803,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -404, y: 347.66}
+  m_AnchoredPosition: {x: -432, y: 329}
   m_SizeDelta: {x: 532, y: 52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1882285370
@@ -9025,7 +9037,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -392.9444, y: 80}
+  m_AnchoredPosition: {x: -169, y: 80}
   m_SizeDelta: {x: 864.1112, y: 111}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1951046257
@@ -9206,7 +9218,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -400, y: 80}
+  m_AnchoredPosition: {x: -428, y: 54}
   m_SizeDelta: {x: 532, y: 52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2010064963
@@ -9624,6 +9636,7 @@ MonoBehaviour:
   coinAffterText: {fileID: 434870023}
   priceText: {fileID: 434870023}
   isClick: 0
+  price: Price2
 --- !u!114 &2079465485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10031,7 +10044,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -400, y: -69}
+  m_AnchoredPosition: {x: -429, y: -82}
   m_SizeDelta: {x: 532, y: 52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2123424454
@@ -10223,6 +10236,7 @@ MonoBehaviour:
   speedName: IgSpeed
   starName: IgStar
   levelName: IgLevel
+  coinUpName: Number0
 --- !u!114 &2140334374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10236,11 +10250,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ignius: {fileID: 2140334373}
+  priceCoin: {fileID: 863236202}
   healthName: IgHealth
   powerName: IgPower
   speedName: IgSpeed
   starName: IgStar
   levelName: IgLevel
+  cointoUp: Number0
+  coinUp: Price0
 --- !u!1 &777733310106212273
 GameObject:
   m_ObjectHideFlags: 0

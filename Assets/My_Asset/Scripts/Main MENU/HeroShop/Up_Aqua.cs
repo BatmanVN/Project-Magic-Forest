@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,11 +16,15 @@ public class Up_Aqua : MonoBehaviour
     [SerializeField] private Text coinAffterText;
     [SerializeField] private Text priceText;
     [SerializeField] private bool isClick;
+    [SerializeField] private string price;
+
+    public int PriceCoin { get => priceCoin; set => priceCoin = value; }
+    [ContextMenu("GetPrice")]
     private void UpHero()
     {
         if (isClick == true)
         {
-            if(choose.IndexHero == 1)
+            if(choose.WasChoose == true)
             {
                 if (coin.coinAmount < coinToUp.CoinUp[indexAquana.Number])
                 {
@@ -33,12 +38,6 @@ public class Up_Aqua : MonoBehaviour
                         coinToUp?.UpAqua();
                         indexAquana.Level += indexAquana.Fixlevel;
                         coinAffterText.text = coinToUp?.CoinUp[indexAquana.Number].ToString();
-                        priceText.text = priceCoin.ToString();
-                        if (priceCoin >= 1000)
-                        {
-                            upAqua.text = "Max";
-                            priceText.text = "Level";
-                        }
                     }
                     isClick = false;
                 }
@@ -48,14 +47,35 @@ public class Up_Aqua : MonoBehaviour
     public void IsClick()
     {
         isClick = true;
-        if (priceCoin < 1000)
+        if (PriceCoin < 1000)
         {
-            if(choose.IndexHero == 1)
-                priceCoin += 250;
+            if(choose.WasChoose == true)
+            {
+                PriceCoin += 250;
+            }
         }
+    }
+    private void PriceText()
+    {
+        priceText.text = PriceCoin.ToString();
+        if (PriceCoin >= 1000)
+        {
+            upAqua.text = "Max";
+            priceText.text = "Level";
+        }
+    }
+    private int GetPrice()
+    {
+        PriceCoin = PlayerPrefs.GetInt(price, PriceCoin);
+        return PriceCoin;
+    }
+    private void Start()
+    {
+        GetPrice();
     }
     private void Update()
     {
         UpHero();
+        PriceText();
     }
 }

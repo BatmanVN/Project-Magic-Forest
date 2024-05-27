@@ -1,13 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Animations;
 using UnityEngine;
 
 public class SpriteMenu : MonoBehaviour
 {
     [SerializeField] private Sprite[] spriteRenderers;
     [SerializeField] private SpriteRenderer characterSprite;
-    [SerializeField] private AnimatorController[] animators;
+    [SerializeField] private RuntimeAnimatorController[] animators;
     [SerializeField] private Animator heroes;
     [SerializeField] private string keyName;
     [SerializeField] private int index;
