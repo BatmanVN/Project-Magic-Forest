@@ -31,22 +31,25 @@ public class Up_Ignius : MonoBehaviour
             if (amount.Index == 0)
             {
                 igniusIndex?.UpdateIndex();
-                isClick = false;
                 if (igniusIndex.Level == igniusIndex.Number + 1)
                 {
                     coinToUp?.UpIgnius();
                     igniusIndex.Level += igniusIndex.Fixlevel;
                     coinAffterText.text = coinToUp?.CoinUp[igniusIndex.Number].ToString();
                 }
+                isClick = false;
             }
         }
     }
     public void IsClick()
     {
-        isClick = true;
-        if (PriceCoin < 1000)
+        if (coin.coinAmount > coinToUp.CoinUp[igniusIndex.Number])
         {
-            PriceCoin += 250;
+            isClick = true;
+            if (PriceCoin < 1000)
+            {
+                PriceCoin += 250;
+            }
         }
     }
     private void PriceText()
