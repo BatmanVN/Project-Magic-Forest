@@ -8557,7 +8557,6 @@ MonoBehaviour:
   _androidGameId: 5627699
   _iOSGameId: 5627698
   _testMode: 1
-  rewardedAdsNutton: {fileID: 2054025180}
 --- !u!1 &1896510869
 GameObject:
   m_ObjectHideFlags: 0
@@ -9378,6 +9377,7 @@ GameObject:
   - component: {fileID: 2054025178}
   - component: {fileID: 2054025177}
   - component: {fileID: 2054025180}
+  - component: {fileID: 2054025181}
   m_Layer: 5
   m_Name: Free
   m_TagString: Untagged
@@ -9448,9 +9448,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2054025180}
-        m_TargetAssemblyTypeName: RewardedAdsButton, Assembly-CSharp
-        m_MethodName: ShowAd
+      - m_Target: {fileID: 2054025181}
+        m_TargetAssemblyTypeName: ShowADs, Assembly-CSharp
+        m_MethodName: ShowADS
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9510,10 +9510,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1130511fd22635b4e826bb3959d09bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _showAdButton: {fileID: 634888389}
+  saveCoin: GetCoin
   _androidAdUnitId: Rewarded_Android
   _iOSAdUnitId: Rewarded_iOS
   coin: {fileID: 1343553531}
+--- !u!114 &2054025181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054025175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91dd1338b1d21a74896c8deac39d236b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  adsButton: {fileID: 2054025180}
 --- !u!1 &2056516242
 GameObject:
   m_ObjectHideFlags: 0

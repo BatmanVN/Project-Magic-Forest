@@ -396,7 +396,6 @@ GameObject:
   - component: {fileID: 204763713}
   - component: {fileID: 204763712}
   - component: {fileID: 204763711}
-  - component: {fileID: 204763715}
   m_Layer: 5
   m_Name: BuyTeras
   m_TagString: Untagged
@@ -519,24 +518,6 @@ RectTransform:
   m_AnchoredPosition: {x: -2.158268, y: -0.000015258578}
   m_SizeDelta: {x: 650, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &204763715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 204763710}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44d680e13f09c604db7eccd5ddc06c86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  heroSell: 5000
-  coinShop: {fileID: 2811056070031495148}
-  wasBuy: 0
-  keyName: BuyTeras
-  buyTeras: 0
-  isClick: 0
 --- !u!1 &231334454
 GameObject:
   m_ObjectHideFlags: 0
@@ -1266,7 +1247,6 @@ GameObject:
   - component: {fileID: 395985889}
   - component: {fileID: 395985888}
   - component: {fileID: 395985887}
-  - component: {fileID: 395985886}
   m_Layer: 5
   m_Name: BuyAqua
   m_TagString: Untagged
@@ -1295,24 +1275,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 650, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &395985886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 395985884}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f745b771b4f728f42b885971c3e598df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  heroSell: 2000
-  coinShop: {fileID: 2811056070031495148}
-  wasBuy: 0
-  keyName: BuyAqua
-  buyAqua: 0
-  isClick: 0
 --- !u!114 &395985887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2470,7 +2432,7 @@ MonoBehaviour:
   speedName: AquaSpeed
   starName: AquaStar
   levelName: AquaLevel
-  coinUpName: Price1
+  coinUpName: Number1
 --- !u!114 &632655650
 MonoBehaviour:
   m_ObjectHideFlags: 0

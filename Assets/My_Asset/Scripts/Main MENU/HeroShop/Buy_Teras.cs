@@ -23,6 +23,7 @@ public class Buy_Teras : MonoBehaviour
             {
                 coinShop.coinAmount -= heroSell;
                 BuyTeras = 2;
+                PlayerPrefs.SetInt(keyName, BuyTeras);
                 WasBuy = true;
                 IsClick = false;
             }
@@ -32,21 +33,21 @@ public class Buy_Teras : MonoBehaviour
             }
         }
     }
-    private void WasBuyTeras()
-    {
-        if (wasBuy == true)
-        {
-            PlayerPrefs.SetInt(keyName, BuyTeras);
-        }
-    }
+    //private void WasBuyTeras()
+    //{
+    //    if (wasBuy == true)
+    //    {
+    //        PlayerPrefs.SetInt(keyName, BuyTeras);
+    //    }
+    //}
     public void Click()
     {
         IsClick = true;
     }
-    private void Start()
-    {
-        WasBuyTeras();
-    }
+    //private void Start()
+    //{
+    //    WasBuyTeras();
+    //}
     private void Update()
     {
         BuyHeroes();

@@ -23,6 +23,7 @@ public class Buy_Aqua : MonoBehaviour
             {
                 coinShop.coinAmount -= heroSell;
                 BuyAqua = 1;
+                PlayerPrefs.SetInt(keyName, BuyAqua);
                 WasBuy = true;
                 IsClick = false;
             }
@@ -32,21 +33,21 @@ public class Buy_Aqua : MonoBehaviour
             }
         }
     }
-    private void WasBuyAqua()
-    {
-        if (wasBuy == true)
-        {
-            PlayerPrefs.SetInt(keyName, BuyAqua);
-        }
-    }
+    //private void WasBuyAqua()
+    //{
+    //    if (wasBuy == true)
+    //    {
+    //        PlayerPrefs.SetInt(keyName, BuyAqua);
+    //    }
+    //}
     public void Click()
     {
         IsClick = true;
     }
-    private void Start()
-    {
-        WasBuyAqua();
-    }
+    //private void Start()
+    //{
+    //    WasBuyAqua();
+    //}
     private void Update()
     {
         BuyHeroes();

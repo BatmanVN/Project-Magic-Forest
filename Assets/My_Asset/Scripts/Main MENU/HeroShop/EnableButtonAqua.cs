@@ -15,13 +15,12 @@ public class EnableButtonAqua : MonoBehaviour
     [ContextMenu("GetIndex")]
     private void EnableButton()
     {
-        if(buttonBuy.BuyAqua == 1)
+        if(BuyAqua == 1)
         {
             buy.SetActive(false);
             upgrade.SetActive(true);
-            GetIndex();
         }
-        else
+        else if (BuyAqua != 1)
         {
             buy.SetActive(true);
             upgrade.SetActive(false);
@@ -32,10 +31,10 @@ public class EnableButtonAqua : MonoBehaviour
         BuyAqua = PlayerPrefs.GetInt(keyName, buttonBuy.BuyAqua);
         return BuyAqua;
     }
-    //private void Start()
-    //{
-    //    GetIndex();
-    //}
+    private void Start()
+    {
+        GetIndex();
+    }
     private void Update()
     {
         EnableButton();
