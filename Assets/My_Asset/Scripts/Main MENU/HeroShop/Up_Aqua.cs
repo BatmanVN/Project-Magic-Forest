@@ -24,8 +24,6 @@ public class Up_Aqua : MonoBehaviour
     {
         if (isClick == true)
         {
-            if(choose.WasChoose == true)
-            {
                 if (coin.coinAmount < coinToUp.CoinUp[indexAquana.Number])
                 {
                     return;
@@ -41,19 +39,22 @@ public class Up_Aqua : MonoBehaviour
                     }
                     isClick = false;
                 }
-            }
         }
     }
     public void IsClick()
     {
-        isClick = true;
+        if (choose.WasChoose == false)
+        {
+            return;
+        }
         if (PriceCoin < 1000)
         {
-            if(choose.WasChoose == true)
+            if (choose.WasChoose == true)
             {
                 PriceCoin += 250;
             }
         }
+        isClick = true;
     }
     private void PriceText()
     {

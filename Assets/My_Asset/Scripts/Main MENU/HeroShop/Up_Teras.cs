@@ -25,8 +25,6 @@ public class Up_Teras : MonoBehaviour
     {
         if (isClick == true)
         {
-            if(choose.WasChoose == true)
-            {
                 if (coin.coinAmount < coinToUp.CoinUp[indexTeras.Number])
                 {
                     return;
@@ -42,8 +40,22 @@ public class Up_Teras : MonoBehaviour
                     }
                     isClick = false;
                 }
+        }
+    }
+    public void IsClick()
+    {
+        if (choose.WasChoose == false)
+        {
+            return;
+        }
+        if (PriceCoin < 1000)
+        {
+            if (choose.WasChoose == true)
+            {
+                PriceCoin += 250;
             }
         }
+        isClick = true;
     }
     private void PriceText()
     {
