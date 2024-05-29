@@ -903,6 +903,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneAgain: Gate1
   sceneHome: MainMenu
+  knightPoint: {fileID: 3165985901890583163, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
   chest: {fileID: 62546777}
   gateAnim: {fileID: 62546773}
   keyGate: {fileID: 988160671}
@@ -914,6 +915,7 @@ MonoBehaviour:
   endGate: {fileID: 1792697043}
   gateName: Gate2
   gateNumber: 1
+  pointKnight: KillKnight
 --- !u!114 &62546777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1927,6 +1929,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3165985901890583163, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
+      propertyPath: knightHealth
+      value: 
+      objectReference: {fileID: 1705798578}
     - target: {fileID: 3455507160608125945, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
       propertyPath: m_Name
       value: Knight_Enemy (1)
@@ -10845,6 +10851,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3165985901890583163, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
+      propertyPath: knightHealth
+      value: 
+      objectReference: {fileID: 2112876431}
     - target: {fileID: 3455507160608125945, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
       propertyPath: m_Name
       value: Knight_Enemy (3)
@@ -13866,6 +13876,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3165985901890583163, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
+      propertyPath: knightHealth
+      value: 
+      objectReference: {fileID: 2000865359}
     - target: {fileID: 3455507160608125945, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
       propertyPath: m_Name
       value: Knight_Enemy (2)
@@ -14339,7 +14353,7 @@ Transform:
   m_GameObject: {fileID: 908255525}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.2012434, y: 0.88999987, z: -618.12177}
+  m_LocalPosition: {x: 5.2143345, y: 0.88999987, z: -618.12177}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28391,6 +28405,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3165985901890583163, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
+      propertyPath: knightHealth
+      value: 
+      objectReference: {fileID: 1978959760}
     - target: {fileID: 3455507160608125945, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
       propertyPath: m_Name
       value: Knight_Enemy
@@ -32141,7 +32159,7 @@ Transform:
   m_GameObject: {fileID: 2021252185}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.2012434, y: 0.88999987, z: -618.12177}
+  m_LocalPosition: {x: 5.2143345, y: 0.88999987, z: -618.12177}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

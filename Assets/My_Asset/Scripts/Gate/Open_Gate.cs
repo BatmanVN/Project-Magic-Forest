@@ -8,6 +8,7 @@ public class Open_Gate : MonoBehaviour
 {
     [SerializeField] private string sceneAgain;
     [SerializeField] private string sceneHome;
+    [SerializeField] private TakePoinKnight knightPoint;
     [SerializeField] private EndGateBar chest;
     [SerializeField] private Animator gateAnim;
     [SerializeField] private KeyGate keyGate;
@@ -17,6 +18,8 @@ public class Open_Gate : MonoBehaviour
     [SerializeField] private GameObject endGate;
     [SerializeField] private string gateName;
     [SerializeField] private int gateNumber;
+    [SerializeField] private string pointKnight;
+    [SerializeField] private int Knight;
     [ContextMenu("SaveGate")]
     private void OpenGate()
     {
@@ -26,14 +29,16 @@ public class Open_Gate : MonoBehaviour
             if (keyGate.GetKey == true)
             {
                 gateAnim.SetTrigger("isOpen");
-                SaveGate();
+                //Knight = knightPoint.KillKnight;
+                SaveData();
                 StartCoroutine(Delay());
             }
         }
     }
-    private void SaveGate()
+    private void SaveData()
     {
         PlayerPrefs.SetInt(gateName, gateNumber);
+        //PlayerPrefs.SetInt(pointKnight, knightPoint.KillKnight);
     }
     private void EnableBar()
     {
@@ -55,10 +60,7 @@ public class Open_Gate : MonoBehaviour
     {
         OpenGate();
     }
-    //private void Start()
-    //{
-    //    SaveGate();
-    //}
+
     private void OnDrawGizmos()
     {
           Gizmos.color = Color.black;

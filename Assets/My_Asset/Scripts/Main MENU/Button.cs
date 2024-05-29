@@ -5,6 +5,8 @@ using UnityEngine.Experimental.GlobalIllumination;
 
 public class Button : MonoBehaviour
 {
+    internal bool interactable;
+    internal object onClick;
     [SerializeField]private Vector2 minLocation;
     [SerializeField]private Vector2 maxLocation;
     [SerializeField] private float speed;

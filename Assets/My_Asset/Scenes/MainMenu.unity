@@ -922,7 +922,7 @@ GameObject:
   - component: {fileID: 181596661}
   - component: {fileID: 181596660}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Buy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5841,8 +5841,9 @@ GameObject:
   - component: {fileID: 1146089347}
   - component: {fileID: 1146089346}
   - component: {fileID: 1146089345}
+  - component: {fileID: 1146089348}
   m_Layer: 5
-  m_Name: Next
+  m_Name: Buy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5950,6 +5951,45 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1146089343}
   m_CullTransparentMesh: 1
+--- !u!114 &1146089348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146089343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36a5f511b0d8142cba0aeb92d0b264c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  productId: 
+  buttonType: 0
+  consumePurchase: 1
+  onTransactionsRestored:
+    m_PersistentCalls:
+      m_Calls: []
+  onPurchaseComplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1146089345}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: Select
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onPurchaseFailed:
+    m_PersistentCalls:
+      m_Calls: []
+  titleText: {fileID: 0}
+  descriptionText: {fileID: 0}
+  priceText: {fileID: 591775504}
 --- !u!1 &1156944810
 GameObject:
   m_ObjectHideFlags: 0
@@ -6971,7 +7011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinName: GetCoin
-  getCoin: 0
+  getCoin: 50000
 --- !u!114 &1343553532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8411,6 +8451,7 @@ GameObject:
   - component: {fileID: 1870281754}
   - component: {fileID: 1870281753}
   - component: {fileID: 1870281752}
+  - component: {fileID: 1870281756}
   m_Layer: 5
   m_Name: ADSBonus
   m_TagString: Untagged
@@ -8488,8 +8529,8 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1870281751}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 20.02176}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8498,9 +8539,25 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 3.4251044, y: -2.109144}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1870281756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870281751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac1fbc6c97f9ded4da39a7cb324f8694, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _androidGameId: 5627699
+  _iOSGameId: 5627698
+  _testMode: 1
+  rewardedAdsNutton: {fileID: 2054025180}
 --- !u!1 &1896510869
 GameObject:
   m_ObjectHideFlags: 0
@@ -9320,6 +9377,7 @@ GameObject:
   - component: {fileID: 2054025179}
   - component: {fileID: 2054025178}
   - component: {fileID: 2054025177}
+  - component: {fileID: 2054025180}
   m_Layer: 5
   m_Name: Free
   m_TagString: Untagged
@@ -9389,7 +9447,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2054025178}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2054025180}
+        m_TargetAssemblyTypeName: RewardedAdsButton, Assembly-CSharp
+        m_MethodName: ShowAd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2054025178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9428,6 +9498,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2054025175}
   m_CullTransparentMesh: 1
+--- !u!114 &2054025180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054025175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1130511fd22635b4e826bb3959d09bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showAdButton: {fileID: 634888389}
+  _androidAdUnitId: Rewarded_Android
+  _iOSAdUnitId: Rewarded_iOS
+  coin: {fileID: 1343553531}
 --- !u!1 &2056516242
 GameObject:
   m_ObjectHideFlags: 0
@@ -9934,6 +10020,7 @@ CanvasRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 634888387}
   - {fileID: 1192104058}
   - {fileID: 897534796}
   - {fileID: 437771118}
@@ -9945,7 +10032,6 @@ SceneRoots:
   - {fileID: 1991105305}
   - {fileID: 535743059}
   - {fileID: 636010003}
-  - {fileID: 634888387}
   - {fileID: 984323578}
   - {fileID: 461191002}
   - {fileID: 1002422768}

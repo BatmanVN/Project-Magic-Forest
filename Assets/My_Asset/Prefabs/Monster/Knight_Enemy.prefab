@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 4946057970891289528}
   - component: {fileID: 4860447528427664204}
   - component: {fileID: 6409066554987826123}
+  - component: {fileID: 3165985901890583163}
   m_Layer: 0
   m_Name: Knight_Enemy
   m_TagString: KinghtMonster
@@ -327,6 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29eae78d2e6827a439d9a2bb6b1458d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthName: 
   healthBar: {fileID: 7381432069853411867}
   health: 0
   maxHealth: 9
@@ -350,6 +352,20 @@ MonoBehaviour:
   enemyTransform: {fileID: 6681393395830615391, guid: 55d578a2da775c34cb3167c54f34d2dc, type: 3}
   animator: {fileID: 3092956610261973948}
   monsterDame: 2
+--- !u!114 &3165985901890583163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3455507160608125945}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f144a345f13d2b46a9eedc8a274a35c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knightHealth: {fileID: 0}
+  killKnight: 0
 --- !u!1 &5282484827160549392
 GameObject:
   m_ObjectHideFlags: 0

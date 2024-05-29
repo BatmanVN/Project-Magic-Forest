@@ -20,7 +20,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/My_Asset/Scenes/Gate2.unity
     guid: 125831efc9250c74d89ed67a54740208
-  - enabled: 1
-    path: Assets/My_Asset/Scenes/Gate3.unity
-    guid: fca4d54a28d6ef942a1e443067fb9cbc
   m_configObjects: {}

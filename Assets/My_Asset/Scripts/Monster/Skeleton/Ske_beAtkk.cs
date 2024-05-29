@@ -21,9 +21,12 @@ public class Ske_beAtkk : MonoBehaviour
     {
         if(skeleton.CompareTag("FireBall"))
         {
-            AttkSke = true;
-            skeAnim.SetTrigger(beAttackParaname);
-            skeHealth.TakeDame(takeDame.DameSke);
+            if(attkSke == false)
+            {
+                skeAnim.SetTrigger(beAttackParaname);
+                skeHealth.TakeDame(takeDame.DameSke);
+                AttkSke = true;
+            }
         }
         if(skeleton.CompareTag("StarSkill"))
         {
