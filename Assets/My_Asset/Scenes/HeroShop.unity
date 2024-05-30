@@ -924,12 +924,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indexAquana: {fileID: 632655649}
-  choose: {fileID: 1741497561}
+  wasBuy: {fileID: 1012282297}
   upAqua: {fileID: 1419824172}
   coin: {fileID: 2811056070031495148}
   coinToUp: {fileID: 1012282295}
   amount: {fileID: 451949327}
-  priceCoin: 0
+  priceCoin: 250
   coinAffterText: {fileID: 1279169129}
   priceText: {fileID: 1279169129}
   isClick: 0
@@ -9589,12 +9589,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indexTeras: {fileID: 791938628}
-  choose: {fileID: 1741497561}
+  buyTeras: {fileID: 1012282296}
   upTeras: {fileID: 1221204365}
   coin: {fileID: 2811056070031495148}
   coinToUp: {fileID: 1012282295}
   amount: {fileID: 451949327}
-  priceCoin: 0
+  priceCoin: 250
   coinAffterText: {fileID: 434870023}
   priceText: {fileID: 434870023}
   isClick: 0

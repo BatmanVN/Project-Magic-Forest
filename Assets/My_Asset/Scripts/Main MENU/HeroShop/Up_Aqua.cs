@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Up_Aqua : MonoBehaviour
 {
     [SerializeField] private Index_Aquana indexAquana;
-    [SerializeField] private ChooseHero choose;
+    [SerializeField] private Buy_Aqua wasBuy;
     [SerializeField] private Text upAqua;
     [SerializeField] private GetCoinShop coin;
     [SerializeField] private CoinToUp coinToUp;
@@ -35,7 +35,11 @@ public class Up_Aqua : MonoBehaviour
                     {
                         coinToUp?.UpAqua();
                         indexAquana.Level += indexAquana.Fixlevel;
-                        coinAffterText.text = coinToUp?.CoinUp[indexAquana.Number].ToString();
+                    if (PriceCoin < 1000)
+                    {
+                            PriceCoin += 250;
+                    }
+                    coinAffterText.text = coinToUp?.CoinUp[indexAquana.Number].ToString();
                     }
                     isClick = false;
                 }
@@ -43,18 +47,14 @@ public class Up_Aqua : MonoBehaviour
     }
     public void IsClick()
     {
-        if (choose.WasChoose == false)
+        if (wasBuy.BuyAqua == 1)
+        {
+            isClick = true;
+        }
+        else if(wasBuy.BuyAqua != 1)
         {
             return;
         }
-        if (PriceCoin < 1000)
-        {
-            if (choose.WasChoose == true)
-            {
-                PriceCoin += 250;
-            }
-        }
-        isClick = true;
     }
     private void PriceText()
     {

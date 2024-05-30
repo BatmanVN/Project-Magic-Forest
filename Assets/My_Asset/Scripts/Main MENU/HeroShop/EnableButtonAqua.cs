@@ -15,7 +15,8 @@ public class EnableButtonAqua : MonoBehaviour
     [ContextMenu("GetIndex")]
     private void EnableButton()
     {
-        if(BuyAqua == 1)
+        GetIndex();
+        if (BuyAqua == 1)
         {
             buy.SetActive(false);
             upgrade.SetActive(true);
@@ -33,7 +34,6 @@ public class EnableButtonAqua : MonoBehaviour
     }
     private void Start()
     {
-        GetIndex();
     }
     private void Update()
     {

@@ -15,6 +15,7 @@ public class EnableButtonTeras : MonoBehaviour
     [ContextMenu("GetIndex")]
     private void EnableButton()
     {
+        GetIndex();
         if (buyTeras == 2)
         {
             buy.SetActive(false);
@@ -33,7 +34,7 @@ public class EnableButtonTeras : MonoBehaviour
     }
     private void Start()
     {
-        GetIndex();
+
     }
     private void Update()
     {

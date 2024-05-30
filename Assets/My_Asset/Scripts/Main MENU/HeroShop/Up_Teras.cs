@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class Up_Teras : MonoBehaviour
 {
     [SerializeField] private Index_Teras indexTeras;
-    [SerializeField] private ChooseHero choose;
+    [SerializeField] private Buy_Teras buyTeras;
     [SerializeField] private Text upTeras;
     [SerializeField] private GetCoinShop coin;
     [SerializeField] private CoinToUp coinToUp;
@@ -35,6 +35,10 @@ public class Up_Teras : MonoBehaviour
                     {
                         indexTeras?.UpdateIndex();
                         coinToUp?.UpTeras();
+                        if (PriceCoin < 1000)
+                        {
+                            PriceCoin += 250;
+                        }
                         indexTeras.Level += indexTeras.Fixlevel;
                         coinAffterText.text = coinToUp?.CoinUp[indexTeras.Number].ToString();
                     }
@@ -44,18 +48,14 @@ public class Up_Teras : MonoBehaviour
     }
     public void IsClick()
     {
-        if (choose.WasChoose == false)
+        if (buyTeras.BuyTeras == 1)
+        {
+            isClick = true;
+        }
+        else if(buyTeras.BuyTeras != 1)
         {
             return;
-        }
-        if (PriceCoin < 1000)
-        {
-            if (choose.WasChoose == true)
-            {
-                PriceCoin += 250;
-            }
-        }
-        isClick = true;
+        }    
     }
     private void PriceText()
     {

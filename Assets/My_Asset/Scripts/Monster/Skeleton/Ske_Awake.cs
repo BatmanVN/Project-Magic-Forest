@@ -13,6 +13,7 @@ public class Ske_Awake : MonoBehaviour
     [SerializeField] private LayerMask player;
     [SerializeField] private GameObject skeHealthBar;
     [SerializeField] private HealthCharacter skeHealth;
+    [SerializeField] private Rigidbody2D skeBody;
     private void SkeAwake()
     {
         var skeAwake = Physics2D.OverlapCircle(skeLeton.position, rangeAtk, player);
@@ -20,6 +21,7 @@ public class Ske_Awake : MonoBehaviour
         if (skeAwake)
         {
             skeAnim.SetTrigger(awakeParaname);
+            skeBody.gravityScale = 1;
             skeHealthBar.SetActive(true);
             skeMove.enabled = true;
             groundBoss.SetActive(true);

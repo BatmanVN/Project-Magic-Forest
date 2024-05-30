@@ -5722,6 +5722,7 @@ GameObject:
   - component: {fileID: 274189999}
   - component: {fileID: 274189998}
   - component: {fileID: 274190000}
+  - component: {fileID: 274190001}
   m_Layer: 3
   m_Name: HeroManager
   m_TagString: Untagged
@@ -5869,6 +5870,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &274190001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274189997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac1fbc6c97f9ded4da39a7cb324f8694, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _androidGameId: 5627699
+  _iOSGameId: 5627698
+  _testMode: 1
 --- !u!1 &277695290
 GameObject:
   m_ObjectHideFlags: 0
@@ -29530,6 +29546,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6075163174331433289, guid: 01b747a502e6a514b91131a6f517e5a5, type: 3}
     - target: {fileID: 862476605531981719, guid: 55d578a2da775c34cb3167c54f34d2dc, type: 3}
+      propertyPath: ads
+      value: 
+      objectReference: {fileID: 1628586138}
+    - target: {fileID: 862476605531981719, guid: 55d578a2da775c34cb3167c54f34d2dc, type: 3}
       propertyPath: beAttackSound
       value: 
       objectReference: {fileID: 274190000}
@@ -29708,6 +29728,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4350646518229535251, guid: 55d578a2da775c34cb3167c54f34d2dc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1628586128}
+    - targetCorrespondingSourceObject: {fileID: 4350646518229535251, guid: 55d578a2da775c34cb3167c54f34d2dc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1628586138}
   m_SourcePrefab: {fileID: 100100000, guid: 55d578a2da775c34cb3167c54f34d2dc, type: 3}
 --- !u!114 &1628586106 stripped
 MonoBehaviour:
@@ -29836,6 +29859,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinSound: {fileID: 1706745421}
+--- !u!114 &1628586138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268715732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 601cb3469c7401b41b7dc78b74049fec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _androidAdUnitId: Interstitial_Android
+  _iOsAdUnitId: Interstitial_iOS
 --- !u!1 &1629013554
 GameObject:
   m_ObjectHideFlags: 0
@@ -32911,6 +32948,10 @@ PrefabInstance:
     - target: {fileID: 6927405530817708614, guid: 0f2b7dd21d77d364b8bfe166829a34b2, type: 3}
       propertyPath: m_RenderMode
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6927405530817708614, guid: 0f2b7dd21d77d364b8bfe166829a34b2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 99
       objectReference: {fileID: 0}
     - target: {fileID: 6927405530817708614, guid: 0f2b7dd21d77d364b8bfe166829a34b2, type: 3}
       propertyPath: m_VertexColorAlwaysGammaSpace
@@ -40418,7 +40459,7 @@ PrefabInstance:
       objectReference: {fileID: 175641891}
     - target: {fileID: 2016411504486178126, guid: 59a18d53b88315a4c906902766c4a22e, type: 3}
       propertyPath: m_GravityScale
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3603743815404492918, guid: 59a18d53b88315a4c906902766c4a22e, type: 3}
       propertyPath: m_Enabled

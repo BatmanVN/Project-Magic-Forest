@@ -7,6 +7,7 @@ public class Player_beAttack : MonoBehaviour
 {
     private const string beAttackParaname = "beAttack";
     private const string isDieParaname = "isDie";
+    [SerializeField] private InterstitialAdExample ads;
     [SerializeField] private AudioSource beAttackSound;
     [SerializeField] private HealthCharacter character;
     [SerializeField] private Collider2D player2D;
@@ -43,7 +44,9 @@ public class Player_beAttack : MonoBehaviour
         {
             player2D.enabled = false;
             playerAnim.SetTrigger(isDieParaname);
+            ads.ShowAd();
             dieBar?.EnableBar();
+
         }
     }
     private void Update()

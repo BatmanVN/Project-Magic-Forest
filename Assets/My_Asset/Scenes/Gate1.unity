@@ -916,6 +916,7 @@ MonoBehaviour:
   gateName: Gate2
   gateNumber: 1
   pointKnight: KillKnight
+  Knight: 0
 --- !u!114 &62546777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10172,6 +10173,7 @@ GameObject:
   - component: {fileID: 622579806}
   - component: {fileID: 622579808}
   - component: {fileID: 622579809}
+  - component: {fileID: 622579810}
   m_Layer: 0
   m_Name: HeroManager
   m_TagString: Player
@@ -10319,6 +10321,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &622579810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622579805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac1fbc6c97f9ded4da39a7cb324f8694, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _androidGameId: 5627699
+  _iOSGameId: 5627698
+  _testMode: 1
 --- !u!1 &625948263
 GameObject:
   m_ObjectHideFlags: 0
@@ -14353,7 +14370,7 @@ Transform:
   m_GameObject: {fileID: 908255525}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.2143345, y: 0.88999987, z: -618.12177}
+  m_LocalPosition: {x: 5.1343327, y: 0.8499999, z: -618.12177}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -32159,7 +32176,7 @@ Transform:
   m_GameObject: {fileID: 2021252185}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.2143345, y: 0.88999987, z: -618.12177}
+  m_LocalPosition: {x: 5.1343327, y: 0.8499999, z: -618.12177}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -37642,6 +37659,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6075163174331433289, guid: 01b747a502e6a514b91131a6f517e5a5, type: 3}
     - target: {fileID: 862476605531981719, guid: 55d578a2da775c34cb3167c54f34d2dc, type: 3}
+      propertyPath: ads
+      value: 
+      objectReference: {fileID: 8861135881206943797}
+    - target: {fileID: 862476605531981719, guid: 55d578a2da775c34cb3167c54f34d2dc, type: 3}
       propertyPath: beAttackSound
       value: 
       objectReference: {fileID: 622579809}
@@ -37775,11 +37796,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6681393395830615391, guid: 55d578a2da775c34cb3167c54f34d2dc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 71.1
+      value: 71.02
       objectReference: {fileID: 0}
     - target: {fileID: 6681393395830615391, guid: 55d578a2da775c34cb3167c54f34d2dc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.27
+      value: -0.31
       objectReference: {fileID: 0}
     - target: {fileID: 6681393395830615391, guid: 55d578a2da775c34cb3167c54f34d2dc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -37844,6 +37865,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4350646518229535251, guid: 55d578a2da775c34cb3167c54f34d2dc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8861135881206943790}
+    - targetCorrespondingSourceObject: {fileID: 4350646518229535251, guid: 55d578a2da775c34cb3167c54f34d2dc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8861135881206943797}
   m_SourcePrefab: {fileID: 100100000, guid: 55d578a2da775c34cb3167c54f34d2dc, type: 3}
 --- !u!114 &3235238521287270051 stripped
 MonoBehaviour:
@@ -38065,6 +38089,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinSound: {fileID: 1802382182}
+--- !u!114 &8861135881206943797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779777120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 601cb3469c7401b41b7dc78b74049fec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _androidAdUnitId: Interstitial_Android
+  _iOsAdUnitId: Interstitial_iOS
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
