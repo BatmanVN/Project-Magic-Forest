@@ -14,7 +14,7 @@ public class Buy_Aqua : MonoBehaviour
     public bool IsClick { get => isClick; set => isClick = value; }
     public int BuyAqua { get => buyAqua; set => buyAqua = value; }
 
-    [ContextMenu("WasBuyAqua")]
+    [ContextMenu("BuyHeroes")]
     private void BuyHeroes()
     {
         if (IsClick == true)
@@ -33,21 +33,10 @@ public class Buy_Aqua : MonoBehaviour
             }
         }
     }
-    //private void WasBuyAqua()
-    //{
-    //    if (wasBuy == true)
-    //    {
-    //        PlayerPrefs.SetInt(keyName, BuyAqua);
-    //    }
-    //}
     public void Click()
     {
         IsClick = true;
     }
-    //private void Start()
-    //{
-    //    WasBuyAqua();
-    //}
     private void Update()
     {
         BuyHeroes();

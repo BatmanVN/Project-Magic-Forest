@@ -14,6 +14,7 @@ public class Ske_beAtkk : MonoBehaviour
     [SerializeField] private SkeAuto_Move skeMove;
     [SerializeField] private float changeSpeed;
     private bool attkSke;
+    private bool skillAttk;
 
     public bool AttkSke { get => attkSke; set => attkSke = value; }
 
@@ -30,9 +31,13 @@ public class Ske_beAtkk : MonoBehaviour
         }
         if(skeleton.CompareTag("StarSkill"))
         {
-            skeAnim.SetTrigger(beAttackParaname);
-            skillDame?.SkilltoSke();
-            skeHealth?.TakeDame(skillDame.dameSkill);
+            if(skillAttk == false)
+            {
+                skeAnim.SetTrigger(beAttackParaname);
+                skillDame?.SkilltoSke();
+                skeHealth?.TakeDame(skillDame.dameSkill);
+                skillAttk = true;
+            }
         }
         if(skeHealth.isDead)
         {

@@ -28,7 +28,6 @@ public class InterstitialAdExample : MonoBehaviour, IUnityAdsLoadListener, IUnit
     public void ShowAd()
     {
         // Note that if the ad content wasn't previously loaded, this method will fail
-        LoadAd();
         Debug.Log("Showing Ad: " + _adUnitId);
         Advertisement.Show(_adUnitId, this);
     }

@@ -881,8 +881,8 @@ GameObject:
   - component: {fileID: 327821655}
   - component: {fileID: 327821654}
   - component: {fileID: 327821653}
-  - component: {fileID: 327821656}
   - component: {fileID: 327821652}
+  - component: {fileID: 327821656}
   m_Layer: 5
   m_Name: Upgrade_Aqua
   m_TagString: Untagged
@@ -7972,8 +7972,8 @@ MonoBehaviour:
   - {fileID: 1576581141}
   - {fileID: 953941980}
   - {fileID: 2082857500}
-  aquana: {fileID: 1012282297}
-  teras: {fileID: 1012282296}
+  aqua: {fileID: 327821656}
+  tera: {fileID: 2079465488}
   indexHero: 0
   manager: {fileID: 1800497744}
   keyName: Index

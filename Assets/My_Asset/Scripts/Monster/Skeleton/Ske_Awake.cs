@@ -21,7 +21,7 @@ public class Ske_Awake : MonoBehaviour
         if (skeAwake)
         {
             skeAnim.SetTrigger(awakeParaname);
-            skeBody.gravityScale = 1;
+            skeBody.gravityScale = 1f;
             skeHealthBar.SetActive(true);
             skeMove.enabled = true;
             groundBoss.SetActive(true);

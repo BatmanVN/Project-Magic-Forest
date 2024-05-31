@@ -5,25 +5,24 @@ using UnityEngine;
 public class ChooseHero : MonoBehaviour
 {
     [SerializeField] private GameObject[] heroes;
-    [SerializeField] private Buy_Aqua aquana;
-    [SerializeField] private Buy_Teras teras;
+    [SerializeField] private EnableButtonAqua aqua;
+    [SerializeField] private EnableButtonTeras tera;
     [SerializeField] private int indexHero;
     [SerializeField] private HeroManager manager;
     [SerializeField] private string keyName;
     [SerializeField] private bool wasChoose;
     public int IndexHero { get => indexHero; set => indexHero = value; }
-    public bool WasChoose { get => wasChoose; set => wasChoose = value; }
 
     [ContextMenu("SelectHero")]
     public void SelectHero()
     {
         for (int i = 0; i < heroes.Length; i++)
         {
-                if (aquana.WasBuy == true)
+                if (aqua.BuyAqua == 1)
                 {
                     manager.Number = 1;
                 }
-                if (teras.WasBuy == true)
+                if (tera.BuyTeras == 2)
                 {
                     manager.Number = 2;
                 }
@@ -32,7 +31,6 @@ public class ChooseHero : MonoBehaviour
                     manager.Number = 0;
                 }
                 IndexHero = manager.Number;
-                WasChoose = true;
                 PlayerPrefs.SetInt(keyName, IndexHero);
         }
     }

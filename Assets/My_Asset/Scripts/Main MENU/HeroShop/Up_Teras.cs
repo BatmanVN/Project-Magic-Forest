@@ -1,7 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -31,15 +29,15 @@ public class Up_Teras : MonoBehaviour
                 }
                 if (amount.Index == 2)
                 {
+                    indexTeras?.UpdateIndex();
                     if (indexTeras.Level == indexTeras.Number + 1)
                     {
-                        indexTeras?.UpdateIndex();
                         coinToUp?.UpTeras();
+                        indexTeras.Level += indexTeras.Fixlevel;
                         if (PriceCoin < 1000)
                         {
                             PriceCoin += 250;
                         }
-                        indexTeras.Level += indexTeras.Fixlevel;
                         coinAffterText.text = coinToUp?.CoinUp[indexTeras.Number].ToString();
                     }
                     isClick = false;
@@ -48,11 +46,11 @@ public class Up_Teras : MonoBehaviour
     }
     public void IsClick()
     {
-        if (buyTeras.BuyTeras == 1)
+        if (buyTeras.BuyTeras == 2)
         {
             isClick = true;
         }
-        else if(buyTeras.BuyTeras != 1)
+        else if(buyTeras.BuyTeras != 2)
         {
             return;
         }    
@@ -60,7 +58,7 @@ public class Up_Teras : MonoBehaviour
     private void PriceText()
     {
         priceText.text = PriceCoin.ToString();
-        if (PriceCoin >= 1000)
+        if (indexTeras.Level >= 5)
         {
             upTeras.text = "Max";
             priceText.text = "Level";

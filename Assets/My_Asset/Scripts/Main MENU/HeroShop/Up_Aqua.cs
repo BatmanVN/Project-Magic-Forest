@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -35,10 +34,10 @@ public class Up_Aqua : MonoBehaviour
                     {
                         coinToUp?.UpAqua();
                         indexAquana.Level += indexAquana.Fixlevel;
-                    if (PriceCoin < 1000)
-                    {
+                        if (PriceCoin < 1000)
+                        {
                             PriceCoin += 250;
-                    }
+                        }
                     coinAffterText.text = coinToUp?.CoinUp[indexAquana.Number].ToString();
                     }
                     isClick = false;
@@ -59,7 +58,7 @@ public class Up_Aqua : MonoBehaviour
     private void PriceText()
     {
         priceText.text = PriceCoin.ToString();
-        if (PriceCoin >= 1000)
+        if (indexAquana.Level >=5)
         {
             upAqua.text = "Max";
             priceText.text = "Level";
