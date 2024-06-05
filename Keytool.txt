@@ -1,5 +1,0 @@
-- Link tải game: https://play.google.com/apps/test/com.VuLinhCompany.MagicFantasy/10
-- Link chấp nhận làm tester: https://play.google.com/apps/internaltest/4701635880523964588
-- Link xem mở áp nội bộ: https://stackoverflow.com/questions/57478894/how-to-enable-internal-app-sharing-for-android
-
-keytool -keystore "G:\Magic_forestNew\Project-Magic-Forest\user.keystore" -list -v
