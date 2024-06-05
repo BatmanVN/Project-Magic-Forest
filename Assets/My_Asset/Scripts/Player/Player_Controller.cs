@@ -6,7 +6,7 @@ using UnityEngine;
 public class Player_Controller : MonoBehaviour
 {
     [SerializeField] private List<MonoBehaviour> components;
-    [SerializeField] private HealthCharacter healthComponent;
+    [SerializeField] private Health healthComponent;
 
     private bool isPlaying = false;
 

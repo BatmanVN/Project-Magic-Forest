@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player_Die : MonoBehaviour
 {
     private const string isDieParaname = "isDie";
-    [SerializeField] private HealthCharacter character;
+    [SerializeField] private Health character;
     [SerializeField] private Animator animator;
     public bool isDieAnim;
     private void Death()

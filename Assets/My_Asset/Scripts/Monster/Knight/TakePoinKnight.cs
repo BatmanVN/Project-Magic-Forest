@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TakePoinKnight : MonoBehaviour
 {
-    [SerializeField] private HealthCharacter knightHealth;
+    [SerializeField] private Health knightHealth;
     [SerializeField] private int killKnight;
 
     public int KillKnight { get => killKnight; set => killKnight = value; }

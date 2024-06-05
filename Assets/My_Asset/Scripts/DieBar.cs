@@ -7,7 +7,7 @@ public class DieBar : MonoBehaviour
 {
     [SerializeField] private string sceneHome;
     [SerializeField] private string sceneSpawn;
-    [SerializeField] private HealthCharacter character;
+    [SerializeField] private Health character;
     [SerializeField] private GameObject dieBar;
 
     private void EnableDieBar()

@@ -6,7 +6,7 @@ public class Player_BonusDef : MonoBehaviour
 {
     private const string defEffectParaname = "defEffect";
     [SerializeField] private Player_BonusDef player_bonusDef;
-    [SerializeField] private HealthCharacter takeDame;
+    [SerializeField] private Health takeDame;
     [SerializeField] private GameObject defObj;
     [SerializeField] private Player_beAttack beAttack;
     [SerializeField] private Animator defEffect;

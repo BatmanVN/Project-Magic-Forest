@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player_BonusHeart : MonoBehaviour
 {
     [SerializeField] Player_BonusHeart bonusHeart;
-    [SerializeField] private HealthCharacter character;
+    [SerializeField] private Health character;
     [SerializeField] private float healAmount;
     public void BonusHeart()
     {

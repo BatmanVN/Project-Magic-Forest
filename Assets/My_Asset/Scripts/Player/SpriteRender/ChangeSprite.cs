@@ -10,7 +10,7 @@ public class ChangeSprite : MonoBehaviour
     [SerializeField] private int index;
     [SerializeField] private RuntimeAnimatorController[] heroAnim;
     [SerializeField] private Animator player;
-    [SerializeField] private HealthCharacter healthCharacter;
+    [SerializeField] private Health healthCharacter;
     [SerializeField] private Mana mana;
     [SerializeField] private Player_Move speed;
     [SerializeField] private Player_skillFire starDame;

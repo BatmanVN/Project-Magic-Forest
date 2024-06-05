@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ske_death : MonoBehaviour
 {
-    [SerializeField] private HealthCharacter skeHealth;
+    [SerializeField] private Health skeHealth;
     [SerializeField] private GameObject disableObj;
     private void Death()
     {

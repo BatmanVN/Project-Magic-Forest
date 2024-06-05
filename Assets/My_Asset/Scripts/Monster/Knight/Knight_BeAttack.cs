@@ -9,7 +9,7 @@ public class Knight_BeAttack : MonoBehaviour
     private const string isDieParaname = "isDie";
     [SerializeField] private GameObject knightObj;
     [SerializeField] private Animator monsterAnim;
-    [SerializeField] private HealthCharacter monsterCharacter;
+    [SerializeField] private Health monsterCharacter;
     [SerializeField] private Player_attack takeDame;
     [SerializeField] private Player_skillFire skillDame;
     private bool beAttack;

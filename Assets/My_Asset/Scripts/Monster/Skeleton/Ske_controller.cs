@@ -5,7 +5,7 @@ using UnityEngine;
 public class Ske_controller : MonoBehaviour
 {
     [SerializeField] private List<MonoBehaviour> skeComponents;
-    [SerializeField] private HealthCharacter skeHealth;
+    [SerializeField] private Health skeHealth;
 
     private bool Active = false;
 

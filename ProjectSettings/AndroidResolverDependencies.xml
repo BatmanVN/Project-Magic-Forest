@@ -40,7 +40,7 @@
   </files>
   <settings>
     <setting name="androidAbis" value="arm64-v8a" />
-    <setting name="bundleId" value="com.VuLinhCompany.MagicFantasy" />
+    <setting name="bundleId" value="com.VuLinhGroup.MagicFantasy" />
     <setting name="explodeAars" value="True" />
     <setting name="gradleBuildEnabled" value="True" />
     <setting name="gradlePropertiesTemplateEnabled" value="False" />

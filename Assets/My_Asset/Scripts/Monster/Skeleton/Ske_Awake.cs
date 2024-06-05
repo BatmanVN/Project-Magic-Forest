@@ -12,7 +12,7 @@ public class Ske_Awake : MonoBehaviour
     [SerializeField] private Transform skeLeton;
     [SerializeField] private LayerMask player;
     [SerializeField] private GameObject skeHealthBar;
-    [SerializeField] private HealthCharacter skeHealth;
+    [SerializeField] private Health skeHealth;
     [SerializeField] private Rigidbody2D skeBody;
     private void SkeAwake()
     {

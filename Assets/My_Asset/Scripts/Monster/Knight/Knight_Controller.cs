@@ -5,7 +5,7 @@ using UnityEngine;
 public class Knight_Controller : MonoBehaviour
 {
     [SerializeField] private List<MonoBehaviour> monsterComponents;
-    [SerializeField] private HealthCharacter monsterHealth;
+    [SerializeField] private Health monsterHealth;
     private bool isAlive = false;
 
     private void Start()

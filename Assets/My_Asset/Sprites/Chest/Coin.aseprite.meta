@@ -21,13 +21,11 @@ ScriptedImporter:
     convertToNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-    flipGreenChannel: 0
-    swizzle: 50462976
     isReadable: 0
     streamingMipmaps: 0
     streamingMipmapsPriority: 0
     vTOnly: 0
-    ignoreMipmapLimit: 0
+    ignoreMasterTextureLimit: 0
     nPOTScale: 1
     sRGBTexture: 1
     spriteMode: 2
@@ -252,6 +250,7 @@ ScriptedImporter:
     cells:
     - name: Coin_Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -260,6 +259,7 @@ ScriptedImporter:
       spriteId: fee1b3103cc3e1e43922864ac9b3ad7e
     - name: Coin_Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 13
         y: 11
@@ -268,6 +268,7 @@ ScriptedImporter:
       spriteId: f8a93f17425f7384fb814fc6ae31b66b
     - name: Coin_Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 14
         y: 11
@@ -276,6 +277,7 @@ ScriptedImporter:
       spriteId: d0bffcb7a39f87b46b9ba065969bdf3b
     - name: Coin_Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 14
         y: 11
@@ -284,6 +286,7 @@ ScriptedImporter:
       spriteId: a9aa73216f35ef14c80968fb52c10ceb
     - name: Coin_Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 14
         y: 11
@@ -292,6 +295,7 @@ ScriptedImporter:
       spriteId: 53450cb9efcfbc944adc3bcf0456f8e1
     - name: Coin_Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0

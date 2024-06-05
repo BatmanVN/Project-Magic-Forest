@@ -8,7 +8,7 @@ public class Ske_beAtkk : MonoBehaviour
     private const string isDieParaname = "isDie";
     [SerializeField] private Animator skeAnim;
     [SerializeField] private GameObject skeObj;
-    [SerializeField] private HealthCharacter skeHealth;
+    [SerializeField] private Health skeHealth;
     [SerializeField] private Player_attack takeDame;
     [SerializeField] private Player_skillFire skillDame;
     [SerializeField] private SkeAuto_Move skeMove;
@@ -48,7 +48,7 @@ public class Ske_beAtkk : MonoBehaviour
     }
     private void ChangeAttack()
     {
-        if(skeHealth.Health <= 10)
+        if(skeHealth.HealTH <= 10)
         {
             skeMove?.ChangeSpeed(changeSpeed);
             skeMove.IsChange = false;
