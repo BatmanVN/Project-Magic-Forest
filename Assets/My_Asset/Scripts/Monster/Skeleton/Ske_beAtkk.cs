@@ -15,25 +15,26 @@ public class Ske_beAtkk : MonoBehaviour
     [SerializeField] private float changeSpeed;
     private bool attkSke;
     private bool skillAttk;
-
+    private bool changespeed;
     public bool AttkSke { get => attkSke; set => attkSke = value; }
 
     private void OnTriggerEnter2D(Collider2D skeleton)
     {
         if(skeleton.CompareTag("FireBall"))
         {
-            if(AttkSke == false)
-            {
-                skeAnim.SetTrigger(beAttackParaname);
+            skeAnim.SetTrigger(beAttackParaname);
+            //if (attkSke == false)
+            //{
+                skillDame?.SkillAmount();
                 skeHealth.TakeDame(takeDame.DameSke);
-                AttkSke = true;
-            }
+            //    attkSke = true;
+            //}
         }
         if(skeleton.CompareTag("StarSkill"))
         {
-            if(skillAttk == false)
+            skeAnim.SetTrigger(beAttackParaname);
+            if (skillAttk == false)
             {
-                skeAnim.SetTrigger(beAttackParaname);
                 skillDame?.SkilltoSke();
                 skeHealth?.TakeDame(skillDame.dameSkill);
                 skillAttk = true;
@@ -44,14 +45,16 @@ public class Ske_beAtkk : MonoBehaviour
             skeAnim.SetTrigger(isDieParaname);
             StartCoroutine(Delay());
         }
-        ChangeAttack();
     }
-    private void ChangeAttack()
+    public void ChangeAttack()
     {
         if(skeHealth.HealTH <= 10)
         {
-            skeMove?.ChangeSpeed(changeSpeed);
-            skeMove.IsChange = false;
+            if(changespeed == false)
+            {
+                skeMove?.ChangeSpeed(changeSpeed);
+                changespeed = true;
+            }
         }
     }
     private void DisableObj()
@@ -65,6 +68,10 @@ public class Ske_beAtkk : MonoBehaviour
     }
     private void Update()
     {
-        
+        ChangeAttack();
+    }
+    private void Start()
+    {
+
     }
 }

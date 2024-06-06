@@ -25,7 +25,7 @@ public class Player_skillFire : MonoBehaviour
     [ContextMenu("GetStarDame")]
     public void SkilltoSke()
     {
-        dameskill -= 2;
+            dameskill -= 2;
     }
     public void SkillAmount()
     {

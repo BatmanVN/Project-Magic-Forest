@@ -21,8 +21,6 @@ public class Player_attack : MonoBehaviour
     {
         if (useMana.MaNa > 1)
         {
-            for (int i = 0; i < ballAttack.Length; i++)
-            {
                 attkKit.Play();
                 if (indexSprites.Index == 0)
                 {
@@ -60,7 +58,6 @@ public class Player_attack : MonoBehaviour
                     }
                     Instantiate(ballAttack[2], ballAttackRight.position, Quaternion.identity);
                 }
-            }
             useMana.ConsumeMana(mana);
         } 
     }

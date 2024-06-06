@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 8140824307410965692}
   - component: {fileID: 6232640146008389595}
   - component: {fileID: 8887131079089240067}
+  - component: {fileID: -991647380254196535}
   m_Layer: 0
   m_Name: Skeleton_Enemy
   m_TagString: Untagged
@@ -33,7 +34,6 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 965675012997498584}
-  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 91.316376, y: 15.883904, z: -0.020950913}
   m_LocalScale: {x: -2, y: 1.5, z: 1}
@@ -41,6 +41,7 @@ Transform:
   m_Children:
   - {fileID: 1405799237886961190}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &3603743815404492918
 BoxCollider2D:
@@ -52,25 +53,6 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -104,12 +86,6 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -180,7 +156,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skeComponents: []
   skeHealth: {fileID: 0}
-  Active: 0
 --- !u!114 &1393013355272558541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,6 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29eae78d2e6827a439d9a2bb6b1458d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthName: 
   healthBar: {fileID: 0}
   health: 0
   maxHealth: 20
@@ -208,6 +184,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 689df042766599c41bca5d5351d2f446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  move: {fileID: 0}
+  skeHealth: {fileID: 0}
   player: {fileID: 0}
   skeAnim: {fileID: 8887131079089240067}
   speed: 5
@@ -233,6 +211,7 @@ MonoBehaviour:
     m_Bits: 8
   skeHealthBar: {fileID: 0}
   skeHealth: {fileID: 1393013355272558541}
+  skeBody: {fileID: 0}
 --- !u!114 &8140824307410965692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,8 +231,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   dame: 3
-  isAttk: 0
-  isEnemy: 0
 --- !u!114 &6232640146008389595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,10 +244,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeAnim: {fileID: 8887131079089240067}
+  skeObj: {fileID: 0}
   skeHealth: {fileID: 1393013355272558541}
   takeDame: {fileID: 0}
   skillDame: {fileID: 0}
-  attkSke: 0
+  skeMove: {fileID: 0}
+  changeSpeed: 0
 --- !u!95 &8887131079089240067
 Animator:
   serializedVersion: 5
@@ -292,6 +271,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-991647380254196535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965675012997498584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d46ccab8b629bdf4f8dae10ae9dc0f71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healths: {fileID: 0}
+  score: {fileID: 0}
+  pointName: SaveScore
+  point: 0
 --- !u!1 &4712395050526586956
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,11 +310,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4712395050526586956}
-  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.03, y: 0.86, z: 1.4759307}
   m_LocalScale: {x: 0.5, y: 0.6666667, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8470858427772231725}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

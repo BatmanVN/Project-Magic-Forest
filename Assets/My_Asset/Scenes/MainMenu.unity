@@ -6588,6 +6588,7 @@ GameObject:
   - component: {fileID: 1232483196}
   - component: {fileID: 1232483195}
   - component: {fileID: 1232483194}
+  - component: {fileID: 1232483198}
   - component: {fileID: 1232483193}
   m_Layer: 5
   m_Name: LeaderBoard
@@ -6608,6 +6609,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 453100d34721b31409f970d29aa95e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointName: SaveScore
+  pointScore: 0
+  getPoint: {fileID: 1232483198}
 --- !u!114 &1232483194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6691,6 +6695,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1232483198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232483192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d53774ed1c48d9543ae62a5d419265f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointGet: GetScore
+  getPoint: 0
 --- !u!1 &1234129599
 GameObject:
   m_ObjectHideFlags: 0
