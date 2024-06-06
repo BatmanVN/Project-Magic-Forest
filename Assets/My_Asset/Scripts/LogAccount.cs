@@ -10,7 +10,6 @@ public class LogAccount : MonoBehaviour
     void Start()
     {
         LoginToGooglePlay();
-        Showleader();
     }
 
     // Update is called once per frame
@@ -27,16 +26,11 @@ public class LogAccount : MonoBehaviour
 
     private void ProcessAuthenticate(SignInStatus status)
     {
-        Debug.Log("Login");
         if (status == SignInStatus.Success)
         {
             connectedToGooglePlay = true;
             Debug.Log("Login success");
         }
         connectedToGooglePlay = false;
-    }
-    private void Showleader()
-    {
-        PlayGamesPlatform.Instance.ShowLeaderboardUI("CgkI0I_z7tAQEAIQAg");
     }
 }
