@@ -1,7 +1,9 @@
+using GooglePlayGames;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 
 public class Knight_BeAttack : MonoBehaviour
 {
@@ -12,10 +14,11 @@ public class Knight_BeAttack : MonoBehaviour
     [SerializeField] private Health monsterCharacter;
     [SerializeField] private Player_attack takeDame;
     [SerializeField] private Player_skillFire skillDame;
+    [SerializeField] private int point;
     private bool beAttack;
     public bool BeAttack { get => beAttack; set => beAttack = value; }
 
-    [ContextMenu("SavePoint")]
+
     private void OnTriggerEnter2D(Collider2D Monster)
     {
         if (Monster.CompareTag("FireBall"))
@@ -35,6 +38,9 @@ public class Knight_BeAttack : MonoBehaviour
         }
         if (monsterCharacter.isDead)
         {
+            PlayGamesPlatform.Instance.IncrementAchievement(GPGSIds.achievement_kill_knight, 1, (bool success) => {
+            });
+
             monsterAnim.SetTrigger(isDieParaname);
             StartCoroutine(Delay());
         }

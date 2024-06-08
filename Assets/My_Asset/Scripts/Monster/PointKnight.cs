@@ -4,28 +4,37 @@ using UnityEngine;
 
 public class PointKnight : MonoBehaviour
 {
-    [SerializeField] private Health healths;
-    [SerializeField] private TotalScore score;
-    [SerializeField] private string pointName;
-    [SerializeField] private int point;
-    private bool takenPoint;
+    [SerializeField] private string saveScore;
+    [SerializeField] private TotalKill getScore;
+    [SerializeField] private Health knightHealth;
+    private bool takedScore;
 
-    [ContextMenu("SavePoint")]
-    private void GetPoint()
-    { 
-            if(healths.isDead)
+    [ContextMenu("SaveScore")]
+    private void TakeScore()
+    {
+        if(knightHealth.isDead)
+        {
+            if(takedScore == false)
             {
-                if (takenPoint == false)
+                getScore.Score += 1;
+                takedScore = true;
+                PlayerPrefs.SetInt(saveScore, getScore.Score);
+                if (Social.localUser.authenticated == true)
                 {
-                    score.PointGet += 1;
-                    takenPoint = true;
-                    PlayerPrefs.SetInt(pointName, score.PointGet);
+                    Social.ReportScore(getScore.Score, GPGSIds.leaderboard_monster_slayer, (bool success) =>
+                    {
+
+                    });
+                }
+                else
+                {
+                    return;
                 }
             }
+        }
     }
     private void Update()
     {
-        point = score.PointGet;
-        GetPoint();
+        TakeScore();
     }
 }

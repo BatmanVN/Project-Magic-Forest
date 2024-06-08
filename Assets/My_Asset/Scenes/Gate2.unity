@@ -1888,7 +1888,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &73310377
 MonoBehaviour:
@@ -2292,7 +2292,7 @@ PrefabInstance:
     - target: {fileID: 4922118516355969386, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
       propertyPath: score
       value: 
-      objectReference: {fileID: 546087713}
+      objectReference: {fileID: 0}
     - target: {fileID: 4922118516355969386, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
       propertyPath: healths
       value: 
@@ -2317,6 +2317,18 @@ PrefabInstance:
       propertyPath: enemyTransform
       value: 
       objectReference: {fileID: 1628586107}
+    - target: {fileID: 6890610623389640463, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
+      propertyPath: getScore
+      value: 
+      objectReference: {fileID: 2107323894}
+    - target: {fileID: 6890610623389640463, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
+      propertyPath: saveScore
+      value: GetScore
+      objectReference: {fileID: 0}
+    - target: {fileID: 6890610623389640463, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
+      propertyPath: knightHealth
+      value: 
+      objectReference: {fileID: 1700058264}
     - target: {fileID: 7289274890264962685, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
       propertyPath: m_FlipX
       value: 0
@@ -3649,7 +3661,7 @@ PrefabInstance:
     - target: {fileID: 4922118516355969386, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
       propertyPath: score
       value: 
-      objectReference: {fileID: 546087713}
+      objectReference: {fileID: 0}
     - target: {fileID: 4922118516355969386, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
       propertyPath: healths
       value: 
@@ -3674,6 +3686,18 @@ PrefabInstance:
       propertyPath: enemyTransform
       value: 
       objectReference: {fileID: 1628586107}
+    - target: {fileID: 6890610623389640463, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
+      propertyPath: getScore
+      value: 
+      objectReference: {fileID: 2107323894}
+    - target: {fileID: 6890610623389640463, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
+      propertyPath: saveScore
+      value: GetScore
+      objectReference: {fileID: 0}
+    - target: {fileID: 6890610623389640463, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
+      propertyPath: knightHealth
+      value: 
+      objectReference: {fileID: 1352872996}
     - target: {fileID: 7289274890264962685, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
       propertyPath: m_FlipX
       value: 0
@@ -5214,7 +5238,7 @@ Transform:
   m_Children:
   - {fileID: 1628586107}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &274190000
 AudioSource:
@@ -6003,7 +6027,7 @@ Transform:
   - {fileID: 1990765425}
   - {fileID: 104046709}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &297566001
 GameObject:
@@ -9971,52 +9995,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &546087712
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 546087714}
-  - component: {fileID: 546087713}
-  m_Layer: 0
-  m_Name: TotalScore
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &546087713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 546087712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc04da8e5fc9bd04ea8de72bd7615be9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointName: SaveScore
-  pointGet: 0
---- !u!4 &546087714
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 546087712}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.885807, y: -3.064681, z: 247.07716}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &552777784
 GameObject:
   m_ObjectHideFlags: 0
@@ -19305,7 +19283,7 @@ PrefabInstance:
     - target: {fileID: 4922118516355969386, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
       propertyPath: score
       value: 
-      objectReference: {fileID: 546087713}
+      objectReference: {fileID: 0}
     - target: {fileID: 4922118516355969386, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
       propertyPath: healths
       value: 
@@ -19326,6 +19304,18 @@ PrefabInstance:
       propertyPath: enemyTransform
       value: 
       objectReference: {fileID: 1628586107}
+    - target: {fileID: 6890610623389640463, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
+      propertyPath: getScore
+      value: 
+      objectReference: {fileID: 2107323894}
+    - target: {fileID: 6890610623389640463, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
+      propertyPath: saveScore
+      value: GetScore
+      objectReference: {fileID: 0}
+    - target: {fileID: 6890610623389640463, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
+      propertyPath: knightHealth
+      value: 
+      objectReference: {fileID: 745763926}
     - target: {fileID: 7289274890264962685, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
       propertyPath: m_FlipX
       value: 0
@@ -37286,6 +37276,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2107323893
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2107323895}
+  - component: {fileID: 2107323894}
+  m_Layer: 0
+  m_Name: TotalKill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2107323894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107323893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 202457b8bb938b5439dbffc1d8d3452a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  getSaveScore: SaveScore
+  score: 0
+--- !u!4 &2107323895
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107323893}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.15510198, y: -1.8039519, z: -0.083121605}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2107486105
 GameObject:
   m_ObjectHideFlags: 0
@@ -37488,6 +37524,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4904591516919019369, guid: 59a18d53b88315a4c906902766c4a22e, type: 3}
+      propertyPath: score
+      value: GetScore
+      objectReference: {fileID: 0}
+    - target: {fileID: -4904591516919019369, guid: 59a18d53b88315a4c906902766c4a22e, type: 3}
+      propertyPath: getScore
+      value: 
+      objectReference: {fileID: 2107323894}
+    - target: {fileID: -4904591516919019369, guid: 59a18d53b88315a4c906902766c4a22e, type: 3}
+      propertyPath: skeHealth
+      value: 
+      objectReference: {fileID: 1286104545}
     - target: {fileID: -4325326953310810932, guid: 59a18d53b88315a4c906902766c4a22e, type: 3}
       propertyPath: skeHealth
       value: 
@@ -37523,7 +37571,7 @@ PrefabInstance:
     - target: {fileID: -991647380254196535, guid: 59a18d53b88315a4c906902766c4a22e, type: 3}
       propertyPath: score
       value: 
-      objectReference: {fileID: 546087713}
+      objectReference: {fileID: 0}
     - target: {fileID: -991647380254196535, guid: 59a18d53b88315a4c906902766c4a22e, type: 3}
       propertyPath: healths
       value: 
@@ -37602,7 +37650,7 @@ PrefabInstance:
       objectReference: {fileID: 1628586106}
     - target: {fileID: 6232640146008389595, guid: 59a18d53b88315a4c906902766c4a22e, type: 3}
       propertyPath: changeSpeed
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8140824307410965692, guid: 59a18d53b88315a4c906902766c4a22e, type: 3}
       propertyPath: playPostion
@@ -37610,7 +37658,7 @@ PrefabInstance:
       objectReference: {fileID: 1628586107}
     - target: {fileID: 8470858427772231725, guid: 59a18d53b88315a4c906902766c4a22e, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8470858427772231725, guid: 59a18d53b88315a4c906902766c4a22e, type: 3}
       propertyPath: m_LocalPosition.x

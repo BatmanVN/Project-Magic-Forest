@@ -13,6 +13,7 @@ public class Ske_beAtkk : MonoBehaviour
     [SerializeField] private Player_skillFire skillDame;
     [SerializeField] private SkeAuto_Move skeMove;
     [SerializeField] private float changeSpeed;
+
     private bool attkSke;
     private bool skillAttk;
     private bool changespeed;
@@ -42,6 +43,18 @@ public class Ske_beAtkk : MonoBehaviour
         }
         if(skeHealth.isDead)
         {
+            Social.ReportProgress(GPGSIds.achievement_the_skeleton_king, 100.0f, (bool success) => {
+            });
+            if (Social.localUser.authenticated == true)
+            {
+                Social.ReportScore(5, GPGSIds.leaderboard_monster_slayer, (bool success) =>
+                {
+                });
+            }
+            else
+            {
+                return;
+            }
             skeAnim.SetTrigger(isDieParaname);
             StartCoroutine(Delay());
         }

@@ -1,14 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.GlobalIllumination;
 
 public class Button : MonoBehaviour
 {
-    internal bool interactable;
-    internal object onClick;
-    [SerializeField]private Vector2 minLocation;
-    [SerializeField]private Vector2 maxLocation;
+    [SerializeField] private Vector2 minLocation;
+    [SerializeField] private Vector2 maxLocation;
     [SerializeField] private float speed;
     [SerializeField] private Camera mainCamera;
     [SerializeField] private float lefMove;
@@ -30,11 +25,11 @@ public class Button : MonoBehaviour
             changePostionMouse.y = 0;
             mainCamera.transform.position += changePostionMouse;
         }
-        if(mainCamera.transform.position.x <= minLocation.x)
+        if (mainCamera.transform.position.x <= minLocation.x)
         {
             mainCamera.transform.position = minLocation;
         }
-        if(mainCamera.transform.position.x >= maxLocation.x)
+        if (mainCamera.transform.position.x >= maxLocation.x)
         {
             mainCamera.transform.position = maxLocation;
         }

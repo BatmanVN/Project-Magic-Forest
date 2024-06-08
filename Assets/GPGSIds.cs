@@ -24,8 +24,9 @@
 
 public static class GPGSIds
 {
-        public const string leaderboard_kill_knight = "CgkI0I_z7tAQEAIQAg"; // <GPGSID>
+        public const string achievement_the_skeleton_king = "CgkI0I_z7tAQEAIQCQ"; // <GPGSID>
         public const string achievement_kill_knight = "CgkI0I_z7tAQEAIQAA"; // <GPGSID>
+        public const string leaderboard_monster_slayer = "CgkI0I_z7tAQEAIQAg"; // <GPGSID>
 
 }
 
