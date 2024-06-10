@@ -15,7 +15,10 @@ public class InterstitialAdExample : MonoBehaviour, IUnityAdsLoadListener, IUnit
             ? _iOsAdUnitId
             : _androidAdUnitId;
     }
-
+    private void Start()
+    {
+        LoadAd();
+    }
     // Load content to the Ad Unit:
     public void LoadAd()
     {

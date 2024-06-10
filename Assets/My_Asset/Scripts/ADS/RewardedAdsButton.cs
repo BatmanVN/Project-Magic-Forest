@@ -21,7 +21,10 @@ public class RewardedAdsButton : MonoBehaviour, IUnityAdsLoadListener, IUnityAds
         // Disable the button until the ad is ready to show:
 
     }
-
+    private void Start()
+    {
+        LoadAd();
+    }
     // Call this public method when you want to get an ad ready to show.
     public void LoadAd()
     {
@@ -49,7 +52,6 @@ public class RewardedAdsButton : MonoBehaviour, IUnityAdsLoadListener, IUnityAds
     {
         // Disable the button:
         // Then show the ad:
-        LoadAd();
         Debug.Log("Show Ad: " + _adUnitId);
         Advertisement.Show(_adUnitId, this);
     }
