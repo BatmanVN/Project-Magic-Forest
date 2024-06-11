@@ -18,7 +18,18 @@ public class Player_beAttack : MonoBehaviour
     [SerializeField] private Player_jump jump;
     [SerializeField] private float jumpRec;
     [SerializeField] private DieBar dieBar;
+    [SerializeField] private float dameSpear;
 
+    private void OnTriggerEnter2D(Collider2D hero)
+    {
+        if(hero.CompareTag("Spear"))
+        {
+            jump?.JumpBeAttk(jumpRec);
+            playerAnim.SetTrigger(beAttackParaname);
+            character?.TakeDame(dameSpear);
+            beAttackSound.Play();
+        }
+    }
     private void TakeDame()
     {
         for(int i = 0; i < monster.Length; i++)

@@ -12,12 +12,17 @@ public class FireBall : MonoBehaviour
     [SerializeField] private SpriteRenderer fireball;
     [SerializeField] private Knight_BeAttack beAttack;
     [SerializeField] private float disableTime;
+    private bool wasHit;
     private void FireballFly()
     {
         var speedForce = speed;
         if (fireball.flipX == true)
         {
             speedForce *= -1;
+        }
+        if(wasHit == true)
+        {
+            speedForce *= 0;
         }
         fireball2D.velocity = speedForce;
         fireballAnim.SetTrigger("isFly");
@@ -26,6 +31,15 @@ public class FireBall : MonoBehaviour
             Color color = fireball.color;
             color.a -= disableTime *Time.deltaTime;
             fireball.color = color;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D bullet)
+    {
+        if (bullet.CompareTag("Ground") || bullet.CompareTag("StopGround") || bullet.CompareTag("StopGroundRight"))
+        {
+            wasHit = true;
+            fireballAnim.SetTrigger("whenHit");
+            disableTime += 0.5f;
         }
     }
     private void Start()

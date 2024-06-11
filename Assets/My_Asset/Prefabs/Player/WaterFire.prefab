@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 8866258082406518882}
   - component: {fileID: -7214512561221864995}
   - component: {fileID: -2420485897432519617}
-  - component: {fileID: -1814437723195009451}
   m_Layer: 0
   m_Name: WaterFire
   m_TagString: FireBall
@@ -175,20 +174,4 @@ MonoBehaviour:
   fireballAnim: {fileID: -7214512561221864995}
   fireball: {fileID: 6040331156701343692}
   beAttack: {fileID: 4946057970891289528, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
-  disableTime: 0.5
---- !u!114 &-1814437723195009451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4088376587669765261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31964e5391859d54c8ef23f8a68f8e14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletObj: {fileID: 4088376587669765261}
-  destroyAmo: {fileID: 7807798631498140235, guid: 29216c152d328ca408b82c1386fd2376, type: 3}
-  destroyBullet: {fileID: 6331789060260067384, guid: 29216c152d328ca408b82c1386fd2376, type: 3}
-  hit: {fileID: -8457002426217303498, guid: 29216c152d328ca408b82c1386fd2376, type: 3}
+  disableTime: 0.4

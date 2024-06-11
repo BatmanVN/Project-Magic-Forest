@@ -18,6 +18,8 @@ TagManager:
   - HealIndex
   - SpeedIndex
   - SkeMonster
+  - Spear
+  - fakepoint
   layers:
   - Default
   - TransparentFX
@@ -29,7 +31,7 @@ TagManager:
   - BackGround
   - UICanvas
   - GroundDouble
-  - 
+  - LeafMonster
   - 
   - 
   - 

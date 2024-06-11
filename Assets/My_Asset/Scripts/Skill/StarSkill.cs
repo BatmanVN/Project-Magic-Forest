@@ -11,10 +11,10 @@ public class StarSkill : MonoBehaviour
     [SerializeField] private Animator starAnimator;
     [SerializeField] private GameObject starPrefabs;
     [SerializeField] private float disableTime;
-    private bool isAnim;
     private void OnTriggerEnter2D(Collider2D starSkill)
     {
-        if(starSkill.CompareTag("KinghtMonster"))
+        if(starSkill.CompareTag("KinghtMonster")|| starSkill.CompareTag("Ground") 
+            || starSkill.CompareTag("StopGround") || starSkill.CompareTag("StopGroundRight"))
         {
             starAnimator.SetTrigger(hitParaname);
             Color color = starRenderer.color;

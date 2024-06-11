@@ -1883,7 +1883,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 73310373}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.6313039, y: 3.1709251, z: -620.9477}
+  m_LocalPosition: {x: -1.841304, y: 3.1509252, z: -620.9477}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15557,11 +15557,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9044699222379123182, guid: 578bad8105ad242458e96f0a26242cee, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 61.46
+      value: 147.46
       objectReference: {fileID: 0}
     - target: {fileID: 9044699222379123182, guid: 578bad8105ad242458e96f0a26242cee, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 24.65
+      value: 20.91
       objectReference: {fileID: 0}
     - target: {fileID: 9044699222379123182, guid: 578bad8105ad242458e96f0a26242cee, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16513,7 +16513,7 @@ GameObject:
   - component: {fileID: 983572639}
   m_Layer: 0
   m_Name: sactx-6-128x128-Uncompressed-Atlas-b40f6ea0_8 (5)
-  m_TagString: Untagged
+  m_TagString: Spear
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16543,7 +16543,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -2.0577512, y: -0.02285546}
@@ -19670,7 +19670,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139425417}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.6313039, y: 3.1709251, z: -620.9477}
+  m_LocalPosition: {x: -1.841304, y: 3.1509252, z: -620.9477}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -27210,6 +27210,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6526601}
     - target: {fileID: 862476605531981719, guid: 55d578a2da775c34cb3167c54f34d2dc, type: 3}
+      propertyPath: dameSpear
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 862476605531981719, guid: 55d578a2da775c34cb3167c54f34d2dc, type: 3}
       propertyPath: beAttackSound
       value: 
       objectReference: {fileID: 274190000}
@@ -27249,6 +27253,10 @@ PrefabInstance:
       propertyPath: bonusSound
       value: 
       objectReference: {fileID: 274190000}
+    - target: {fileID: 1751153719191085024, guid: 55d578a2da775c34cb3167c54f34d2dc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2601810407237105214, guid: 55d578a2da775c34cb3167c54f34d2dc, type: 3}
       propertyPath: powerBar
       value: 
@@ -27355,11 +27363,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6681393395830615391, guid: 55d578a2da775c34cb3167c54f34d2dc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.95
+      value: -10.16
       objectReference: {fileID: 0}
     - target: {fileID: 6681393395830615391, guid: 55d578a2da775c34cb3167c54f34d2dc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.92
+      value: -4.94
       objectReference: {fileID: 0}
     - target: {fileID: 6681393395830615391, guid: 55d578a2da775c34cb3167c54f34d2dc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -27409,7 +27417,8 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7825760975431844252, guid: 55d578a2da775c34cb3167c54f34d2dc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 55d578a2da775c34cb3167c54f34d2dc, type: 3}
 --- !u!114 &1628586106 stripped
 MonoBehaviour:

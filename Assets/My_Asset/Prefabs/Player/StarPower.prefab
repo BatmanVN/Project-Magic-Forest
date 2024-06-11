@@ -142,7 +142,7 @@ MonoBehaviour:
   starRenderer: {fileID: -6486332918827426265}
   starAnimator: {fileID: 1539022354883686353}
   starPrefabs: {fileID: 5726601417960012454}
-  disableTime: 0.5
+  disableTime: 0.4
 --- !u!95 &1539022354883686353
 Animator:
   serializedVersion: 5
