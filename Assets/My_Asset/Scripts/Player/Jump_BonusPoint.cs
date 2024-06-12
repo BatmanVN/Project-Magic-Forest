@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Jump_BonusPoint : MonoBehaviour
 {
+    private const string jumpbonusParaname = "isBonus";
     [SerializeField] private AudioSource bonusSound;
     [SerializeField] private GameObject PointBonus;
-    private const string jumpbonusParaname = "isBonus";
     [SerializeField] private Vector2 jumpBonusPoint;
     [SerializeField] private Rigidbody2D player2D;
     [SerializeField] private BonusPoint bonusPoint;
@@ -32,10 +32,6 @@ public class Jump_BonusPoint : MonoBehaviour
         {
             return;
         }
-        //if(isJumpBonus == true)
-        //{
-        //    Destroy(PointBonus);
-        //}
     }
     private void Update()
     {

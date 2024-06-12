@@ -4,7 +4,6 @@ using UnityEngine;
 public class BonusPoint : MonoBehaviour
 {
     [SerializeField] private Jump_BonusPoint jumpBonus;
-    [SerializeField] private GameObject PointBonus;
 
     private bool jumpEnabled;
 

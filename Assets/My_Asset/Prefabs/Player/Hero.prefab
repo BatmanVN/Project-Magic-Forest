@@ -266,6 +266,7 @@ GameObject:
   - component: {fileID: 3887868131802418563}
   - component: {fileID: 3587953724767225596}
   - component: {fileID: 3851613565438096409}
+  - component: {fileID: 946779511739996846}
   - component: {fileID: 3697131222220853390}
   - component: {fileID: 862476605531981719}
   - component: {fileID: 8543553231657929882}
@@ -280,9 +281,9 @@ GameObject:
   - component: {fileID: 5504969488511308719}
   - component: {fileID: 7418363573945667537}
   - component: {fileID: 2853991954737794104}
-  - component: {fileID: 946779511739996846}
   - component: {fileID: 3595506791958584202}
-  m_Layer: 0
+  - component: {fileID: 8210738051863081469}
+  m_Layer: 3
   m_Name: Hero
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -297,7 +298,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4350646518229535251}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.26, y: -0.26, z: -5.527121}
+  m_LocalPosition: {x: 70.63, y: -0.3, z: 0}
   m_LocalScale: {x: 2, y: 1.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -413,7 +414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   components:
-  - {fileID: 0}
+  - {fileID: 946779511739996846}
   - {fileID: 3697131222220853390}
   - {fileID: 862476605531981719}
   - {fileID: 8543553231657929882}
@@ -426,7 +427,23 @@ MonoBehaviour:
   - {fileID: 6035019764766160219}
   - {fileID: 4157455461679329787}
   - {fileID: 5504969488511308719}
-  healthComponent: {fileID: 0}
+  healthComponent: {fileID: 946779511739996846}
+--- !u!114 &946779511739996846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4350646518229535251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29eae78d2e6827a439d9a2bb6b1458d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthName: 
+  healthBar: {fileID: 0}
+  health: 0
+  maxHealth: 15
 --- !u!114 &3697131222220853390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -440,14 +457,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attkKit: {fileID: 0}
-  ballAttack: []
+  ballAttack:
+  - {fileID: 4219060861608243989, guid: 20df32f83ec7cef4a890239ce95fcec0, type: 3}
+  - {fileID: 4088376587669765261, guid: 4eeae7c4df5015c4d96486fdb5e0a174, type: 3}
+  - {fileID: 3322813350017396729, guid: fc23953084712fa4a8528156e1a04240, type: 3}
   indexSprites: {fileID: 0}
-  ballAttackRight: {fileID: 0}
+  ballAttackRight: {fileID: 5520532133665333995}
   move: {fileID: 5665918621117032843}
   fireRender:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 6121116761820729648, guid: 20df32f83ec7cef4a890239ce95fcec0, type: 3}
+  - {fileID: 6040331156701343692, guid: 4eeae7c4df5015c4d96486fdb5e0a174, type: 3}
+  - {fileID: 4797282028429977754, guid: fc23953084712fa4a8528156e1a04240, type: 3}
   useMana: {fileID: 2601810407237105214}
   Dame: 4
   dameSke: 0
@@ -466,19 +486,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ads: {fileID: 0}
   beAttackSound: {fileID: 0}
-  character: {fileID: 0}
+  character: {fileID: 946779511739996846}
   player2D: {fileID: 3887868131802418563}
   bonusDef: {fileID: 4157455461679329787}
   monster:
-  - {fileID: 6409066554987826123, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
-  - {fileID: 6409066554987826123, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
-  - {fileID: 6409066554987826123, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
-  - {fileID: 6409066554987826123, guid: 9a3164eccc2885045a2843ebff4f630e, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   skeAttk: {fileID: 8140824307410965692, guid: 59a18d53b88315a4c906902766c4a22e, type: 3}
   playerAnim: {fileID: 3595506791958584202}
   jump: {fileID: 8543553231657929882}
   jumpRec: 0.5
   dieBar: {fileID: 2853991954737794104}
+  dameSpear: 0
 --- !u!114 &8543553231657929882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -524,8 +545,8 @@ MonoBehaviour:
   player2D: {fileID: 3587953724767225596}
   playerSprite: {fileID: 7136069026643868312}
   animator: {fileID: 3595506791958584202}
-  moveDirection: {x: 4.3, y: 0}
-  speedDefault: 1
+  moveDirection: {x: 30, y: 0}
+  speedDefault: 4.2
   stopGround: {fileID: 7418363573945667537}
   isRunning: 0
 --- !u!114 &103767715028143303
@@ -545,17 +566,17 @@ MonoBehaviour:
   skillBar: {fileID: 0}
   buttonStar: {fileID: 0}
   starPower:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 5726601417960012454, guid: 2b7c389324d403545883394d73cad288, type: 3}
+  - {fileID: 2451934867016117595, guid: f18b31938c56ea942bfa59cb33e32849, type: 3}
+  - {fileID: 5152967680813459929, guid: 01b747a502e6a514b91131a6f517e5a5, type: 3}
   fireRender:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: -6486332918827426265, guid: 2b7c389324d403545883394d73cad288, type: 3}
+  - {fileID: 6391464101145324996, guid: f18b31938c56ea942bfa59cb33e32849, type: 3}
+  - {fileID: 6075163174331433289, guid: 01b747a502e6a514b91131a6f517e5a5, type: 3}
   indexHero: {fileID: 0}
   move: {fileID: 5665918621117032843}
   fireBall: {fileID: 5520532133665333995}
-  dameskill: 24
+  dameskill: 21
   excatlySkill: 0
   maxSkillAmount: 5
 --- !u!114 &2601810407237105214
@@ -573,7 +594,7 @@ MonoBehaviour:
   powerKey: 
   powerBar: {fileID: 0}
   mana: 0
-  maxMana: 12
+  maxMana: 6
 --- !u!114 &5547817678360739236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -624,7 +645,7 @@ MonoBehaviour:
   speedAnim: {fileID: 6725778152069931064}
   speedObj: {fileID: 5145791766182112281}
   timeBonus: 5
-  speedBonus: 1
+  speedBonus: 3
 --- !u!114 &6035019764766160219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -638,7 +659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bonusHeart: {fileID: 6035019764766160219}
-  character: {fileID: 0}
+  character: {fileID: 946779511739996846}
   healAmount: 3
 --- !u!114 &4157455461679329787
 MonoBehaviour:
@@ -653,7 +674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player_bonusDef: {fileID: 4157455461679329787}
-  takeDame: {fileID: 0}
+  takeDame: {fileID: 946779511739996846}
   defObj: {fileID: 8259604472604337154}
   beAttack: {fileID: 862476605531981719}
   defEffect: {fileID: 6184121929939044}
@@ -700,24 +721,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneHome: MainMenu
   sceneSpawn: Gate1
-  character: {fileID: 0}
+  character: {fileID: 946779511739996846}
   dieBar: {fileID: 0}
---- !u!114 &946779511739996846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4350646518229535251}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29eae78d2e6827a439d9a2bb6b1458d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthName: 
-  healthBar: {fileID: 0}
-  health: 0
-  maxHealth: 0
 --- !u!95 &3595506791958584202
 Animator:
   serializedVersion: 5
@@ -739,6 +744,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8210738051863081469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4350646518229535251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b539aa4f294d5944b495504468390b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinSound: {fileID: 0}
 --- !u!1 &5145791766182112281
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,7 +768,7 @@ GameObject:
   - component: {fileID: 2923797170847667687}
   - component: {fileID: 4069783491811098487}
   - component: {fileID: 6725778152069931064}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SpeedEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -941,7 +959,7 @@ GameObject:
   - component: {fileID: 7112749374090466384}
   - component: {fileID: 704050603378412539}
   - component: {fileID: 7512210415692602142}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EffectArrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1184,7 +1202,7 @@ GameObject:
   - component: {fileID: 1840048372939395643}
   - component: {fileID: 2218551340896475179}
   - component: {fileID: 9084260751105099190}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Shoes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
