@@ -20,6 +20,9 @@ TagManager:
   - SkeMonster
   - Spear
   - fakepoint
+  - LeafBullet
+  - PointA
+  - pointDis
   layers:
   - Default
   - TransparentFX

@@ -328,7 +328,7 @@ namespace Lean.Pool
 			TryDespawnOldest(ref clone, true);
 		}
 
-		private bool TryDespawnOldest(ref GameObject clone, bool registerDespawned)
+		public bool TryDespawnOldest(ref GameObject clone, bool registerDespawned)
 		{
 			MergeSpawnedClonesToList();
 

@@ -8,32 +8,21 @@ public class LeafAttck : MonoBehaviour
     [SerializeField] private GameObject bulletLeaf;
     [SerializeField] private int numberBullet;
     [SerializeField] private int delay;
-    private void OnTriggerEnter2D(Collider2D leafBullet)
+    private void Awake()
     {
-        if (leafBullet.CompareTag("Ground") || leafBullet.CompareTag("Player"))
-        {
-            Destroy(bulletLeaf);
-        }
+        Leafattack();
     }
     private void Leafattack()
     {
-        if(numberBullet <= 5)
-        {
             Instantiate(bulletLeaf, mouthLeaf.position, Quaternion.identity);
-            numberBullet += 1;
-        }
-        if(numberBullet >= 5)
-        {
-            numberBullet = 0;
-        }
     }
     private IEnumerator Delay()
     {
         yield return new WaitForSeconds(delay);
         Leafattack();
-        StartCoroutine(Delay());
+        yield return StartCoroutine(Delay());
     }
-    private void Update()
+    private void Start()
     {
         StartCoroutine(Delay());
     }

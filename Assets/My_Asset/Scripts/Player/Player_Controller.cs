@@ -15,13 +15,13 @@ public class Player_Controller : MonoBehaviour
         StartGame();
     }
 
-    private void StartGame()
+    public void StartGame()
     {
         isPlaying = true;
         EnableComponents();
         Debug.Log("Start Game");
     }
-    private void QuitGame()
+    public void QuitGame()
     {
         isPlaying = false;
         DisableComponents();
