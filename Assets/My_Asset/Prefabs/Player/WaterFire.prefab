@@ -168,6 +168,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4af484959d04d1149826912074ba2dbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stopBullet:
+  - Ground
+  - StopGround
+  - StopGroundRight
   fireObj: {fileID: 4088376587669765261}
   fireball2D: {fileID: 417163968107180933}
   speed: {x: 10, y: 0}

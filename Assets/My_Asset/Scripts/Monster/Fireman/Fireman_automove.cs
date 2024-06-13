@@ -4,24 +4,24 @@ using UnityEngine;
 
 public class Fireman_automove : MonoBehaviour
 {
-    private const string moveParaname = "fireManMove";
-    [SerializeField] private Transform attackPostion;
-    [SerializeField] private float rangeAttk;
-    [SerializeField] private LayerMask playerMask;
+    private const string moveParaname = "isWalking";
+    [SerializeField] private Fireman_Attack enemy;
+    [SerializeField] private PointDis touch;
     [SerializeField] private Transform player;
     [SerializeField] private Animator firemanAnim;
     [SerializeField] private float speed;
     private Transform currentPoint;
     private void StartMove() //Plan 2 bot siDA
     {
-        var hit = Physics2D.OverlapCircle(attackPostion.position, rangeAttk, playerMask);
-        if (!hit)
+        //var hit = Physics2D.OverlapCircle(attackPostion.position, rangeAttk, playerMask);
+        if (enemy.IsEnemy == false)
         {
-            transform.position = Vector2.MoveTowards(transform.position, currentPoint.transform.position, speed * Time.deltaTime);
-            firemanAnim.SetBool(moveParaname, true);
+                transform.position = Vector2.MoveTowards(transform.position, currentPoint.transform.position, speed * Time.deltaTime);
+                firemanAnim.SetBool(moveParaname, true);
         }
         else
-            return;
+        firemanAnim.SetBool(moveParaname, false);
+        return;
     }
     private void Start()
     {

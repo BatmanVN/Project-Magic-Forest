@@ -5,6 +5,7 @@ using UnityEngine;
 public class StarSkill : MonoBehaviour
 {
     private const string hitParaname = "whenHit";
+    [SerializeField] private string[] stopBullet = new string[] { "Ground", "StopGround", "StopGroundRight" };
     [SerializeField] private Rigidbody2D starRig2d;
     [SerializeField] private Vector2 starDirection;
     [SerializeField] private SpriteRenderer starRenderer;
@@ -13,14 +14,16 @@ public class StarSkill : MonoBehaviour
     [SerializeField] private float disableTime;
     private void OnTriggerEnter2D(Collider2D starSkill)
     {
-        if(starSkill.CompareTag("KinghtMonster")|| starSkill.CompareTag("Ground") 
-            || starSkill.CompareTag("StopGround") || starSkill.CompareTag("StopGroundRight"))
+        foreach(var tags in stopBullet)
         {
-            starAnimator.SetTrigger(hitParaname);
-            Color color = starRenderer.color;
-            color.a -= disableTime * Time.deltaTime;
-            starRenderer.color = color;
-            StartCoroutine(Delay());
+            if (starSkill.CompareTag(tags))
+            {
+                starAnimator.SetTrigger(hitParaname);
+                Color color = starRenderer.color;
+                color.a -= disableTime * Time.deltaTime;
+                starRenderer.color = color;
+                StartCoroutine(Delay());
+            }
         }
     }
     private void Destroy()

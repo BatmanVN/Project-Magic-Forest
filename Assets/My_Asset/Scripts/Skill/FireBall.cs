@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class FireBall : MonoBehaviour
 {
+    [SerializeField] private string[] stopBullet = new string[] { "Ground", "StopGround", "StopGroundRight" };
     [SerializeField] private GameObject fireObj;
     [SerializeField] private Rigidbody2D fireball2D;
     [SerializeField] private Vector2 speed;
@@ -35,11 +36,14 @@ public class FireBall : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D bullet)
     {
-        if (bullet.CompareTag("Ground") || bullet.CompareTag("StopGround") || bullet.CompareTag("StopGroundRight"))
+        foreach (var tags in stopBullet)
         {
-            wasHit = true;
-            fireballAnim.SetTrigger("whenHit");
-            disableTime += 0.5f;
+            if (bullet.CompareTag(tags))
+            {
+                wasHit = true;
+                fireballAnim.SetTrigger("whenHit");
+                disableTime += 0.5f;
+            }
         }
     }
     private void Start()

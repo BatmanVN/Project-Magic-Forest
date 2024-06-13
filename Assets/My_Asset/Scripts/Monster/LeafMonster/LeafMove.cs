@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class LeafMove : MonoBehaviour
 {
+    [SerializeField] private string[] stopBullet = new string[] { "Ground", "Player", "StopGround", "StopGroundRight" };
     [SerializeField] private GameObject bulletLeaf;
     [SerializeField] private Rigidbody2D bulletRection;
     [SerializeField] private Vector2 speed;
     private void OnTriggerEnter2D(Collider2D leafBullet)
     {
-        if (leafBullet.CompareTag("Ground") || leafBullet.CompareTag("Player"))
+        foreach(string tags in stopBullet)
         {
-            Destroy(bulletLeaf);
+            if (leafBullet.CompareTag(tags))
+            {
+                Destroy(bulletLeaf);
+            }
         }
     }
     private void BulletMove()

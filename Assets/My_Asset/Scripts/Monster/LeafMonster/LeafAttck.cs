@@ -6,7 +6,6 @@ public class LeafAttck : MonoBehaviour
 {
     [SerializeField] private Transform mouthLeaf;
     [SerializeField] private GameObject bulletLeaf;
-    [SerializeField] private int numberBullet;
     [SerializeField] private int delay;
     private void Awake()
     {

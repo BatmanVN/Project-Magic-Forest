@@ -147,6 +147,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 869c833011e0121408af3ea340cf29a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stopBullet:
+  - Ground
+  - StopGround
+  - StopGroundRight
   starRig2d: {fileID: 8083740232971630245}
   starDirection: {x: 4, y: 0}
   starRenderer: {fileID: 6391464101145324996}
