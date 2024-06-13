@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Firebullet : MonoBehaviour
 {
-    private const string flyBulletName = "isfly";
+    private const string flyBulletName = "isFly";
     private const string destroyBulletName = "isDestroy";
-    [SerializeField] private string[] stopBullet = new string[] { "Ground", "Player", "StopGround", "StopGroundRight" };
+    [SerializeField] private string[] stopBullet = new string[] { "Ground","Player", "StopGround", "StopGroundRight" };
     [SerializeField] private Rigidbody2D bullet;
     [SerializeField] private GameObject firebulletObj;
     [SerializeField] private Animator bulletAnim;
@@ -41,6 +41,7 @@ public class Firebullet : MonoBehaviour
             {
                 wasHit = true;
                 bulletAnim.SetTrigger(destroyBulletName);
+                StartCoroutine(Delay());
             }
         }
     }
@@ -52,10 +53,6 @@ public class Firebullet : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         Destroybullet();
-    }
-    private void Start()
-    {
-        StartCoroutine(Delay());
     }
     private void Update()
     {

@@ -21,7 +21,7 @@ public class LeafMove : MonoBehaviour
     private void BulletMove()
     {
         var speedBullet = speed;
-        bulletRection.velocity = speed;
+        bulletRection.velocity = speedBullet;
     }
     void Update()
     {

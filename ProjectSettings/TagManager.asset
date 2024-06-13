@@ -23,6 +23,8 @@ TagManager:
   - LeafBullet
   - PointA
   - pointDis
+  - FiremanBullet
+  - LightSkill
   layers:
   - Default
   - TransparentFX

@@ -14,6 +14,7 @@ public class Player_beAttack : MonoBehaviour
     [SerializeField] private Player_BonusDef bonusDef;
     [SerializeField] private Attack_Player[] monster;
     [SerializeField] private Ske_attack skeAttk;
+    [SerializeField] private Fireman_Attack fireMan;
     [SerializeField] private Animator playerAnim;
     [SerializeField] private Player_jump jump;
     [SerializeField] private float jumpRec;
@@ -36,6 +37,13 @@ public class Player_beAttack : MonoBehaviour
             character?.TakeDame(dameSpear);
             beAttackSound.Play();
         }
+        if(hero.CompareTag("FiremanBullet"))
+        {
+            jump?.JumpBeAttk(jumpRec);
+            playerAnim.SetTrigger(beAttackParaname);
+            character?.TakeDame(fireMan.Dame);
+            beAttackSound.Play();
+        }
     }
     private void TakeDame()
     {
@@ -50,14 +58,6 @@ public class Player_beAttack : MonoBehaviour
                 monster[i].IsEnemy = false;
             }
         }
-        if(skeAttk.IsEnemy == true && bonusDef.EnableEffect == false)
-        {
-            jump?.JumpBeAttk(jumpRec);
-            beAttackSound.Play();
-            playerAnim.SetTrigger(beAttackParaname);
-            character?.TakeDame(skeAttk.Dame);
-            skeAttk.IsEnemy = false;
-        }
         if (character.isDead)
         {
             player2D.enabled = false;
@@ -66,8 +66,21 @@ public class Player_beAttack : MonoBehaviour
             dieBar?.EnableBar();
         }
     }
+    private void TakedameSke()
+    {
+        if (skeAttk.IsEnemy == true && bonusDef.EnableEffect == false)
+        {
+            jump?.JumpBeAttk(jumpRec);
+            beAttackSound.Play();
+            playerAnim.SetTrigger(beAttackParaname);
+            character?.TakeDame(skeAttk.Dame);
+            skeAttk.IsEnemy = false;
+        }
+    }
+
     private void Update()
     {
         TakeDame();
+        TakedameSke();
     }
 }

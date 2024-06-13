@@ -14,7 +14,6 @@ public class Knight_BeAttack : MonoBehaviour
     [SerializeField] private Health monsterCharacter;
     [SerializeField] private Player_attack takeDame;
     [SerializeField] private Player_skillFire skillDame;
-    [SerializeField] private int point;
     private bool beAttack;
     public bool BeAttack { get => beAttack; set => beAttack = value; }
 
@@ -45,13 +44,7 @@ public class Knight_BeAttack : MonoBehaviour
             StartCoroutine(Delay());
         }
     }
-    private void OnTriggerExit2D(Collider2D Monster)
-    {
-        if (Monster.CompareTag("FireBall"))
-        {
-            beAttack = false;
-        }
-    }
+
     private void DisableObj()
     {
         knightObj.SetActive(false);

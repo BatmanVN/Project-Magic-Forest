@@ -12,7 +12,6 @@ public class Fireman_Attack : MonoBehaviour
     [SerializeField] private float dame;
     [SerializeField] private SpriteRenderer bulletSprite;
     [SerializeField] private float timeDelay;
-    private bool isAttk;
     private bool isEnemy;
     public float Dame { get => dame; private set => dame = value; }
     public bool IsEnemy { get => isEnemy; set => isEnemy = value; }
@@ -22,17 +21,13 @@ public class Fireman_Attack : MonoBehaviour
         var scale = transform.localScale;
         var fireManPostion = transform.position;
         var hit = Physics2D.OverlapCircle(attackPostion.position, rangeAttk, playerMask);
-        if (isAttk == false)
+        if (hit)
         {
-            if (hit)
-            {
-                isAttk = true;
-                IsEnemy = true;
-            }
+            IsEnemy = true;
         }
-        else if (!hit)
+        else
         {
-            isAttk = false;
+            IsEnemy = false;
         }
         if (fireManPostion.x > playPostion.transform.position.x)
         {

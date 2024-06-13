@@ -13,7 +13,6 @@ public class Fireman_automove : MonoBehaviour
     private Transform currentPoint;
     private void StartMove() //Plan 2 bot siDA
     {
-        //var hit = Physics2D.OverlapCircle(attackPostion.position, rangeAttk, playerMask);
         if (enemy.IsEnemy == false)
         {
                 transform.position = Vector2.MoveTowards(transform.position, currentPoint.transform.position, speed * Time.deltaTime);
