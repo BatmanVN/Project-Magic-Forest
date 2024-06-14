@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class UseLightSkill : MonoBehaviour
 {
-    [SerializeField] private GameObject blackGround;
     [SerializeField] private Health fireManHealth;
     [SerializeField] private Fireman_Attack normalAttack;
     [SerializeField] private GameObject skillPoint;
@@ -33,7 +32,6 @@ public class UseLightSkill : MonoBehaviour
         if(count >= 3)
         {
             skillPoint.SetActive(false);
-            Destroy(blackGround);
             normalAttack.enabled = true;
         }
     }

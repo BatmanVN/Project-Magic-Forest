@@ -10,7 +10,7 @@ public class AutoMove : MonoBehaviour
     [SerializeField] private Animator monsterAnim;
     [SerializeField] private float speed;
     private Transform currentPoint;
-    private void StartMove() //Plan 2 bot siDA
+    private void StartMove()
     {
         var scale = transform.localScale;
         if (Vector2.Distance(transform.position, pointB.transform.position) < 0.3f)

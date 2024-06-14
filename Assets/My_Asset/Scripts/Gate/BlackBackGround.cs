@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,7 @@ using UnityEngine.UI;
 public class BlackBackGround : MonoBehaviour
 {
     [SerializeField] private Image blackGround;
+    [SerializeField] private GameObject blackObj;
     [SerializeField] private Health firemanHealth;
     [SerializeField] private float timeDelay;
     private bool wasChange;
@@ -21,6 +23,7 @@ public class BlackBackGround : MonoBehaviour
                 wasChange = true;
             }
             StartCoroutine(Delay());
+            StartCoroutine(DelayDestroy());
         }
         Debug.Log(colorA.a);
     }
@@ -33,6 +36,15 @@ public class BlackBackGround : MonoBehaviour
             blackGround.color = colorA;
             wasChange = false;
         }
+    }
+    private void DestroyObj()
+    {
+        Destroy(blackObj);
+    }
+    private IEnumerator DelayDestroy()
+    {
+        yield return new WaitForSeconds(5);
+        DestroyObj();
     }
     private IEnumerator Delay()
     {
