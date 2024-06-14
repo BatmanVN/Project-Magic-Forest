@@ -21,6 +21,7 @@ public class Player_beAttack : MonoBehaviour
     [SerializeField] private DieBar dieBar;
     [SerializeField] private float dameSpear;
     [SerializeField] private float dameLeaf;
+    [SerializeField] private float damePig;
 
     private void OnTriggerEnter2D(Collider2D hero)
     {
@@ -42,6 +43,18 @@ public class Player_beAttack : MonoBehaviour
             jump?.JumpBeAttk(jumpRec);
             playerAnim.SetTrigger(beAttackParaname);
             character?.TakeDame(fireMan.Dame);
+            beAttackSound.Play();
+        }
+        if(hero.CompareTag("LightSkill"))
+        {
+            playerAnim.SetTrigger(beAttackParaname);
+            character?.TakeDame(fireMan.Dame);
+            beAttackSound.Play();
+        }
+        if(hero.CompareTag("BigFly"))
+        {
+            playerAnim.SetTrigger(beAttackParaname);
+            character?.TakeDame(damePig);
             beAttackSound.Play();
         }
     }

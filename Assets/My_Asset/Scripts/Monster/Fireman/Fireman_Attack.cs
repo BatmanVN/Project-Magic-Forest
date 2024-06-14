@@ -12,9 +12,12 @@ public class Fireman_Attack : MonoBehaviour
     [SerializeField] private float dame;
     [SerializeField] private SpriteRenderer bulletSprite;
     [SerializeField] private float timeDelay;
+    [SerializeField] private float dameSkill;
+
     private bool isEnemy;
     public float Dame { get => dame; private set => dame = value; }
     public bool IsEnemy { get => isEnemy; set => isEnemy = value; }
+    public float DameSkill { get => dameSkill; set => dameSkill = value; }
 
     private void AttackPlayer()
     {

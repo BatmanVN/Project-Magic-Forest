@@ -25,6 +25,7 @@ TagManager:
   - pointDis
   - FiremanBullet
   - LightSkill
+  - PigFly
   layers:
   - Default
   - TransparentFX
