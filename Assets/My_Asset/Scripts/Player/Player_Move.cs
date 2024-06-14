@@ -100,7 +100,6 @@ public class Player_Move : MonoBehaviour
     {
         if (stopGround.StopGroundLeft == false)
            isLeft = true;
-        
         walkAudio.Play();
     }
     public void DownRight()

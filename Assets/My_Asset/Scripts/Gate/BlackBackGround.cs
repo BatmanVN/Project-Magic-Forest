@@ -25,7 +25,6 @@ public class BlackBackGround : MonoBehaviour
             StartCoroutine(Delay());
             StartCoroutine(DelayDestroy());
         }
-        Debug.Log(colorA.a);
     }
     private void DownBlack()
     {

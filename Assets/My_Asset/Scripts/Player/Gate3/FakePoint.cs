@@ -10,7 +10,7 @@ public class FakePoint : MonoBehaviour
     {
         if(Player.CompareTag("fakepoint"))
         {
-            playerHealth.TakeDame(playerHealth.MaxHealth);
+            playerHealth.TakeDame(playerHealth.HealTH);
         }
     }
 }

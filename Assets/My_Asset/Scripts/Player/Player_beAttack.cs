@@ -51,7 +51,7 @@ public class Player_beAttack : MonoBehaviour
             character?.TakeDame(fireMan.Dame);
             beAttackSound.Play();
         }
-        if(hero.CompareTag("BigFly"))
+        if(hero.CompareTag("PigFly"))
         {
             playerAnim.SetTrigger(beAttackParaname);
             character?.TakeDame(damePig);

@@ -30,14 +30,7 @@ public class Pig_Move : MonoBehaviour
             currentPoint = pointA.transform;
             pigScale.x = 1.3f;
         }
-        if (pigScale.x > 0 && wasHit == true)
-        {
-            currentPoint = pointB.transform;
-        }
-        if (pigScale.x < 0 && wasHit == true)
-        {
-            currentPoint = pointA.transform;
-        }
+
         transform.position = Vector2.MoveTowards(transform.position,currentPoint.transform.position,speed*Time.deltaTime);
         pigAnim.SetTrigger("isFly");
         transform.localScale = pigScale;
