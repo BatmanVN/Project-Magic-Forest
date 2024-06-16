@@ -71,6 +71,9 @@ public class Player_beAttack : MonoBehaviour
                 monster[i].IsEnemy = false;
             }
         }
+    }
+    private void WhenDie()
+    {
         if (character.isDead)
         {
             player2D.enabled = false;
@@ -95,5 +98,6 @@ public class Player_beAttack : MonoBehaviour
     {
         TakeDame();
         TakedameSke();
+        WhenDie();
     }
 }

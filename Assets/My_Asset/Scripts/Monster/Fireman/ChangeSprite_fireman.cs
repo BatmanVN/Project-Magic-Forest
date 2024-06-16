@@ -19,9 +19,10 @@ public class ChangeSprite_fireman : MonoBehaviour
 
     public void ChangeStatus2()
     {
-        cameraCharacter[0].SetActive(false);
-        cameraCharacter[1].SetActive(true);
-        firemanSprite.sprite = changeSprite[1];
+
+         cameraCharacter[0].SetActive(false);
+         cameraCharacter[1].SetActive(true);
+         firemanSprite.sprite = changeSprite[1];
     }
     public void BackHeroCamera()
     {

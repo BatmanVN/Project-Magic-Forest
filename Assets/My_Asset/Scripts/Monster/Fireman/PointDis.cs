@@ -5,7 +5,7 @@ using UnityEngine;
 public class PointDis : MonoBehaviour
 {
     [SerializeField] private GameObject pointA;
-    [SerializeField] private GameObject pointB;
+    [SerializeField] private GameObject pointB; 
     private bool wasTouch;
 
     public bool WasTouch { get => wasTouch; set => wasTouch = value; }

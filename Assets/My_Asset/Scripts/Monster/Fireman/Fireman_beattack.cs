@@ -7,6 +7,8 @@ public class Fireman_beattack : MonoBehaviour
 {
     private const string isAttackParaname = "beAttack";
     private const string isDieParaname = "isDie";
+    [SerializeField] private GameObject pointA;
+    [SerializeField] private GameObject pointB;
     [SerializeField] private GameObject firemanObj;
     [SerializeField] private Animator monsterAnim;
     [SerializeField] private Health firemanHealth;
@@ -45,6 +47,8 @@ public class Fireman_beattack : MonoBehaviour
                 return;
             }
             monsterAnim.SetTrigger(isDieParaname);
+            pointA.SetActive(true);
+            pointB.SetActive(false);
             StartCoroutine(Delay());
         }
     }

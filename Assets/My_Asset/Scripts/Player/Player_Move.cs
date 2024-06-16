@@ -123,6 +123,8 @@ public class Player_Move : MonoBehaviour
     }
     private void Update()
     {
+        Debug.Log(isLeft);
+        Debug.Log(isRight);
         KeyMove();
         PlayerMove();
     }

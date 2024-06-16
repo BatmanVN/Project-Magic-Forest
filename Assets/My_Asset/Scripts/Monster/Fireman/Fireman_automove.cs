@@ -13,14 +13,17 @@ public class Fireman_automove : MonoBehaviour
     private Transform currentPoint;
     private void StartMove() //Plan 2 bot siDA
     {
-        if (enemy.IsEnemy == false)
+        if(touch.WasTouch == true)
         {
+            if (enemy.IsEnemy == false)
+            {
                 transform.position = Vector2.MoveTowards(transform.position, currentPoint.transform.position, speed * Time.deltaTime);
                 firemanAnim.SetBool(moveParaname, true);
+            }
+            else
+                firemanAnim.SetBool(moveParaname, false);
+                return;
         }
-        else
-        firemanAnim.SetBool(moveParaname, false);
-        return;
     }
     private void Start()
     {

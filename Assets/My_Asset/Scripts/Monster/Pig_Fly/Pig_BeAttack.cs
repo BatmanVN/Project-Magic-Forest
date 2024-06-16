@@ -21,12 +21,10 @@ public class Pig_BeAttack : MonoBehaviour
         if (Monster.CompareTag("FireBall"))
         {
             pigAnim.SetTrigger(isAttackParaname);
-            if (beAttack == false)
-            {
+
                 skillDame?.SkillAmount();
                 pigHP.TakeDame(takeDame.dame);
-                beAttack = true;
-            }
+
         }
         if (Monster.CompareTag("StarSkill"))
         {

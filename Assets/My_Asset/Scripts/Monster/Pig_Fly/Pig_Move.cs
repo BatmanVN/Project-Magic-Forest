@@ -4,19 +4,13 @@ using UnityEngine;
 
 public class Pig_Move : MonoBehaviour
 {
+    [SerializeField] private Health pigHealth;
     [SerializeField] private GameObject pointA;
     [SerializeField] private GameObject pointB;
+    [SerializeField] private GameObject pointDie;
     [SerializeField] private Animator pigAnim;
     [SerializeField] private float speed;
     private Transform currentPoint;
-    private bool wasHit = false;
-    private void OnTriggerEnter2D(Collider2D pigFly)
-    {
-        if(pigFly.CompareTag("Player"))
-        {
-            wasHit = true;
-        }
-    }
     private void AutoMove()
     {
         var pigScale = transform.localScale;
@@ -30,7 +24,10 @@ public class Pig_Move : MonoBehaviour
             currentPoint = pointA.transform;
             pigScale.x = 1.3f;
         }
-
+        if(pigHealth.isDead)
+        {
+            currentPoint = pointDie.transform;
+        }
         transform.position = Vector2.MoveTowards(transform.position,currentPoint.transform.position,speed*Time.deltaTime);
         pigAnim.SetTrigger("isFly");
         transform.localScale = pigScale;

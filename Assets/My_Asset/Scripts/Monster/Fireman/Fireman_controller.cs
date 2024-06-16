@@ -7,19 +7,16 @@ public class Fireman_controller : MonoBehaviour
     [SerializeField] private List<MonoBehaviour> controller;
     [SerializeField] private Health fireManHealth;
     [SerializeField] private PointDis touch;
-    private bool isAlive;
     private void Start()
     {
 
     }
     private void StartBattle()
     {
-        isAlive = true;
         EnableComponents();
     }
     private void EndBattle()
     {
-        isAlive = false;
         DisableComponents();
     }
     private void EnableComponents()
@@ -37,11 +34,20 @@ public class Fireman_controller : MonoBehaviour
             component.enabled = active;
         }
     }
+    private void StartGame()
+    {
+            StartBattle();
+    }
+    private IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(5);
+        StartGame();
+    }
     private void Update()
     {
         if(touch.WasTouch == true)
         {
-            StartBattle();
+            StartCoroutine(Delay());
         }
         else if(touch.WasTouch == false || fireManHealth.isDead)
         {
