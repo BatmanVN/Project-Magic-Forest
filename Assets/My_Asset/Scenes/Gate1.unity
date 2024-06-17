@@ -937,9 +937,9 @@ MonoBehaviour:
   - {fileID: 1348466089}
   - {fileID: 1657516659}
   - {fileID: 588602509}
-  chest1: Chest1
-  chest2: Chest2
-  chest3: Chest3
+  chest1: Chest1Gate1
+  chest2: Chest2Gate1
+  chest3: Chest3Gate1
   chestOpen1: 0
   chestOpen2: 0
   chestOpen3: 0

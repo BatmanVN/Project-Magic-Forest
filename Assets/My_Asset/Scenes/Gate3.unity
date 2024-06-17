@@ -2143,15 +2143,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1807302613708131923, guid: d125a57dd57f0cf4e816ecb82946aefa, type: 3}
       propertyPath: chest1
-      value: Chest1
+      value: Chest1Gate3
       objectReference: {fileID: 0}
     - target: {fileID: 1807302613708131923, guid: d125a57dd57f0cf4e816ecb82946aefa, type: 3}
       propertyPath: chest2
-      value: Chest2
+      value: Chest2Gate3
       objectReference: {fileID: 0}
     - target: {fileID: 1807302613708131923, guid: d125a57dd57f0cf4e816ecb82946aefa, type: 3}
       propertyPath: chest3
-      value: Chest3
+      value: Chest3Gate3
       objectReference: {fileID: 0}
     - target: {fileID: 1807302613708131923, guid: d125a57dd57f0cf4e816ecb82946aefa, type: 3}
       propertyPath: Chest.Array.data[0]

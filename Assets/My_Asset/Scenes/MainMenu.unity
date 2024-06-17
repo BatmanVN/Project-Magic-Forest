@@ -958,9 +958,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e3390d90dad7834896dacbbfbbbecdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chest1: Chest1
-  chest2: Chest2
-  chest3: Chest3
+  chest1: Chest1Gate2
+  chest2: Chest2Gate2
+  chest3: Chest3Gate2
   chestOpen1: 0
   chestOpen2: 0
   chestOpen3: 0
@@ -1293,9 +1293,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e3390d90dad7834896dacbbfbbbecdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chest1: Chest1
-  chest2: Chest2
-  chest3: Chest3
+  chest1: Chest1Gate1
+  chest2: Chest2Gate1
+  chest3: Chest3Gate1
   chestOpen1: 0
   chestOpen2: 0
   chestOpen3: 0
@@ -10154,9 +10154,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e3390d90dad7834896dacbbfbbbecdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chest1: Chest1
-  chest2: Chest2
-  chest3: Chest3
+  chest1: Chest1Gate3
+  chest2: Chest2Gate3
+  chest3: Chest3Gate3
   chestOpen1: 0
   chestOpen2: 0
   chestOpen3: 0
