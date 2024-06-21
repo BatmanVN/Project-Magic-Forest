@@ -26,6 +26,7 @@ TagManager:
   - FiremanBullet
   - LightSkill
   - PigFly
+  - FireMan
   layers:
   - Default
   - TransparentFX

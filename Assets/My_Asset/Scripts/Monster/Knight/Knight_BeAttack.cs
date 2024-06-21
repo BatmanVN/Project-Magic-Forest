@@ -23,12 +23,10 @@ public class Knight_BeAttack : MonoBehaviour
         if (Monster.CompareTag("FireBall"))
         {
             monsterAnim.SetTrigger(isAttackParaname);
-            //if (beAttack == false)
-            //{
+
                 skillDame?.SkillAmount();
                 monsterCharacter.TakeDame(takeDame.dame);
-            //    beAttack = true;
-            //}
+
         }
         if(Monster.CompareTag("StarSkill"))
         {

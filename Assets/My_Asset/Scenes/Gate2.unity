@@ -1883,7 +1883,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 73310373}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.661304, y: 2.4909253, z: -620.9477}
+  m_LocalPosition: {x: -1.9013038, y: 2.2309256, z: -620.9477}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15325,7 +15325,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9044699222379123182, guid: 578bad8105ad242458e96f0a26242cee, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 147.46
+      value: 146.35
       objectReference: {fileID: 0}
     - target: {fileID: 9044699222379123182, guid: 578bad8105ad242458e96f0a26242cee, type: 3}
       propertyPath: m_LocalPosition.y
@@ -19336,7 +19336,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139425417}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.661304, y: 2.4909253, z: -620.9477}
+  m_LocalPosition: {x: -1.9013038, y: 2.2309256, z: -620.9477}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -26923,11 +26923,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6681393395830615391, guid: 55d578a2da775c34cb3167c54f34d2dc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.16
+      value: -10.4
       objectReference: {fileID: 0}
     - target: {fileID: 6681393395830615391, guid: 55d578a2da775c34cb3167c54f34d2dc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.94
+      value: -5.2
       objectReference: {fileID: 0}
     - target: {fileID: 6681393395830615391, guid: 55d578a2da775c34cb3167c54f34d2dc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -29974,6 +29974,10 @@ PrefabInstance:
     - target: {fileID: 4529713282318817003, guid: 0f2b7dd21d77d364b8bfe166829a34b2, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -548.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 4529713282476867597, guid: 0f2b7dd21d77d364b8bfe166829a34b2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 99
       objectReference: {fileID: 0}
     - target: {fileID: 4529713282614221336, guid: 0f2b7dd21d77d364b8bfe166829a34b2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

@@ -141,6 +141,10 @@ MonoBehaviour:
   - Ground
   - StopGround
   - StopGroundRight
+  - KinghtMonster
+  - SkeMonster
+  - PigFly
+  - FireMan
   starRig2d: {fileID: -5026300384237757675}
   starDirection: {x: 4, y: 0}
   starRenderer: {fileID: -6486332918827426265}

@@ -172,6 +172,10 @@ MonoBehaviour:
   - Ground
   - StopGround
   - StopGroundRight
+  - SkeMonster
+  - PigFly
+  - FireMan
+  - KinghtMonster
   fireObj: {fileID: 4088376587669765261}
   fireball2D: {fileID: 417163968107180933}
   speed: {x: 10, y: 0}

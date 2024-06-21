@@ -14775,7 +14775,7 @@ GameObject:
   - component: {fileID: 1099124055}
   m_Layer: 0
   m_Name: FireManControl
-  m_TagString: Untagged
+  m_TagString: FireMan
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28615,7 +28615,7 @@ PrefabInstance:
       objectReference: {fileID: 2108496451}
     - target: {fileID: 5665918621117032843, guid: 55d578a2da775c34cb3167c54f34d2dc, type: 3}
       propertyPath: moveDirection.x
-      value: 150
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6681393395830615391, guid: 55d578a2da775c34cb3167c54f34d2dc, type: 3}
       propertyPath: m_RootOrder

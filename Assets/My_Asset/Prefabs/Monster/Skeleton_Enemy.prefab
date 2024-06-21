@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: -4904591516919019369}
   m_Layer: 0
   m_Name: Skeleton_Enemy
-  m_TagString: Untagged
+  m_TagString: SkeMonster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -283,6 +283,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ae080b6e9eba05479f24dcad298036f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 
+  getScore: {fileID: 0}
+  skeHealth: {fileID: 0}
 --- !u!1 &4712395050526586956
 GameObject:
   m_ObjectHideFlags: 0

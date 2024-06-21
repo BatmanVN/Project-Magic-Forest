@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class FireBall : MonoBehaviour
 {
-    [SerializeField] private string[] stopBullet = new string[] { "Ground", "StopGround", "StopGroundRight" };
+    [SerializeField] private string[] stopBullet = new string[] { "Ground", "StopGround", "StopGroundRight", "KinghtMonster", "SkeMonster","PigFly","FireMan" };
     [SerializeField] private GameObject fireObj;
     [SerializeField] private Rigidbody2D fireball2D;
     [SerializeField] private Vector2 speed;
