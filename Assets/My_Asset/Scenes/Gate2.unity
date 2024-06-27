@@ -14710,7 +14710,7 @@ PrefabInstance:
       objectReference: {fileID: 898224291}
     - target: {fileID: 6652295651336846028, guid: d125a57dd57f0cf4e816ecb82946aefa, type: 3}
       propertyPath: gateName
-      value: 
+      value: Gate3
       objectReference: {fileID: 0}
     - target: {fileID: 6652295651336846028, guid: d125a57dd57f0cf4e816ecb82946aefa, type: 3}
       propertyPath: sceneHome

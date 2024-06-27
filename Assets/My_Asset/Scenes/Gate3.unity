@@ -28836,6 +28836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 2046727572}
+  die: {fileID: 2046727596}
 --- !u!114 &2046727595 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5504969488511308719, guid: 55d578a2da775c34cb3167c54f34d2dc, type: 3}

@@ -72,6 +72,11 @@ public class Player_beAttack : MonoBehaviour
             }
         }
     }
+    public void TakeDameFakePoint()
+    {
+        beAttackSound.Play();
+        WhenDie();
+    }
     private void WhenDie()
     {
         if (character.isDead)
